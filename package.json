@@ -1,0 +1,22 @@
+{
+  "name": "thoughts",
+  "version": "1.0.0",
+  "description": "Thoughts of daily work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zizifn/thoughts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zizifn/thoughts/issues"
+  },
+  "homepage": "https://github.com/zizifn/thoughts#readme",
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
+  }
+}
