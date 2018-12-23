@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Promises test</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style type="text/css" media="screen">
+        @-webkit-keyframes spin {
+            to {
+                stroke-dashoffset: -264;
+            }
+        }
+
+        @keyframes spin {
+            to {
+                stroke-dashoffset: -264;
+            }
+        }
+
+        .spinner circle {
+            fill: none;
+            stroke: slategray;
+            stroke-width: 16;
+            stroke-linecap: round;
+            stroke-dasharray: 0, 0, 70, 194;
+            stroke-dashoffset: 0;
+            animation: spin 1s infinite linear;
+            -webkit-animation: spin 1s infinite linear;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="story"></div>
+    <svg class="spinner" viewBox="0 0 100 100" width="20" height="20">
+        <circle cx="50" cy="50" r="42" transform="rotate(-90,50,50)" />
+    </svg>
+    <script>
+        var jsonHost = 'https://raw.githubusercontent.com/zizifn/thoughts/master/data/primers/';
+        var divStory = document.querySelector(".story");
+
+        function addTextToPage(content) {
+            var p = document.createElement('P');
+            p.innerText = content;
+            divStory.appendChild(p);
+        };
+
+        function addHtmlToPage(content) {
+            var div = document.createElement('div');
+            div.innerHTML = content;
+            divStory.appendChild(div);
+        }
+    </script>
+    <script>
+        function get(url) {
+            var xmlHttp = new XMLHttpRequest();
+            xmlHttp.open('GET', url);
+            xmlHttp.onload = (ev) => {
+                console.log(xmlHttp.responseText);
+                addHtmlToPage(JSON.parse(xmlHttp.responseText).heading);
+                document.querySelector('.spinner').style.display = 'none';
+                return xmlHttp.response;
+            }
+            xmlHttp.send();
+        }
+
+        get(jsonHost + 'story.json');
+
+    </script>
+</body>
+
+</html>
