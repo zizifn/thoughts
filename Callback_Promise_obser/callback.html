@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Promises test</title>
+    <title>Promises Test</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
     <style type="text/css" media="screen">
         @-webkit-keyframes spin {
@@ -10,13 +10,11 @@
                 stroke-dashoffset: -264;
             }
         }
-
         @keyframes spin {
             to {
                 stroke-dashoffset: -264;
             }
         }
-
         .spinner circle {
             fill: none;
             stroke: slategray;
@@ -31,7 +29,6 @@
 </head>
 
 <body>
-
     <div class="story"></div>
     <svg class="spinner" viewBox="0 0 100 100" width="20" height="20">
         <circle cx="50" cy="50" r="42" transform="rotate(-90,50,50)" />
@@ -55,6 +52,7 @@
     <script>
         function get(url) {
             var xmlHttp = new XMLHttpRequest();
+            xmlHttp.timeout = 10000;
             xmlHttp.open('GET', url);
             xmlHttp.onload = (ev) => {
                 console.log(xmlHttp.responseText);

@@ -90,12 +90,40 @@
                 });
         }
 
-        get(jsonHost + 'story.json').then(result => {
-            addHtmlToPage(JSON.parse(result).heading);
-            document.querySelector('.spinner').style.display = 'none';
-        });
+        function getJson(url){
+            return get(url).then((vaule => JSON.parse(vaule)));
+        }
 
-        //http://localhost:8888/primers/callback2promise.html
+        // getJson(jsonHost + 'story.json').then(result => {
+        //     addHtmlToPage(result.heading);
+        //     return getJson(jsonHost + result.chapterUrls[0]);
+        //    // document.querySelector('.spinner').style.display = 'none';
+        // }).then(
+        //     (chapter) => {
+        //         addHtmlToPage(chapter.html);
+        //     }
+        // );
+
+        var sequence = Promise.resolve();
+
+        getJson(jsonHost + 'story.json').then(
+            story =>{
+                addHtmlToPage(story.heading);
+                story.chapterUrls.forEach(chapterUrl => {
+                    sequence = sequence.then(
+                        value =>{
+                            return getJson(jsonHost + chapterUrl).then(
+                                chapter =>{
+                                    addHtmlToPage(chapter.html);
+                                }
+                            );
+                        }
+                    )
+                });
+            }
+        )
+
+        //http://localhost:8888/primers/promise_sequencing.html
 
     </script>
 </body>
