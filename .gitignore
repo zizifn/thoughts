@@ -331,3 +331,7 @@ ASALocalRun/
 
 #nodejs
 node_modules/
+
+# for local
+Callback_Promise_obser/WebSiteSQLDatabase - Copy.json
+Callback_Promise_obser/azure.ps1
