@@ -93,36 +93,6 @@
         function getJson(url) {
             return get(url).then((vaule => JSON.parse(vaule)));
         }
-
-        // getJson(jsonHost + 'story.json').then(result => {
-        //     addHtmlToPage(result.heading);
-        //     return getJson(jsonHost + result.chapterUrls[0]);
-        //    // document.querySelector('.spinner').style.display = 'none';
-        // }).then(
-        //     (chapter) => {
-        //         addHtmlToPage(chapter.html);
-        //     }
-        // );
-
-        //需要用一个promise 吧所有promise 串联起来，要不然就是并发。
-        // var sequence = Promise.resolve();
-        // getJson(jsonHost + 'story.json').then(
-        //     story =>{
-        //         addHtmlToPage(story.heading);
-        //         story.chapterUrls.forEach(chapterUrl => {
-        //             sequence = sequence.then(
-        //                 value =>{
-        //                     return getJson(jsonHost + chapterUrl).then(
-        //                         chapter =>{
-        //                             addHtmlToPage(chapter.html);
-        //                         }
-        //                     );
-        //                 }
-        //             )
-        //         });
-        //     }
-        // )
-
         //reduce
         getJson(jsonHost + 'story.json').then(
             story => {
@@ -140,7 +110,7 @@
             }
         );
 
-        //http://localhost:8888/primers/promise_sequencing.html
+        //http://localhost:8888/primers/promise_parallel.html
 
     </script>
 </body>
