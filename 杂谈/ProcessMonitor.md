@@ -7,7 +7,7 @@
 ## 查找问题的过程
 
 - 强制指定路由器的DNS Server,但是系统还是会重置DNS Server.
-- 检查registry,发现会有人自动reset。
+- 检查registry后,DNS registry会自动改变。
 
 ![DNS](/杂谈/data/DNSRegistry.jpg)
 
