@@ -9,6 +9,6 @@ Thoughts of daily work
 
 #### 工具
 
-###### [是谁在重置Widnows 的DNS Server?](https://github.com/zizifn/thoughts/blob/master/%E6%9D%82%E8%B0%88/ProcessMonitor.md)
+###### [是谁在重置Widnows 的DNS Server?(ProcessMonitor使用)](https://github.com/zizifn/thoughts/blob/master/%E6%9D%82%E8%B0%88/ProcessMonitor.md)
 
 ###### [UbuntuCommand](https://github.com/zizifn/thoughts/blob/master/UbuntuCommand/readme.md)
