@@ -14,7 +14,7 @@
 ## 工具
 
 于是使用微软的[Process Monitor](https://docs.microsoft.com/zh-cn/sysinternals/downloads/procmon),来检查是谁在变动Registry?
-找到process后，发现是netsh一直在RegsetValue，更改DNS的registry。于是我用`netsh int ip reset` 重置设置。问题解决！
+找到process后，发现是netsh一直在RegsetValue，更改DNS的registry。于是我用`netsh int ip reset` 重置设置。问题解决！至于为什么netsh会重置DNS server，**可能**是由于[Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/)的Naming Server的原因。
 
 ![Process Monitor](/杂谈/data/processmon.jpg)
 
