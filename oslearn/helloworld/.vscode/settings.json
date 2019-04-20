@@ -1,0 +1,23 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "files.autoSave": "off",
+   // "powershell.powerShellExePath": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
+    "csharp.suppressDotnetRestoreNotification": true,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "omnisharp.projectLoadTimeout": 120,
+    "files.trimTrailingWhitespace": true,
+    "workbench.colorTheme": "Default Light+",
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "git.autofetch": true,
+    "window.zoomLevel": 0,
+    "gitlens.historyExplorer.enabled": true,
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\bash.exe",
+    "terminal.integrated.rendererType": "dom",
+    "gitlens.views.fileHistory.enabled": true,
+    "gitlens.views.lineHistory.enabled": true,
+    "cmake.configureOnOpen": true,
+    "cmake-tools-helper.cmake_download_path": "c:\\Users\\James\\.vscode\\extensions\\maddouri.cmake-tools-helper-0.2.1\\cmake_download"
+}
