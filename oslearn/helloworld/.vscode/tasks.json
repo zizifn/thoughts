@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build hello world on WSL",
+            "type": "shell",
+            "command": "g++",
+            // "options":{
+            //     "shell": {
+            //         "executable": "C:\\Windows\\System32\\bash.exe"
+            //     }
+            // },
+            "args": [
+                "-g",
+                "-o",
+                "/mnt/c/github/thoughts/oslearn/helloworld/helloworld.out",
+                "helloworld.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}
