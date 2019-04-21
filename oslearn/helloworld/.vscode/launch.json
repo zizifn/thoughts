@@ -5,12 +5,12 @@
                 "name": "(gdb) Launch",
                 "type": "cppdbg",
                 "request": "launch",
-                "program": "/mnt/c/github/thoughts/oslearn/helloworld/helloworld.out",
+                "program": "/c/github/thoughts/oslearn/helloworld/staticcreateprocess",
                 "args": ["-fThreading"],
                 "stopAtEntry": true,
-                "cwd": "/mnt/c/github/thoughts/oslearn/helloworld/",
+                "cwd": "/c/github/thoughts/oslearn/helloworld/",
                 "environment": [],
-                "externalConsole": true,
+                "externalConsole": false,
                 "windows": {
                     "MIMode": "gdb",
                     "miDebuggerPath": "/usr/bin/gdb",
@@ -19,7 +19,9 @@
                             "description": "Enable pretty-printing for gdb",
                             "text": "-enable-pretty-printing",
                             "ignoreFailures": true
-                        }
+                        },
+                        // enable gdb
+                       {"text": "-gdb-set follow-fork-mode child"}
                     ]
                 },
                 "pipeTransport": {
@@ -29,7 +31,7 @@
                     "debuggerPath": "/usr/bin/gdb"
                 },
                 "sourceFileMap": {
-                    "/mnt/c": "c:\\",
+                    "/c": "c:\\",
                     "/usr": "C:/Users/James/AppData/Local/Packages/CanonicalGroupLimited.UbuntuonWindows_79rhkp1fndgsc/LocalState/rootfs/usr/"
                 }
             }
