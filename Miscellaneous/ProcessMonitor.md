@@ -1,4 +1,4 @@
-# 是谁在重置Widnows 的DNS Server?
+# 是谁在重置 Windows 的DNS Server?
 
 ## 起因
 
