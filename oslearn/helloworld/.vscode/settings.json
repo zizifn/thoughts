@@ -1,12 +1,15 @@
 // Place your settings in this file to overwrite the default settings
 {
     "files.autoSave": "off",
-   // "powershell.powerShellExePath": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
+    "powershell.powerShellExePath": "C:\\Program Files\\PowerShell\\6\\pwsh.exe",
     "csharp.suppressDotnetRestoreNotification": true,
     "editor.renderWhitespace": "all",
     "editor.renderControlCharacters": true,
     "omnisharp.projectLoadTimeout": 120,
     "files.trimTrailingWhitespace": true,
+    "[markdown]": {
+    "files.trimTrailingWhitespace": false
+    },
     "workbench.colorTheme": "Default Light+",
     "gitlens.advanced.messages": {
         "suppressShowKeyBindingsNotice": true
