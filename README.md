@@ -6,10 +6,12 @@ Thoughts of daily work
 
 ### [Callback and Promise](./Callback_Promise_obser/readme.md)
 
-## 工具
+## 工具 & Miscellaneous
 
-### [是谁在重置Widnows 的DNS Server?(ProcessMonitor使用)](./%E6%9D%82%E8%B0%88/ProcessMonitor.md)
+### [是谁在重置Widnows 的DNS Server?(ProcessMonitor使用)](./Miscellaneous/ProcessMonitor.md)
+
+### [Widnwos Subsystem Linux(WSL)](./Miscellaneous/WSL.MD)
 
 ### [Command](./Command/readme.md)
 
-### [Kubernetes]
+### [Kubernetes](./Kubernetes/readme.md)
