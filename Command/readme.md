@@ -23,3 +23,5 @@
 
 * This command should let you explore a docker image, refer to dokcer doc for detials,
 `docker run --rm -it --entrypoint=/bin/bash name-of-image`
+
+## [PowerShell](./PowerShell.md)
