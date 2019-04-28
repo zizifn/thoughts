@@ -9,14 +9,14 @@
 - 强制指定路由器的DNS Server,但是系统还是会重置DNS Server.
 - 检查registry后,DNS registry会自动改变。
 
-![DNS](/Miscellaneous/data/DNSRegistry.jpg)
+![DNS](../Miscellaneous/data/DNSRegistry.jpg)
 
 ## 工具
 
 于是使用微软的[Process Monitor](https://docs.microsoft.com/zh-cn/sysinternals/downloads/procmon),来检查是谁在变动Registry?
 找到process后，发现是netsh一直在RegsetValue，更改DNS的registry。于是我用`netsh int ip reset` 重置设置。问题解决！至于为什么netsh会重置DNS server，**可能**是由于[Service Fabric](https://azure.microsoft.com/en-us/services/service-fabric/)的Naming Server的原因。
 
-![Process Monitor](/Miscellaneous/data/processmon.jpg)
+![Process Monitor](../Miscellaneous/data/processmon.jpg)
 
 ## 感悟
 
