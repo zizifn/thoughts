@@ -21,5 +21,6 @@
     "gitlens.views.fileHistory.enabled": true,
     "gitlens.views.lineHistory.enabled": true,
     "cmake.configureOnOpen": true,
-    "cmake-tools-helper.cmake_download_path": "c:\\Users\\James\\.vscode\\extensions\\maddouri.cmake-tools-helper-0.2.1\\cmake_download"
+    "cmake-tools-helper.cmake_download_path": "c:\\Users\\James\\.vscode\\extensions\\maddouri.cmake-tools-helper-0.2.1\\cmake_download",
+    "editor.mouseWheelZoom": true
 }
