@@ -1,10 +1,14 @@
 # Guide
 
-## Build Script
+## Lesson and Build Script
 
-Script 有些许注释和解释。  
-build_dynamicLib.ps1  
-build_staticLib.ps1
+Script 有些许**注释和解释**.
+
+### build_dynamicLib.ps1
+
+### build_staticLib.ps1
+
+### lesson11-thread.ps1
 
 ## DEBUG with GDB
 
