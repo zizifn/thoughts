@@ -7,7 +7,8 @@
 
 ### WSL Command
 
-```wsl -help
+``` wsl -help
+wsl -help
 命令行选项无效: -help
 使用: wsl.exe [选项] ......
 选项:
