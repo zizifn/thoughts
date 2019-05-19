@@ -1,6 +1,6 @@
-# thoughts
+# zizifn Thoughts
 
-Thoughts of daily work
+Thoughts of daily work by zizifn.
 
 ## 技术分享
 
