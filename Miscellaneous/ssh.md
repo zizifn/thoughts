@@ -4,9 +4,18 @@
 
 ## Why we need SSH?
 
-- TTY
+- [TTY](https://en.wikipedia.org/wiki/Tty_(unix))?
+[Teleprinter](https://en.wikipedia.org/wiki/Teleprinter)
+[The TTY demystified](http://www.linusakesson.net/programming/tty/index.php)
+- [Docker command example](https://docs.docker.com/v17.12/edge/engine/reference/commandline/container_exec/#description)
 
-## How SSH work ?
+    `--tty , -t	Allocate a pseudo-TTY`
+- How to remote?
+SSH?
+- SSH without tty
+`ssh host_test ls`
+
+## How SSH work?
 
 ![SSH0](./data/SSH0.jpg)
 
