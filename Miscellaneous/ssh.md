@@ -5,13 +5,17 @@
 ## Why we need SSH?
 
 - [TTY](https://en.wikipedia.org/wiki/Tty_(unix))?
-[Teleprinter](https://en.wikipedia.org/wiki/Teleprinter)
-[The TTY demystified](http://www.linusakesson.net/programming/tty/index.php)
+
+    [Teleprinter](https://en.wikipedia.org/wiki/Teleprinter)
+    [The TTY demystified](http://www.linusakesson.net/programming/tty/index.php)
+
 - [Docker command example](https://docs.docker.com/v17.12/edge/engine/reference/commandline/container_exec/#description)
 
     `--tty , -t	Allocate a pseudo-TTY`
+
 - How to remote?
 SSH?
+
 - SSH without tty
 `ssh host_test ls`
 
@@ -88,6 +92,6 @@ IdentityFile ~/.ssh/id_rsa_personal
 
 [OpenSSH Internals for PowerShell Pros by Anthony Nocentino](https://www.youtube.com/watch?v=CPE2-bWK9Vc)
 
-Or if you can't accesss youtube,
+Or if you can't access youtube,
 
 https://www.bilibili.com/video/av52884427/
