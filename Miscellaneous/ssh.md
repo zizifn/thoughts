@@ -7,7 +7,10 @@
 - [TTY](https://en.wikipedia.org/wiki/Tty_(unix))?
 
     [Teleprinter](https://en.wikipedia.org/wiki/Teleprinter)
+
     [The TTY demystified](http://www.linusakesson.net/programming/tty/index.php)
+
+    不严谨的说话，TTY就是终端。terminal。
 
 - [Docker command example](https://docs.docker.com/v17.12/edge/engine/reference/commandline/container_exec/#description)
 
@@ -17,7 +20,23 @@
 SSH?
 
 - SSH without tty
-`ssh host_test ls`
+
+Most command don't need TTY to work.
+
+[More details]:(https://askubuntu.com/questions/716682/remote-ssh-command-requires-a-terminal)
+
+``` bash
+    ssh host_test ls
+    ssh host_test bash
+```
+
+- SSH with tty
+
+``` bash
+    ssh host_test
+    ssh -t host_test "vi text.txt"
+    ssh -t host_test top
+```
 
 ## How SSH work?
 
