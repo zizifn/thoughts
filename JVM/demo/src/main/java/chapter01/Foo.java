@@ -3,7 +3,7 @@ package chapter01;
 public class Foo {
     public static void main(String[] args) {
 
-        boolean flag2 = false;
+        boolean flag2 = true;
 
         for(int i=0;i<100;i++){
             flag2 = true;
