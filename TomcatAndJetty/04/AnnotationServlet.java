@@ -14,10 +14,10 @@ public class AnnotationServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-   System.out.println("AnnotationServlet get.");
+   System.out.println("AnnotationServlet get!.");
         PrintWriter out = response.getWriter();
         response.setContentType("text/html; charset=utf-8");
-        out.println("<strong>Annotation Servlet Get!</strong><br>");
+        out.println("<strong>Annotation Servlet Get!!!!!!!!2</strong><br>");
 
     }
 
