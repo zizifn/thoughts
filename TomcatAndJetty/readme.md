@@ -1,6 +1,7 @@
 # readme
 
-## [04 Basic](./04/readme.md)
+## Tomcat Basic
 
-1. [Tomcat](./04/tomcat.md)
-2. [TomcatWithDocker](./04/TomcatWithDocker.md)
+1. [04](./04/readme.md)
+2. [Tomcat](./04/tomcat.md)
+3. [TomcatWithDocker](./04/TomcatWithDocker.md)
