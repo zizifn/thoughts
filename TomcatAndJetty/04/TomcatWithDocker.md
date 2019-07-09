@@ -2,7 +2,7 @@
 
 ## Sample Java Web Project
 
-1. [Maven sample project](./setup/pom.xml)
+1. [Maven sample project](https://github.com/zizifn/thoughts/tree/master/TomcatAndJetty/04/setup)
     - Folder `webapp`, following the standard.
     - pom.xml for package `war`
     - Default tomcat will append application name into URI, if want use root path, need add below line into `server.xml`, under `<Host>`
