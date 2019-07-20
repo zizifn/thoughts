@@ -23,11 +23,11 @@ Extract `*.war` and copy folder to `$tomcatHome/webapps`.
 
 ## Use Docker for local development
 
-From auto or manually deploy application, you can found below command for Docker
+From auto or manually deploy application, you can easy come out below `powershell` command for Docker
 
 ``` powershell
 docker run -it --rm `
-  -e JPDA_ADDRESS=*:8000 ` # for debug
+  -e JPDA_ADDRESS=*:8000 ` # for debug, tomcat9 need use *:8000, tomcat8 just use 8000
   -e JPDA_TRANSPORT=dt_socket `
   -p 8080:8080 `
   -p 8000:8000 `
