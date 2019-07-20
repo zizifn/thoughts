@@ -13,7 +13,7 @@ public class ServletUT {
     public void radom(){
 
         int random = (int)(Math.random() * 5);
-        System.out.println(random);
+        // System.out.println(random);
 
         SplittableRandom splittableRandom = new SplittableRandom();
 
