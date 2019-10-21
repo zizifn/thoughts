@@ -1,0 +1,10 @@
+<h3>child</h3>
+<div>{{model.prop1}}</div>
+<div>
+    <label>ind {{ind}} </label><br>
+    <label>str {{str}} </label>
+    <label>size {{size}} </label> <br>
+    <input [(ngModel)]="size" (input)="ngOnChange($event)" (input)="ngOnChange2($event)" >
+</div>
+
+<button (click)="updateModel()">update model</button>
