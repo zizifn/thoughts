@@ -1,0 +1,13 @@
+<h2>{{title}}</h2>
+<h3>Parent</h3>
+<div>{{parentModel.prop1}}</div>
+
+<div>
+        <label>ind {{ind}} </label> <br>
+        <label>str {{str}} </label> <br>
+        <label>size: {{size}} </label> <br>
+    </div>
+
+<button (click)="updateModel()">update model</button>
+<app-child [model]="parentModel" [ind]="ind" [str]="str" [(size)]="size"></app-child>
+<footer>Angular version: {{angularVersion}}</footer>
