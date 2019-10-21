@@ -9,10 +9,12 @@ import java.io.PrintWriter;
 
 public class ServletTest extends HttpServlet {
 
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+                TestLombok lombok = new TestLombok();
+                String test1 = lombok.getTest1();
         System.out.println("MyServlet process get");
         PrintWriter out = response.getWriter();
         response.setContentType("text/html;charset=utf-8");
