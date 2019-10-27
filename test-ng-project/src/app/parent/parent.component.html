@@ -1,13 +1,23 @@
-<h2>{{title}}</h2>
+<div class="flex-container div-container">
+<h2>{{ title }}</h2>
 <h3>Parent</h3>
-<div>{{parentModel.prop1}}</div>
+<div>{{ parentModel.prop1 }}</div>
 
 <div>
-        <label>ind {{ind}} </label> <br>
-        <label>str {{str}} </label> <br>
-        <label>size: {{size}} </label> <br>
-    </div>
+    <label>ind {{ ind }} </label> <br />
+    <label>str {{ str }} </label> <br />
+    <label>size: {{ size }} </label> <br />
+</div>
+<div>
+
+<ul>
+</ul>
+
+</div>
+
 
 <button (click)="updateModel()">update model</button>
-<app-child [model]="parentModel" [ind]="ind" [str]="str" [(size)]="size"></app-child>
-<footer>Angular version: {{angularVersion}}</footer>
+<app-child prefix="12345-parent" [model]="parentModel" [ind]="ind" [str]="str" [(size)]="size" class="child-layout div-container"></app-child>
+<footer>Angular version: {{ angularVersion }}</footer>
+</div>
+

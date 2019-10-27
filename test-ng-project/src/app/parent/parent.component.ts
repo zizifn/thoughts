@@ -19,7 +19,7 @@ export class ParentComponent implements OnInit {
   }
 
   updateModel() {
-    this.size +=10;
+    this.size += 10;
     this.str += ' parent';
     this.ind = !this.ind;
     this.parentModel.prop1 += ' parent';
