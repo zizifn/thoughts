@@ -1,0 +1,17 @@
+body {
+    margin: 0%;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.div-container {
+    border: 1px solid red;
+}
+
+.child-layout {
+    border: 5px solid black;
+    margin: 2px;
+}
