@@ -15,6 +15,8 @@ export class ChildComponent implements OnInit {
   @Input()  size: number | string;
   @Output() sizeChange = new EventEmitter<number|string>();
 
+  @Input() prefix: string = 'default prefix';
+
   updateModel() {
     this.str += ' child';
     this.ind = !this.ind;

@@ -1,9 +1,10 @@
 <h3>child</h3>
 <div>{{model.prop1}}</div>
-<div>
+<div class="flex-container">
     <label>ind {{ind}} </label><br>
     <label>str {{str}} </label>
     <label>size {{size}} </label> <br>
+    <span>prefix {{ prefix }} </span>
     <input [(ngModel)]="size" (input)="ngOnChange($event)" (input)="ngOnChange2($event)" >
 </div>
 
