@@ -23,3 +23,5 @@ Thoughts of daily work by zizifn.
 ### [Open SSH](./Miscellaneous/ssh.md)
 
 ### [Tools](./Miscellaneous/Tools.md)
+
+### [Java syntax I feel odd](./Miscellaneous/Java.md)
