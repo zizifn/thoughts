@@ -21,17 +21,19 @@ public class MyConfig {
     private static final Logger log = org.slf4j.LoggerFactory.getLogger(MyConfig.class);
 
     @Bean
-    @ConfigurationProperties("bar.datasource")
+    @ConfigurationProperties("bar.datasource.druid")
     public DataSourceProperties barDataSourceProperties(){
-        log.info("bar barDataSourceProperties");
+        log.info("foo barDataSourceProperties");
         return new DataSourceProperties();
     }
 
     @Bean
+    @ConfigurationProperties("bar.datasource.druid")
     public DataSource barDataSource() {
         log.info("bar barDataSource:1");
         DataSourceProperties dataSourceProperties = barDataSourceProperties();
         log.info("bar datasource: {}", dataSourceProperties.getUrl());
+        log.info("bar datasource type: {}", dataSourceProperties.getType());
         return dataSourceProperties.initializeDataSourceBuilder().build();
     }
 
@@ -49,17 +51,19 @@ public class MyConfig {
     }
 
     @Bean
-    @ConfigurationProperties("foo.datasource")
+    @ConfigurationProperties("foo.datasource.hikari")
     public DataSourceProperties fooDataSourceProperties(){
-        log.info("foo barDataSourceProperties");
+        log.info("foo fooDataSourceProperties");
         return new DataSourceProperties();
     }
 
     @Bean
+    @ConfigurationProperties("foo.datasource.hikari")
     public DataSource fooDataSource() {
-        log.info("foo barDataSource:1");
+        log.info("foo fooDataSource:1");
         DataSourceProperties dataSourceProperties = fooDataSourceProperties();
         log.info("foo datasource: {}", dataSourceProperties.getUrl());
+        log.info("foo datasource type: {}", dataSourceProperties.getType());
         return dataSourceProperties.initializeDataSourceBuilder().build();
     }
 
