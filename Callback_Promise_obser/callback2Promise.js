@@ -72,7 +72,7 @@ function get(url) {
 // same error function return Error object, same as construct
 // console.log(Error("test error"));
 // console.log(new Error("test error"));
-// get("http://zizi.press").then(
+// get("http://").then(
 //     (value) => {
 //         console.log("Success", value);
 //     }
