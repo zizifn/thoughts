@@ -14,4 +14,9 @@ export class FlexBoxComponent implements OnInit {
   ngOnInit() {
   }
 
+  inputClick(event){
+    console.log("input!!!!!!!!!!!")
+  }
+
+
 }
