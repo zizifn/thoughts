@@ -5,3 +5,7 @@ if (testStr || testStr === '') {
 } else {
     console.log("test str is false");
 }
+
+var funTest = (s: string) => "test";
+
+console.log(funTest('ddd'));

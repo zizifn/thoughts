@@ -33,7 +33,7 @@ public class DemoApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		log.info("command runner111");
-		barJdbcTemplate.queryForList("select * from test").forEach(
+		barJdbcTemplate.queryForList("SELECT * FROM test").forEach(
 				value -> log.info(value.toString())
 		);
 	}

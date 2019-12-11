@@ -4,11 +4,24 @@
     <p>X100</p>
 </div>
 
-<p>flex-box works!</p>
+<p>flex-box works!!!!!!--from chrome deftools</p>
 <div>test&#13;test1
 </div>
 <span>NYSE&#13; 100</span><br/>
 <span>X 100</span>
+
+    <div class="btn-group btn-group-toggle" ngbRadioGroup name="radioBasic">
+        <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" [value]="1"> Left (pre-checked)
+        </label>
+        <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" value="middle"> Middle
+        </label>
+        <label ngbButtonLabel class="btn-primary">
+            <input ngbButton type="radio" [value]="false" (click)="inputClick()"> Right
+        </label>
+    </div>
+
 <p class="small">
         This is a paragraph with a smaller line-height.<br>
         This is a paragraph with a smaller line-height.<br>

@@ -1,6 +1,8 @@
 package com.james.demo;
 
+import com.zaxxer.hikari.HikariDataSource;
 import org.slf4j.Logger;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -30,6 +32,7 @@ public class MyConfig {
     @Bean
     @ConfigurationProperties("bar.datasource.druid")
     public DataSource barDataSource() {
+        HikariDataSource test= null;
         log.info("bar barDataSource:1");
         DataSourceProperties dataSourceProperties = barDataSourceProperties();
         log.info("bar datasource: {}", dataSourceProperties.getUrl());
@@ -45,7 +48,7 @@ public class MyConfig {
 
     @Bean
     @Resource
-    public PlatformTransactionManager barTxManager(DataSource barDataSource) {
+    public PlatformTransactionManager barTxManager(DataSource barDataSource, @Qualifier("barDataSourceProperties")DataSourceProperties barDataSourcePropertie) {
         log.info("bar fooTxManager");
         return new DataSourceTransactionManager(barDataSource);
     }
@@ -66,6 +69,20 @@ public class MyConfig {
         log.info("foo datasource type: {}", dataSourceProperties.getType());
         return dataSourceProperties.initializeDataSourceBuilder().build();
     }
+
+//    @Bean
+//    public DataSourceInitializer dataSourceInitializer1(@Qualifier("fooDataSource") DataSource datasource,
+//                                                        @Qualifier("fooDataSourceProperties")DataSourceProperties dataSourceProperties) {
+//        ResourceDatabasePopulator resourceDatabasePopulator = new ResourceDatabasePopulator();
+//        resourceDatabasePopulator.addScript(new ClassPathResource(dataSourceProperties.getSchema().get(0)));
+//        resourceDatabasePopulator.addScript(new ClassPathResource(dataSourceProperties.getSchema().get(0)));
+//
+//        DataSourceInitializer dataSourceInitializer = new DataSourceInitializer();
+//        dataSourceInitializer.setDataSource(datasource);
+//        dataSourceInitializer.setDatabasePopulator(resourceDatabasePopulator);
+//        return dataSourceInitializer;
+//    }
+
 
     @Bean
     @Resource
