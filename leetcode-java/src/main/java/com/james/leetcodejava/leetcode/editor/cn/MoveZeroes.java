@@ -29,7 +29,7 @@
 
            Solution solution = new MoveZeroes().new Solution();
           int[] nums = new int[]{0,0,1,0,3,12};
-          nums = new int[]{1,3,12};
+         // nums = new int[]{1,3,12};
           solution.moveZeroes(nums);
           for (int num: nums
           ) {
@@ -42,18 +42,40 @@
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public void moveZeroes(int[] nums) {
-        int nonzeroLocation = 0;
-        for (int i = 0, numsLength = nums.length; i < numsLength; i++) {
-            int num = nums[i];
-            if (num != 0) {
-                int temp = nums[nonzeroLocation];
-                nums[nonzeroLocation] = num;
-                nums[i] = temp;
-                nonzeroLocation = nonzeroLocation + 1;
-            }
 
+        int nonZeroIndex = 0;
+        int index =0;
+        nonZeroIndex = moveZeroes(nonZeroIndex, index, nums);
+    }
+
+    private int moveZeroes(int nonZeroIndex, int index, int[] nums) {
+        if(index > nums.length -1){
+            return nonZeroIndex;
         }
-        
+        int num = nums[index++];
+        if(num!=0){
+            nums[nonZeroIndex++] = num;
+        }
+
+        return moveZeroes(nonZeroIndex, index, nums);
+    }
+}
+
+
+
+      class Solution2 {
+    public void moveZeroes(int[] nums) {
+
+        int index = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i] != 0){
+                int temp = nums[index];
+                nums[index] = nums[i];
+                nums[i] = temp;
+                index++ ;
+            }
+            
+        }
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
