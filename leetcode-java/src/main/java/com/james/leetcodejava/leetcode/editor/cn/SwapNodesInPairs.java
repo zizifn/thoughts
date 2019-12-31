@@ -21,10 +21,10 @@
           ListNode head5 = new ListNode(5);
 
           head.next = head2;
-          head2.next = head3;
-          head3.next = head4;
-          head4.next = head5;
-          head5.next = null;
+//          head2.next = head3;
+//          head3.next = head4;
+//          head4.next = head5;
+//          head5.next = null;
 
           ListNode listNode = solution.swapPairs(head);
 
@@ -46,7 +46,28 @@
  * }
  */
 class Solution {
+
     public ListNode swapPairs(ListNode head) {
+
+        if(head == null || head.next == null){
+            return head;
+        }
+        ListNode newHead = new ListNode(-1);
+        newHead.next = head;
+        head = newHead;
+
+        for( int i = 0; head.next !=null && head.next.next !=null ; i++, head = head.next.next) {
+
+            ListNode tempHead = head.next.next;
+            head.next.next = tempHead.next;
+            tempHead.next = head.next;
+            head.next = tempHead;
+        }
+        return newHead.next;
+
+    }
+
+    public ListNode swapPairs2(ListNode head) {
         if(head== null || head.next == null){
             return head;
         }
