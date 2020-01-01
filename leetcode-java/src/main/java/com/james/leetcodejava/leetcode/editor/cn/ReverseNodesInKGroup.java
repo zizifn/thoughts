@@ -38,12 +38,17 @@ public class ReverseNodesInKGroup {
 //        head2.next = head;
           head2.next = head3;
           head3.next = head4;
-//          head4.next = head5;
+          head4.next = head5;
 //          head5.next = null;
 
-        ListNode listNode = solution.reverseKGroup(head, 2);
+        ListNode listNode = solution.reverseKGroup(head5, 2);
 
-        System.out.println();
+        for (int i = 0; listNode != null; i++) {
+            System.out.println(listNode.val);
+            listNode = listNode.next;
+
+        }
+//        System.out.println();
     }
 
 
@@ -58,14 +63,17 @@ public class ReverseNodesInKGroup {
      * }
      */
     class Solution {
+
+        // n+ k*n/k = 2n
         public ListNode reverseKGroup(ListNode head, int k) {
 
             ListNode newHead = null;
             ListNode initHead = head;
-            ListNode loopHead = head;
-            for (int i = 1; loopHead != null ; i++, loopHead = initHead.next) {
-                if(i!=1 && i%k == 0){
-                    ListNode tempHead = head.next;
+            ListNode lastkGroupTail = null;
+            for (int i = 0; true ; i++) {
+                if(i!=0 && i%k == 0){
+                    ListNode tempHead = head;
+                    ListNode currentkGroupHead = initHead;
                     for (int j = 0; j < k; j++) {
                         ListNode temp = initHead;
                         initHead = initHead.next;
@@ -73,45 +81,78 @@ public class ReverseNodesInKGroup {
                         tempHead = temp;
 
                     }
-                    if(newHead ==null){
-                        newHead = head;
+                    if(newHead == null){
+                        newHead = tempHead;
                     }
-                    if(initHead == null){
-                        break;
+
+                    if(lastkGroupTail!=null){
+                        lastkGroupTail.next = tempHead;
                     }
-                    i++;
+                    lastkGroupTail = currentkGroupHead;
 
                 }
 
-            }
-
-            return newHead;
-        }
-
-        private ListNode reverseList(ListNode head, int k) {
-
-            ListNode tempHead = head;
-            int i = 0;
-            for (; tempHead != null; i++, tempHead = tempHead.next) {
-                if (i > k) {
+                if(head == null){
                     break;
                 }
-            }
-            // 先定义一个新的头部，然后依次对这个经行操作。
-            ListNode newHead = null;
-            if (i >= k) {
-                for (int j = 0; j != k && head !=null; j++) {
-                    ListNode temp = head;
-                    head = head.next;
-                    temp.next = newHead;
-                    newHead = temp;
+                head = head.next;
 
-                }
-            } else {
-                return head;
             }
+            // if linked list size NOT > K, return linked list
+            if(newHead == null){
+                return initHead;
+            }
+
             return newHead;
         }
+
+        // n+ k*n/k = 2n
+        public ListNode reverseKGroup2(ListNode head, int k) {
+
+            ListNode newHead = null;
+            ListNode currentKGroupHead = head;
+            ListNode lastkGroupTail = null;
+            for (int i = 0; true ; i++) {
+                if(i!=0 && i%k == 0){
+
+                    //每次遇到k的节点，把之前K个节点翻转。
+                    // 需要记录上个K group的尾部和这个Kgroup的头部
+                    ListNode tempHead = head;
+                    ListNode tempCurrentkGroupHead = currentKGroupHead;
+                    for (int j = 0; j < k; j++) {
+                        ListNode temp = currentKGroupHead;
+                        currentKGroupHead = currentKGroupHead.next;
+                        temp.next = tempHead;
+                        tempHead = temp;
+
+                    }
+                    if(newHead == null){
+                        newHead = tempHead;
+                    }
+
+                    // 关联 上个K group的尾部和这个Kgroup的头部
+                    if(lastkGroupTail!=null){
+                        lastkGroupTail.next = tempHead;
+                    }
+                    lastkGroupTail = tempCurrentkGroupHead;
+
+                }
+
+                if(head == null){
+                    break;
+                }
+                head = head.next;
+
+            }
+            // if linked list size NOT > K, return linked list
+            if(newHead == null){
+                return currentKGroupHead;
+            }
+
+            return newHead;
+        }
+
+
 
     }
 //leetcode submit region end(Prohibit modification and deletion)
