@@ -15,7 +15,7 @@ public class ReverseLinkedList {
     public static void main(String[] args) {
         Solution solution = new ReverseLinkedList().new Solution();
 
-        ListNode head = new ListNode(1);
+        ListNode head =  new ListNode(1);
         ListNode head2 = new ListNode(2);
         ListNode head3 = new ListNode(3);
         ListNode head4 = new ListNode(4);
@@ -32,7 +32,6 @@ public class ReverseLinkedList {
         for (int i = 0; listNode != null; i++) {
             System.out.println(listNode.val);
             listNode = listNode.next;
-
         }
 
     }
