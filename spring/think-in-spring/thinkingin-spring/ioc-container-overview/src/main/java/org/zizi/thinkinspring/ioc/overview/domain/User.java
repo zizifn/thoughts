@@ -34,4 +34,8 @@ public class User {
                 '}';
     }
 
+    public static User createUser(){
+        return new User();
+    }
+
 }

@@ -1,0 +1,8 @@
+<p>redux-test works!</p>
+<div>
+    <input type="button" (click)="onMyClick($event)" />
+</div>
+
+<ul>
+    <li *ngFor="let item of (store.state$ | async).someModel as SomeModel">{{item.name}}</li>
+</ul>
