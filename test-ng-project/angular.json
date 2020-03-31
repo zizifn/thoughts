@@ -43,9 +43,15 @@
               ],
               "optimization": true,
               "outputHashing": "all",
-              "sourceMap": false,
+              "sourceMap": {
+                "hidden": true,
+                "scripts": true,
+                "styles": true
+              },
               "extractCss": true,
-              "namedChunks": false,
+              "namedChunks": true,
+              "outputPath": "dist-prod/test-ng-project",
+              "deployUrl": "./ngtest/test-ng-project/",
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
