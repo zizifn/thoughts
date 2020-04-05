@@ -11,6 +11,6 @@ while ($true)
   [System.Windows.Forms.Cursor]::Position = New-Object System.Drawing.Point($x, $y)
   Echo "Moving mouse...x = $x  y= $y"
   
-  Start-Sleep -Seconds 100
+  Start-Sleep -Seconds 6000
   $PlusOrMinus *= -1
 }
