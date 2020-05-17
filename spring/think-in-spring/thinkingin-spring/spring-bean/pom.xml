@@ -24,10 +24,7 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>${groupId}</groupId>
             <artifactId>ioc-container-overview</artifactId>
