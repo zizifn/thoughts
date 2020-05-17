@@ -10,6 +10,7 @@
     <modules>
         <module>ioc-container-overview</module>
         <module>spring-bean</module>
+        <module>dependcy-lookup</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -34,6 +35,13 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+    <dependencies>
+<!--        ioc-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>

@@ -25,3 +25,5 @@ Thoughts of daily work by zizifn.
 ### [Tools](./Miscellaneous/Tools.md)
 
 ### [Java syntax I feel odd](./Miscellaneous/Java.md)
+
+### [Use Closure 实现 OOP](./Miscellaneous/closure/closure.md)
