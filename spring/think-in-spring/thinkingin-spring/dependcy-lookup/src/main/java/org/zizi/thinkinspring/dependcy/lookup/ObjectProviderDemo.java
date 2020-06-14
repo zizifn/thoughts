@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Bean;
 public class ObjectProviderDemo {
 
     public static void main(String[] args) {
-        
         // create bean factory
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
 

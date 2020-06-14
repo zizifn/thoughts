@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title>RXJS sample
+    </title>
+    <!-- Everything is imported under the rxjs namespace -->
+    <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+</head>
+
+<body>
+    <button> click me</button>
+    <script>
+        const fromEvent = rxjs.fromEvent;
+        const interval = rxjs.interval;
+        const Observable = rxjs.Observable;
+        const of = rxjs.of;
+        const Subject = rxjs.Subject;
+        const map = rxjs.operators.map;
+        const tap = rxjs.operators.tap;
+        const take = rxjs.operators.take;
+        const throttleTime = rxjs.operators.throttleTime;
+        // wait for some time, reduce http request
+        const debounceTime = rxjs.operators.debounceTime;
+        const distinctUntilChanged = rxjs.operators.distinctUntilChanged;
+
+        const scan = rxjs.operators.scan;
+        const reduce = rxjs.operators.reduce;
+
+        const pluck = rxjs.operators.pluck;
+
+        const mergeMap = rxjs.operators.mergeMap;
+        const switchMap = rxjs.operators.switchMap;
+
+        const filter = rxjs.operators.filter;
+
+        var button = document.querySelector('button');
+
+        var obserable2 = interval(1000)
+
+
+        fromEvent(button, 'click').pipe(
+            switchMap(
+                event => obserable2
+            )
+        ).
+            subscribe(
+                (value) => console.log(value),
+                (error) => console.log(error),
+                () => console.log("complete"))
+
+const switched = of(1, 2, 3).pipe(switchMap((x) => of(x, x ** 2, x ** 3)));
+switched.subscribe(x => console.log(x));
+// 1
+// 1
+// 1
+// 2
+// 4
+// 8
+    </script>
+</body>
+
+</html>

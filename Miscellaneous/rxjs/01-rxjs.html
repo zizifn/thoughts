@@ -1,0 +1,36 @@
+<html>
+
+<head>
+    <title>
+        RXJS sample
+    </title>
+        <!-- Everything is imported under the rxjs namespace -->
+
+</head>
+
+<body>
+
+    <button> click me</button>
+    <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+    <script>
+        const fromEvent = rxjs.fromEvent;
+        const map = rxjs.operators.map;
+        const throttleTime = rxjs.operators.throttleTime;
+
+        var button = document.querySelector('button');
+        // button.addEventListener(
+        //     'click',
+        //     event => console.log(event)
+        // )
+
+        // lession 1
+        rxjs.fromEvent(button, 'click').pipe(
+            throttleTime(1000),
+            map(event => event.clientY)
+            ).subscribe(
+            event =>  console.log(event)
+        )
+    </script>
+</body>
+
+</html>

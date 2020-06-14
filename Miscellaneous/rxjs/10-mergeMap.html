@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <title>RXJS sample
+    </title>
+    <!-- Everything is imported under the rxjs namespace -->
+    <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+</head>
+
+<body>
+    <input type="text" id="input1"></input>
+    <input type="text" id="input2"></input>
+    <p>Combined value:<span></span></p>
+    <script>
+        const fromEvent = rxjs.fromEvent;
+        const interval = rxjs.interval;
+        const Observable = rxjs.Observable;
+        const of = rxjs.of;
+        const Subject = rxjs.Subject;
+        const map = rxjs.operators.map;
+        const tap = rxjs.operators.tap;
+        const take = rxjs.operators.take;
+        const throttleTime = rxjs.operators.throttleTime;
+        // wait for some time, reduce http request
+        const debounceTime = rxjs.operators.debounceTime;
+        const distinctUntilChanged = rxjs.operators.distinctUntilChanged;
+
+        const scan = rxjs.operators.scan;
+        const reduce = rxjs.operators.reduce;
+
+        const pluck = rxjs.operators.pluck;
+
+        const mergeMap = rxjs.operators.mergeMap;
+
+        const filter = rxjs.operators.filter;
+        var input1 = document.querySelector('#input1');
+        var input2 = document.querySelector('#input2');
+
+        var span = document.querySelector('span');
+
+
+        fromEvent(input1, 'input').pipe(
+            mergeMap(
+                (event1) => {
+                    return fromEvent(input2, 'input').pipe(map(
+                        event2 => event1.target.value + ' ' + event2.target.value))
+                }
+            )
+        ).
+            subscribe(
+                (value) => console.log(span.textContent = value),
+                (error) => console.log(error),
+                () => console.log("complete"))
+
+
+        const letters = of('a', 'b', 'c');
+        const result = letters.pipe(
+            mergeMap(x => interval(1000).pipe(map(i => x + i))),
+        );
+        result.subscribe(x => console.log(x));
+
+    </script>
+</body>
+
+</html>
