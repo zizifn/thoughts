@@ -36,6 +36,9 @@
 
 
     <button (click)="updateModel()">update model</button>
+    <button (click)="clickTest()">click</button>
+    <button (click)="subscribeClick()">subscribe click</button>
+    <button (click)="sentNext()">sentNext</button>
     <app-child prefix="12345-parent" [model]="parentModel" [ind]="ind" [str]="str" [(size)]="size"
         class="child-layout div-container"></app-child>
     <footer>Angular version: {{ angularVersion }}</footer>

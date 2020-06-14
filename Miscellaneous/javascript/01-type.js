@@ -108,3 +108,52 @@ console.log(o + "")
 console.log(o -2 ) // 当然可以通过增强Symbol.toPrimitive来handle number的case
 // toPrimitive
 // NaN
+
+
+// promise
+
+
+function foo(){
+    var testVar = "test";
+    // Promise.resolve("done").then(
+    //     (value) => {
+    //         console.log(value + testVar);
+    //     }
+    // );
+    setTimeout(function(){
+        console.log("dddd" + testVar);
+    }, 300);
+}
+foo();
+console.log("end main");
+
+function foo() {
+    var testObject = {
+        testVar1: "test111",
+        // Promise.resolve("done").then(
+        //     (value) => {
+        //         console.log(value + testVar);
+        //     }
+        // );
+
+        log: function () {
+            console.log("inside log " + this.testVar1);
+            setTimeout(
+                () => {
+                    console.log("dddd " + this.testVar1);
+                }, 300);
+
+            console.log("end log method " + this.testVar1);
+        }
+    }
+    console.log("call   testObject.log");
+    testObject.log();
+
+}
+foo();
+console.log("end foo");
+setTimeout(
+    () => {
+        console.log("setTimeout " + this);
+    }, 300);
+console.log("end main");

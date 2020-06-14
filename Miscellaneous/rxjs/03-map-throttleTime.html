@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>RXJS sample
+    </title>
+    <!-- Everything is imported under the rxjs namespace -->
+    <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+</head>
+
+<body>
+    <button>click me</button>
+    <script>
+        const Observable = rxjs.Observable;
+        const map = rxjs.operators.map;
+        const take = rxjs.operators.take;
+        const throttleTime = rxjs.operators.throttleTime;
+        var button = document.querySelector('button');
+
+        rxjs.interval(1000).pipe(
+        map(value => "number " +  value),
+        throttleTime(2000),
+        take(30)
+        )
+        .subscribe(
+            (value) => console.log(value)
+        );
+
+    </script>
+</body>
+
+</html>

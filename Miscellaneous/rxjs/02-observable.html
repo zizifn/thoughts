@@ -1,0 +1,46 @@
+<html>
+    <head>
+        <title>RXJS sample
+    </title>
+        <!-- Everything is imported under the rxjs namespace -->
+        <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+    </head>
+    <body>
+        <button>click me</button>
+        <script>
+            const Observable = rxjs.Observable;
+
+            let observer = {
+                next: (event)=>console.log(event),
+                error: (error)=>console.log(error),
+                complete: ()=>console.log("complete")
+            }
+
+            var button = document.querySelector('button');
+
+            var observable = Observable.create((obser)=>{
+                button.onclick = (event)=>{
+                    obser.next(event) // obser closure
+                };
+                obser.next("value");
+                // async
+                setTimeout(()=>{
+                    obser.next("timeout next")
+                    // obser closure
+                }, 2000);
+
+                obser.next("second next value");
+
+                // after error no other next
+                //             obser.complete("complete");
+                //             obser.error("error");
+                //             obser.next("next value");
+            }
+            );
+
+            // 每一次 subscribe 都会执行一遍 create里面的函数
+            observable.subscribe(observer);
+            observable.subscribe(event=>console.log("2 " + event));
+        </script>
+    </body>
+</html>
