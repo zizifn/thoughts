@@ -28,10 +28,14 @@
 // test.log()
 
 var bar = {
-    myName:"bar object",
+    myName: "bar object",
     printName: function () {
         console.log(myName)
     }
+}
+
+for (let a in bar) {
+    console.log(a)
 }
 
 function test() {
@@ -49,3 +53,14 @@ let myName = "main method"
 let _printName = foo()
 _printName() // "main method"
 bar.printName() // "main method"
+
+function f() {
+    let a = 2;
+    {
+        let a = 3;
+    }
+
+    console.log(a)
+
+}
+
