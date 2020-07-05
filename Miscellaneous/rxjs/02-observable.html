@@ -1,46 +1,49 @@
 <html>
-    <head>
-        <title>RXJS sample
+
+<head>
+    <title>RXJS sample
     </title>
-        <!-- Everything is imported under the rxjs namespace -->
-        <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
-    </head>
-    <body>
-        <button>click me</button>
-        <script>
-            const Observable = rxjs.Observable;
+    <!-- Everything is imported under the rxjs namespace -->
+    <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+</head>
 
-            let observer = {
-                next: (event)=>console.log(event),
-                error: (error)=>console.log(error),
-                complete: ()=>console.log("complete")
-            }
+<body>
+    <button>click me</button>
+    <script>
+        const Observable = rxjs.Observable;
 
-            var button = document.querySelector('button');
+        let observer = {
+            next: (event) => console.log(event),
+            error: (error) => console.log(error),
+            complete: () => console.log("complete")
+        }
 
-            var observable = Observable.create((obser)=>{
-                button.onclick = (event)=>{
-                    obser.next(event) // obser closure
-                };
-                obser.next("value");
-                // async
-                setTimeout(()=>{
-                    obser.next("timeout next")
-                    // obser closure
-                }, 2000);
+        var button = document.querySelector('button');
 
-                obser.next("second next value");
+        var observable = Observable.create((obser) => {
+            button.onclick = (event) => {
+                obser.next(event)// obser closure
+            };
+            obser.next("value");
+            // async
+            setTimeout(() => {
+                obser.next("timeout next")
+                // obser closure
+            }, 2000);
 
-                // after error no other next
-                //             obser.complete("complete");
-                //             obser.error("error");
-                //             obser.next("next value");
-            }
-            );
+            obser.next("second next value");
 
-            // 每一次 subscribe 都会执行一遍 create里面的函数
-            observable.subscribe(observer);
-            observable.subscribe(event=>console.log("2 " + event));
-        </script>
-    </body>
+            // after error no other next
+            //             obser.complete("complete");
+            //             obser.error("error");
+            //             obser.next("next value");
+        }
+        );
+
+        // 每一次 subscribe 都会执行一遍 create里面的函数
+        observable.subscribe(observer);
+        observable.subscribe(event => console.log("2 " + event));
+    </script>
+</body>
+
 </html>

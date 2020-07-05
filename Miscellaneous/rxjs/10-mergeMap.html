@@ -46,8 +46,7 @@
                         event2 => event1.target.value + ' ' + event2.target.value))
                 }
             )
-        ).
-            subscribe(
+        ).subscribe(
                 (value) => console.log(span.textContent = value),
                 (error) => console.log(error),
                 () => console.log("complete"))
