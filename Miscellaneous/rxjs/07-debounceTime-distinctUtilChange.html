@@ -29,7 +29,7 @@
             tap((ev) => console.log("tap")),
             map(ev => ev.target.value),
             debounceTime(500),
-            distinctUntilChanged()
+            // distinctUntilChanged()
         ).
             subscribe(
                 (value) => console.log(value),
