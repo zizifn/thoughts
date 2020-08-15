@@ -12,7 +12,11 @@ Thoughts of daily work by zizifn.
 
 ## 工具 & Miscellaneous
 
-### [是谁在重置Widnows 的DNS Server?(ProcessMonitor使用)](./Miscellaneous/ProcessMonitor.md)
+## JavaScript
+
+### [RXJS](./Miscellaneous/rxjs/readme.md)
+
+### [是谁在重置 Widnows 的 DNS Server?(ProcessMonitor 使用)](./Miscellaneous/ProcessMonitor.md)
 
 ### [Windows Subsystem Linux(WSL)](./Miscellaneous/WSL.MD)
 

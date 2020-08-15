@@ -10,7 +10,8 @@
     <ng-template #testViewChild></ng-template>
 </div>
 
-<p>flex-box works!!!!!!--from chrome deftools</p>
+<p *ngIf="testViewChildInd; else testblock">flex-box works!!!!!!--from chrome deftools</p>
+<ng-template #testblock>test else block</ng-template>
 <div>test&#13;test1
 </div>
 <span>NYSE&#13; 100</span><br />

@@ -45,18 +45,19 @@
                     return fromEvent(input2, 'input').pipe(map(
                         event2 => event1.target.value + ' ' + event2.target.value))
                 }
-            )
+            ),
+            map(v => 1111)
         ).subscribe(
-                (value) => console.log(span.textContent = value),
-                (error) => console.log(error),
-                () => console.log("complete"))
+            (value) => console.log(span.textContent = value),
+            (error) => console.log(error),
+            () => console.log("complete"))
 
 
-        const letters = of('a', 'b', 'c');
-        const result = letters.pipe(
-            mergeMap(x => interval(1000).pipe(map(i => x + i))),
-        );
-        result.subscribe(x => console.log(x));
+        // const letters = of('a', 'b', 'c');
+        // const result = letters.pipe(
+        //     mergeMap(x => interval(1000).pipe(map(i => x + i))),
+        // );
+        // result.subscribe(x => console.log(x));
 
     </script>
 </body>

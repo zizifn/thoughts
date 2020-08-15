@@ -8,7 +8,8 @@
 </head>
 
 <body>
-    <button> click me</button>
+    <button id="button1"> click me</button>
+    <button id="button2"> click me2</button>
     <script>
         const fromEvent = rxjs.fromEvent;
         const interval = rxjs.interval;
@@ -28,13 +29,17 @@
 
         const pluck = rxjs.operators.pluck;
 
+
         const mergeMap = rxjs.operators.mergeMap;
-         const mergeAll = rxjs.operators.mergeAll;
+        const mergeAll = rxjs.operators.mergeAll;
         const switchMap = rxjs.operators.switchMap;
+        const delay = rxjs.operators.delay;
+        const catchError = rxjs.operators.catchError;
 
         const filter = rxjs.operators.filter;
 
-        var button = document.querySelector('button');
+        var button = document.querySelector('#button1');
+        var button2 = document.querySelector('#button2');
 
         var obserable2 = interval(1000)
 
@@ -43,14 +48,51 @@
             switchMap(
                 event => obserable2
             )
-        ).
-            subscribe(
-                (value) => console.log(value),
-                (error) => console.log(error),
-                () => console.log("complete"))
+        ).subscribe(
+            (value) => console.log(value),
+            (error) => console.log(error),
+            () => console.log("complete"))
 
-const switched = of(1, 2, 3).pipe(switchMap((x) => of(x, x ** 2, x ** 3)));
-switched.subscribe(x => console.log(x));
+        const switched = of(1, 2, 3).pipe(switchMap((x) => of(x, x ** 2, x ** 3).pipe(delay(100))));
+        switched.subscribe(x => console.log(x));
+
+
+        var s1 = new Subject();
+        function check(value) {
+            if (value === 3) {
+                throw new Error('error in check')
+            }
+            return value;
+        }
+        function checkOuter(value) {
+            if (value === 4) {
+                throw new Error('error in check')
+            }
+            return value;
+        }
+        s1.pipe(
+            switchMap(
+                (value) =>
+                    of(value).pipe(
+                        filter(check),
+                        catchError(error => {
+                            console.log('inner observable error');
+                            return of('inner error catch');
+                        })
+                    )
+            ),
+            filter(checkOuter),
+            catchError(error => {
+                console.log('outer observable error');
+                return of('outer error catch');
+            })
+        ).subscribe(console.log, console.log)
+        s1.next('11') // 11
+        s1.next(3) // inner observable error <br> inner error catch.
+        s1.next('11') // 11
+        s1.next(4) //outer observable error <br> outer error catch
+        s1.next('11') // no output
+        s1.observers // []
 // 1
 // 1
 // 1

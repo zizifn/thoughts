@@ -1,19 +1,28 @@
-import { Component, OnInit, ViewChild, ViewContainerRef, ComponentRef, ComponentFactoryResolver, AfterViewInit, ViewChildren, Inject } from '@angular/core';
-import { ParamMap, convertToParamMap} from '@angular/router'
-import {Location} from '@angular/common'
-import { ViewchildTestComponent } from '../viewchild-test/viewchild-test.component';
+import {
+  Component,
+  OnInit,
+  ViewChild,
+  ViewContainerRef,
+  ComponentRef,
+  ComponentFactoryResolver,
+  AfterViewInit,
+  ViewChildren,
+  Inject,
+} from "@angular/core";
+import { ParamMap, convertToParamMap } from "@angular/router";
+import { Location } from "@angular/common";
+import { ViewchildTestComponent } from "../viewchild-test/viewchild-test.component";
+// import { fastequal } from "fast-deep-equal";
 
 @Component({
-  selector: 'app-flex-box',
-  templateUrl: './flex-box.component.html',
-  styleUrls: ['./flex-box.component.scss']
+  selector: "app-flex-box",
+  templateUrl: "./flex-box.component.html",
+  styleUrls: ["./flex-box.component.scss"],
 })
 export class FlexBoxComponent implements OnInit, AfterViewInit {
-
-
-  @ViewChild('testViewChild',{static:false,read:ViewContainerRef})
+  @ViewChild("testViewChild", { static: false, read: ViewContainerRef })
   public testViewChild: ViewContainerRef;
-  public testViewChildRef:ComponentRef<ViewchildTestComponent>;
+  public testViewChildRef: ComponentRef<ViewchildTestComponent>;
 
   testViewChildInd = true;
 
@@ -22,31 +31,34 @@ export class FlexBoxComponent implements OnInit, AfterViewInit {
   constructor(
     public resolver: ComponentFactoryResolver,
     @Inject(Location) public location: Location
-  ) { }
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   ngAfterViewInit(): void {
-    const viewChildTestFac = this.resolver.resolveComponentFactory(ViewchildTestComponent);
-    this.testViewChildRef = this.testViewChild.createComponent(viewChildTestFac);
+    const viewChildTestFac = this.resolver.resolveComponentFactory(
+      ViewchildTestComponent
+    );
+    this.testViewChildRef = this.testViewChild.createComponent(
+      viewChildTestFac
+    );
   }
 
-  inputClick(event){
-    let test  = convertToParamMap({id:[1,2]});
-    let test2  = convertToParamMap({});
-    let test3  = convertToParamMap(null);
+  inputClick(event) {
+    let test = convertToParamMap({ id: [1, 2] });
+    let test2 = convertToParamMap({});
+    let test3 = convertToParamMap(null);
 
-    console.log("input!!!!!!!!!!!")
+    // fastequal(test, test2);
+
+    console.log("input!!!!!!!!!!!");
   }
 
-  testViewChildIndClick(){
-    this.location.go('hook');
+  testViewChildIndClick() {
+    this.location.go("hook");
     this.testViewChildInd = !this.testViewChildInd;
     //this.testViewChild.parentInjector.
     console.log(this.testViewChild); // null
-     console.log(this.testViewChildRef);
+    console.log(this.testViewChildRef);
   }
-
-
 }
