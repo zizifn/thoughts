@@ -10,11 +10,11 @@ Thoughts of daily work by zizifn.
 
 ### [TomcatAndJetty](./TomcatAndJetty/readme.md)
 
-## 工具 & Miscellaneous
-
 ## JavaScript
 
 ### [RXJS](./Miscellaneous/rxjs/readme.md)
+
+## 工具 & Miscellaneous
 
 ### [是谁在重置 Widnows 的 DNS Server?(ProcessMonitor 使用)](./Miscellaneous/ProcessMonitor.md)
 
