@@ -31,3 +31,5 @@ Thoughts of daily work by zizifn.
 ### [Java syntax I feel odd](./Miscellaneous/Java.md)
 
 ### [Use Closure 实现 OOP](./Miscellaneous/closure/closure.md)
+
+### [SVG](./Miscellaneous/svg.md)

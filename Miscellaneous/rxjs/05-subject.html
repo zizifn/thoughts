@@ -9,6 +9,8 @@
 
 <body>
     <button>click me</button>
+    <input type="text"></input>
+    <script>alert(1)</script>
     <script>
         const Observable = rxjs.Observable;
         const Subject = rxjs.Subject;
@@ -16,6 +18,12 @@
         const take = rxjs.operators.take;
         const throttleTime = rxjs.operators.throttleTime;
         const tap = rxjs.operators.tap;
+        const mergeMap = rxjs.operators.mergeMap;
+        const mergeAll = rxjs.operators.mergeAll;
+        const switchMap = rxjs.operators.switchMap;
+        const delay = rxjs.operators.delay;
+        const catchError = rxjs.operators.catchError;
+        const throwError = rxjs.throwError;
         var button = document.querySelector('button');
 
         let subject = new Subject();
