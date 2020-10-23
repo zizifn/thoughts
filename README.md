@@ -32,4 +32,4 @@ Thoughts of daily work by zizifn.
 
 ### [Use Closure 实现 OOP](./Miscellaneous/closure/closure.md)
 
-### [SVG](./Miscellaneous/svg.md)
+### [SVG](./Miscellaneous/svg/svg.md)
