@@ -19,7 +19,7 @@ typeof str // "string"
 typeof 123 // "number"
 // 浮点数计算有精度问题
 0.1 + 0.2 === 0.30000000000000004
-console.log( Math.abs(0.1 + 0.2 - 0.3) <= Number.EPSILON);
+console.log(Math.abs(0.1 + 0.2 - 0.3) <= Number.EPSILON);
 
 //Symbol
 
@@ -38,16 +38,16 @@ var obj2 = {
 
 var o = new Object
 
-o[Symbol.iterator] = function() {
+o[Symbol.iterator] = function () {
     var v = 0
     return {
-        next: function() {
+        next: function () {
             return { value: v++, done: v > 10 }
         }
     }
 };
 
-for(var v of o)
+for (var v of o)
     console.log(v); // 0 1 2 3 ... 9
 
 // use Symbol can 实现很多功能。
@@ -74,7 +74,7 @@ new Number(5) == "5" // true
 new Number(5) === "5" // false
 
 
-var symbolObject = (function(){ return this; }).call(Symbol("a"));
+var symbolObject = (function () { return this; }).call(Symbol("a"));
 
 console.log(typeof symbolObject); //object
 console.log(symbolObject instanceof Symbol); //true
@@ -83,8 +83,8 @@ console.log(symbolObject.constructor == Symbol); //true
 // 拆箱
 
 var o = {
-    valueOf : () => {console.log("valueOf"); return {}},
-    toString : () => {console.log("toString"); return {}}
+    valueOf: () => { console.log("valueOf"); return {} },
+    toString: () => { console.log("toString"); return {} }
 }
 
 o * 2
@@ -94,18 +94,18 @@ o * 2
 
 
 var o = {
-    valueOf : () => {console.log("valueOf"); return {}},
-    toString : () => {console.log("toString"); return {}}
+    valueOf: () => { console.log("valueOf"); return {} },
+    toString: () => { console.log("toString"); return {} }
 }
 
-o[Symbol.toPrimitive] = () => {console.log("toPrimitive"); return "hello"}
+o[Symbol.toPrimitive] = () => { console.log("toPrimitive"); return "hello" }
 
 
 console.log(o + "")
 // toPrimitive
 // hello
 
-console.log(o -2 ) // 当然可以通过增强Symbol.toPrimitive来handle number的case
+console.log(o - 2) // 当然可以通过增强Symbol.toPrimitive来handle number的case
 // toPrimitive
 // NaN
 
@@ -113,14 +113,14 @@ console.log(o -2 ) // 当然可以通过增强Symbol.toPrimitive来handle number
 // promise
 
 
-function foo(){
+function foo() {
     var testVar = "test";
     // Promise.resolve("done").then(
     //     (value) => {
     //         console.log(value + testVar);
     //     }
     // );
-    setTimeout(function(){
+    setTimeout(function () {
         console.log("dddd" + testVar);
     }, 300);
 }
