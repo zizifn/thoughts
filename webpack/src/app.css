@@ -1,0 +1,12 @@
+.element {
+  background-color: blue;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+}
+.testImg {
+  background-image: url("img_girl.jpg");
+  background-repeat: no-repeat;
+  width: 400px;
+  height: 400px;
+}
