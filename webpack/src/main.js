@@ -7,7 +7,7 @@ function main() {
     // alert("test webpack for js")
     document.write(greetings("Affirmative", "Dave"));
 
-    // test
+    // test tet
     testCss();
 }
 
