@@ -16,6 +16,10 @@ Thoughts of daily work by zizifn.
 
 ## 工具 & Miscellaneous
 
+### [从存储字节理解 Unicode（UTF8/UTF16))](./Miscellaneous/Unicode/Unicode.md)
+
+### [从 C# String 类理解 Unicode（UTF8/UTF16))](./Miscellaneous/Unicode/UnicodeCSharp.md)
+
 ### [是谁在重置 Widnows 的 DNS Server?(ProcessMonitor 使用)](./Miscellaneous/ProcessMonitor.md)
 
 ### [Windows Subsystem Linux(WSL)](./Miscellaneous/WSL.MD)
@@ -33,3 +37,5 @@ Thoughts of daily work by zizifn.
 ### [Use Closure 实现 OOP](./Miscellaneous/closure/closure.md)
 
 ### [SVG](./Miscellaneous/svg/svg.md)
+
+### [webpack](./webpack/readme.md)
