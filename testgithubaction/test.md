@@ -1,3 +1,3 @@
 # test
 
-wode我
+wode 我
