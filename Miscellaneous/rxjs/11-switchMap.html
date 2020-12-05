@@ -87,13 +87,33 @@
                 console.log('outer observable error');
                 return of('outer error catch');
             })
-        ).subscribe(console.log, console.log)
+        ).subscribe((e) => {
+            try {
+                console.log("sub" + e)
+            } catch {
+
+            }
+        }
+            , console.log)
         s1.next('11') // 11
         s1.next(3) // inner observable error <br> inner error catch.
         s1.next('11') // 11
         s1.next(4) //outer observable error <br> outer error catch
-        s1.next('11') // no output
+        s1.next('11') // no output, 没有output 原因是，遇到error 会observable end
         s1.observers // []
+
+        s1.subscribe(
+            (value) => {
+                try {
+                    if (value === 4) {
+                        throw new Error('error in check')
+                    }
+                    console.log(value)
+                } catch {
+
+                }
+            }
+        )
 // 1
 // 1
 // 1
