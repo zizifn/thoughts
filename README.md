@@ -22,6 +22,8 @@ Thoughts of daily work by zizifn.
 
 ### [是谁在重置 Widnows 的 DNS Server?(ProcessMonitor 使用)](./Miscellaneous/ProcessMonitor.md)
 
+### [一份给自己用的 GIT 教程](./Miscellaneous/git/readme.md)
+
 ### [Windows Subsystem Linux(WSL)](./Miscellaneous/WSL.MD)
 
 ### [Command](./Command/readme.md)
