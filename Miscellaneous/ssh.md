@@ -1,8 +1,8 @@
 # SSH
 
-随着 Windows10 集成了Open ssh. SSH的简单总结有必要来一下。
+随着 Windows10 集成了 Open ssh. SSH 的简单总结有必要来一下。
 
-## Why we need SSH?
+## Why we need SSH
 
 - [TTY](https://en.wikipedia.org/wiki/Tty_(unix))?
 
@@ -10,7 +10,7 @@
 
     [The TTY demystified](http://www.linusakesson.net/programming/tty/index.php)
 
-    不严谨的说话，TTY就是终端。terminal。
+    不严谨的说话，TTY 就是终端。terminal。
 
 - [Docker command example](https://docs.docker.com/v17.12/edge/engine/reference/commandline/container_exec/#description)
 
@@ -40,7 +40,7 @@ Most command don't need TTY to work.
 
 - SSH through proxy
 
-```
+```plain
 ssh root@domain.com -p 22  -o "ProxyCommand=nc -X connect -x 127.0.0.1:10801 %h %p" 
 
 or window version
@@ -48,20 +48,20 @@ or window version
 ssh root@domain.com -p 22  -o "ProxyCommand=C:\Program Files (x86)\Nmap\ncat.exe --verbose --proxy-type http --proxy 127.0.0.1:10801 %h %p"
 ```
 
-## How SSH work?
+## How SSH work
 
 ![SSH0](./data/SSH0.jpg)
 
 ## Authentications
 
-```
+```plain
 PasswordAuthentication yes
 PubkeyAuthentication yes
 ```
 
 ### PasswordAuthentication
 
-和HTTPS（SSL）加密算法很像。 然而怎么保证server的public key不被替换呢（第一次连接时候）？ 你要自己对自己的known_hosts负责。SSL有浏览器内置的CA来校验server public是不是正确的。 Use `SSH -v` or `SSH -vvv`观察下连接过程。
+和 HTTPS（SSL）加密算法很像。 然而怎么保证 server 的 public key 不被替换呢（第一次连接时候）？ 你要自己对自己的 known_hosts 负责。SSL 有浏览器内置的 CA 来校验 server public 是不是正确的。 Use `SSH -v` or `SSH -vvv`观察下连接过程。
 
 1. When an SSH server is initialized, it creates a host key, which is a public/private keypair. The SSH server gives out the public key to anyone who connects to it.
 2. Your SSH client checks if the host you are trying to connect to has a host key in the ~/.ssh/known_hosts file
@@ -80,9 +80,9 @@ Need do something in server.
 
 ### SSH client config for multiple Pubkey
 
-使用PubkeyAuthentication, server 需要client的public key。然后对于client multiple，client有很多public key， ssh client在建立连接时候该如何选择呢？ 答案是SSH 进行连接的时候，不需要指定public key，private key里面包含public key。
+使用 PubkeyAuthentication, server 需要 client 的 public key。然后对于 client multiple，client 有很多 public key， ssh client 在建立连接时候该如何选择呢？ 答案是 SSH 进行连接的时候，不需要指定 public key，private key 里面包含 public key。
 
-```
+```plain
 # Company account
 Host company
 HostName github.com

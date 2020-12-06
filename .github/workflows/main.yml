@@ -37,4 +37,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           npm install -g lint-md-cli
-          lint-md testgithubaction/*md
+          lint-md */**/*md

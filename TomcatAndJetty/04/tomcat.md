@@ -2,7 +2,7 @@
 
 ## 结构
 
-```
+```plain
 /bin 存放 Windows 或 Linux 平台上启动和关闭脚本文件
 /conf store Tomcat all kind of config, most important is server.xml
 /lib store Tomcat and all wen need JAR file

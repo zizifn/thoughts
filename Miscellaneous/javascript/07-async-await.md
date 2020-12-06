@@ -4,7 +4,7 @@
 
 ### 生成器
 
-如果用java来实现，就需要来一个Class, 来记住哪一次调用。
+如果用 java 来实现，就需要来一个 Class, 来记住哪一次调用。
 
 ``` js
 function *genDemo() {
@@ -73,9 +73,9 @@ public class CountNumber {
 ### 协程
 
 
-## 用实际code理解async / await
+## 用实际 code 理解 async / await
 
-下面code输出的结果是，
+下面 code 输出的结果是，
 
  1. script start
  2. bar start
