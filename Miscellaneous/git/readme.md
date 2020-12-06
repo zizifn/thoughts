@@ -2,11 +2,11 @@
 
 首先这是一份给自己用的 GIT 教程。对于如何学习， 当然是要多刷几遍 [learngitbranching](http://learngitbranching.js.org/?demo) ， 和常用 `git help` 或者 https://git-scm.com/docs/user-manual
 
-上面三个是第一应该查看的。那么这边教程是干什么的呢？是记录我在学习中实践的记录
+上面三个是第一应该查看的。那么这边教程是干什么的呢？是记录我在学习中实践。
 
 ## git pull && git fetch
 
-`it pull is shorthand for git fetch followed by git merge FETCH_HEAD. `
+`git pull is shorthand for git fetch followed by git merge FETCH_HEAD.`
 
 当我们理解这个时候，一定要理解本地 branch 和 remote branch 的区别。 可以借助 `git branch -r` 来加以理解。
 如果想指定 remote，这个时候就需要 `git remote -v` 查看。 一般默认 remote 会有个本地名字 `origin` (可以改)。 然后辅助 online 文档，基本没有问题。

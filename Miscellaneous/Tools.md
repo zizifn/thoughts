@@ -13,7 +13,7 @@
 
 ## Windows 10 Store App proxy
 
-```
+```plain
 Setting Proxy
 netsh winhttp set proxy hostname:port
 

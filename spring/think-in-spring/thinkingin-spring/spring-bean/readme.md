@@ -4,9 +4,9 @@
 
 1. class/name/etc
 
-2. 构造bean
+2. 构造 bean
 
-### 命名Spring Bean
+### 命名 Spring Bean
 
 ### Spring Bean 的别名
 

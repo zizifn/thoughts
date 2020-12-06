@@ -7,9 +7,9 @@
 2. id
     `id root`
 3. userdel
-    `userdel wilson` or `userdel -r wilson `
+    `userdel wilson` or `userdel -r wilson`
 4. usermod, 修改用户
-    ```
+    ```plain
     uid=0(root) gid=0(root) groups=0(root)
     ```
 5. groupadd

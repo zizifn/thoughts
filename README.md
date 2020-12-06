@@ -20,7 +20,7 @@ Thoughts of daily work by zizifn.
 
 ### [从 C# String 类理解 Unicode（UTF8/UTF16))](./Miscellaneous/Unicode/UnicodeCSharp.md)
 
-### [是谁在重置 Widnows 的 DNS Server?(ProcessMonitor 使用)](./Miscellaneous/ProcessMonitor.md)
+### [是谁在重置 windows 的 DNS Server?(ProcessMonitor 使用)](./Miscellaneous/ProcessMonitor.md)
 
 ### [一份给自己用的 GIT 教程](./Miscellaneous/git/readme.md)
 

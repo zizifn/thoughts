@@ -5,7 +5,7 @@
   "main": "index.js",
   "husky": {
     "hooks": {
-      "pre-commit": "echo 'test husky hooks 2'"
+      "pre-commit": "npx lint-md */**/*.md"
     }
   },
   "scripts": {

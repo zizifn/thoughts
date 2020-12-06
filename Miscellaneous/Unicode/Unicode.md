@@ -28,7 +28,7 @@ UTF8/UTF16 实现 Unicode 的标准，把字符存储到存储介质中。
 
 我们知道存储字节多少只和 UTF 有关，那么我们先看 UTF8 一张表.详情请查看 wikipedia 的介绍 https://en.wikipedia.org/wiki/UTF-8 。当然你看百度百科也是可以的。
 
-```
+```plain
 Bits of First Last Bytes in Byte 1 Byte 2 Byte 3 Byte 4 Byte 5 Byte 6
 code point code point code point sequence
   7 U+0000 U+007F 1 0xxxxxxx
