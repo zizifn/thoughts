@@ -1,4 +1,4 @@
-# zizifn Blog
+# zizifn blog
 
 Thoughts of daily work by zizifn.
 
