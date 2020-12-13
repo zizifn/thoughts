@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: lint-md
 
 # Controls when the action will run.
 on:
@@ -29,9 +29,17 @@ jobs:
         with:
           node-version: 12.x
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      #
+      # - name: add ssh script
+      #   run: |
+      #     echo Hello, world!
+      #   # check ssh or install ssh
+      #     command -v ssh-agent >/dev/null || (apt-get update -y && apt-get install openssh-client -y)
+      #     eval $(ssh-agent -s)
+      #     echo $SSH_PRIVATE_KEY | tr -d '\r' | ssh-add -
+      #     mkdir -p ~/.ssh && chmod 700 ~./.ssh
+      #     echo $SSH_KNOW_HOSTS >> ~./.ssh/known_hosts && chmod 644 ~./.ssh/known_hosts
+      #     ssh root@host
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
