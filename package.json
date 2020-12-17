@@ -28,6 +28,7 @@
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
+    "@cloudflare/wrangler": "^1.12.2",
     "husky": "^4.3.0"
   }
 }

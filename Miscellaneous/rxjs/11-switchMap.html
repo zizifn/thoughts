@@ -30,6 +30,7 @@
         const pluck = rxjs.operators.pluck;
 
 
+        const concatMap = rxjs.operators.concatMap;
         const mergeMap = rxjs.operators.mergeMap;
         const mergeAll = rxjs.operators.mergeAll;
         const switchMap = rxjs.operators.switchMap;
@@ -72,17 +73,17 @@
             return value;
         }
         s1.pipe(
-            switchMap(
+            concatMap(
                 (value) =>
                     of(value).pipe(
                         filter(check),
                         catchError(error => {
                             console.log('inner observable error');
-                            return of('inner error catch');
+                            return rxjs.empty();
                         })
                     )
             ),
-            filter(checkOuter),
+            filter(checkOuter),// 把可能出现的error的，炒作放入到 switchMap，这样就不会end source observable
             catchError(error => {
                 console.log('outer observable error');
                 return of('outer error catch');
@@ -93,27 +94,27 @@
             } catch {
 
             }
-        }
-            , console.log)
+        }, console.log, () => console.log('completed'))
+
         s1.next('11') // 11
         s1.next(3) // inner observable error <br> inner error catch.
         s1.next('11') // 11
-        s1.next(4) //outer observable error <br> outer error catch
+        // s1.next(4) //outer observable error <br> outer error catch
         s1.next('11') // no output, 没有output 原因是，遇到error 会observable end
         s1.observers // []
 
-        s1.subscribe(
-            (value) => {
-                try {
-                    if (value === 4) {
-                        throw new Error('error in check')
-                    }
-                    console.log(value)
-                } catch {
+        // s1.subscribe(
+        //     (value) => {
+        //         try {
+        //             if (value === 4) {
+        //                 throw new Error('error in check')
+        //             }
+        //             console.log(value)
+        //         } catch {
 
-                }
-            }
-        )
+        //         }
+        //     }
+        // )
 // 1
 // 1
 // 1
