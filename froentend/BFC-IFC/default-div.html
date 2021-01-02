@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>default div</title>
+    <style>
+        .div1 {
+            border: 1px solid rgb(35, 62, 185);
+            width: 100px;
+            height: 100%;
+        }
+
+        .inner-div1 {
+            border: 1px solid rgb(170, 185, 35);
+            width: 150px;
+            height: 150px;
+        }
+
+        .div2 {
+            border: 1px solid rgb(211, 28, 89);
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<div class="div1">div1
+    <div class="inner-div1">inner-div1</div>
+</div>
+<div class="div2">div2</div>
+没有标签的文字，会被默认一个box..<span style="color: blue;">span 标签内的元素</span>
+
+<br>
+<br>
+<br>
+<br>
+<span style="color: red;">------------------------------------------------------------------------------</span>
+
+<li>- HTML 标签会创建一个BFC, 这说明浏览器上来就准备好了一切。</li>
+<li>- 每个元素/box都有自己的命，是应该放在行中还是列？上天已经给了一个default 值</li>
+<li>- div 上天给的default 值是display: block， F12可以查看。所以他被放入列中， 所以两个div会被叠罗汉。<a
+        href="https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements" class="href">MDN doc</a> </li>
+<li>- 遇到需要放入行中的元素，如果没有IFC，会创建IFC。</li>
+<li>- span 上天给的default 值是display:inline， 所以它不会被放到列中。</li>
+<li>- 可不可以逆天改display，
+    可以，但是也许会有点不完美。
+    <a
+        href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flow_Layout/Block_and_Inline_Layout_in_Normal_Flow#Changing_the_Formatting_Context_an_element_participates_in">
+        MDN doc</a>
+</li>
+
+<br>
+<br>
+<span style="color: red;">------------也许你也发现，元素/box
+    里面也可以放入新的元素/box. 比如div1------------------------------------------------------------------</span>
+
+
+<li>- 每个元素/box 里面可不可以放入列，换句话说就是，元素内部可不可以有BFC， 这也是上天定的。</li>
+<li>- 比如div里面就可以把元素排成列，然而span 就不可以。</li>
+<li>- 当然同样可以通过改display，来逆天改命。<a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Display">MDN doc</a>
+</li>
+
+<br>
+<br>
+<span style="margin-top:30px; color: red;">--------BFC 合并!!
+    好听到了。-----------------------------------------------------------------</span>
+<li>这个单开一个章节</li>
+
+<body>
+
+</body>
+
+</html>

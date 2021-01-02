@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div style="border: 1px blue solid;">
+        <div style=" border: 1px yellow solid; max-width: 600px; height: auto; margin: auto;">
+            out<br>
+            out2
+            <div style=" border: 1px red solid; width: 100px; height: 100px; margin: auto;">
+            </div>
+            <div style=" border: 1px black solid; width: 100px; height: 100px; margin: auto;">
+            </div>
+            <span>test13</span>
+        </div>
+        <span>test11</span>
+    </div>
+
+
+    <div>
+        <div class="static">
+            static 是默认值。任意 position: static; 的元素不会被特殊的定位。一个 static 元素表示它不会被“positioned”，一个 position
+            属性被设置为其他值的元素表示它会被“positioned”。
+        </div>
+        <div class="relative1">relative 表现的和 static 一样，除非你添加了一些额外的属性。</div>
+        <div class="relative2">相对于自己的offset。。。在一个相对定位（position属性的值为relative）的元素上设置 top 、 right 、 bottom 和 left
+            属性会使其偏离其正常位置。其他的元素的位置则不会受该元素的影响发生位置改变来弥补它偏离后剩下的空隙。</div>
+        <div class="fixed">
+            Hello！暂时不要太关注我哦。 fixed
+            <div class="absolute">
+                position: absolute;
+                这个元素是绝对定位的。它相对于它的父元素定位。
+            </div>
+        </div>
+        <div class="absolute">
+            position: absolute;
+            这个元素是绝对定位的。它相对于它的父元素定位。
+        </div>
+        <div style="width: 100px; height: 100px; overflow:scroll; ">
+            <div class="sticky">
+                sticky
+            </div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laudantium accusamus consectetur. Debitis
+            quo inventore delectus veritatis tempora sit quaerat necessitatibus ipsa quisquam ut impedit sunt ipsam,
+            <div class="sticky">
+                sticky2
+            </div>
+            assumenda consequuntur saepe!
+        </div>
+
+
+    </div>
+</body>
+
+</html>

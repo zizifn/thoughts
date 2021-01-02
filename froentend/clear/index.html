@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clear</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div>
+        <div class="box">
+            我感觉好像我在漂浮!
+        </div>
+        <section>
+            在这个例子中， section 元素实际上是在 div 之后的（译注：DOM结构上）。然而 div 元素是浮动到左边的，于是 section 中的文字就围绕了 div ，并且 section
+            元素包围了整个元素。如果我们想让
+            section 显示在浮动元素之后呢？
+        </section>
+    </div>
+
+    <div>
+        <div class="box">
+            我感觉好像我在漂浮!
+        </div>
+        <section style=" clear:left">
+            使用 clear 我们就可以将这个段落移动到浮动元素 div 下面。你需要用 left 值才能清除元素的向左浮动。你还可以用 right 或 both 来清除向右浮动或同时清除向左向右浮动。
+        </section>
+    </div>
+
+    <div style="border: 1px red solid; overflow: auto;">
+        <img src="111.BMP" alt="111.BMP" srcset="">
+        如下我们实现了图片宽度始终是容器宽度的50%.你甚至还能同时使用 min-width 和 max-width 来限制图片的最大或最小宽度！
+        不......这个图片比包含它的元素还高， 而且它是浮动的，于是它就溢出到了容器外面！add overflow for 清除浮动
+    </div>
+
+</body>
+
+</html>
