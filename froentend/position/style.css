@@ -1,0 +1,67 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  border: 1px red solid;
+  overflow: auto; /*清除浮动*/
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+  border: 5px rgba(0, 255, 128, 0.568) solid;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  float: right;
+}
+
+body {
+  /* 当界面有滚动条时候有用。*/
+  margin-bottom: 100px;
+}
+
+@media (min-width: 600px) {
+  /* nav {
+    float: left;
+    width: 25%;
+  }
+  section {
+    margin-left: 25%;
+  } */
+
+  nav {
+    position: absolute;
+    /* float: left; */
+    width: 200px;
+    border: 2px rgb(4, 0, 255) solid;
+  }
+
+  section {
+    margin-left: 200px;
+    border: 2px rgba(0, 255, 242, 0.568) solid;
+    padding: 10px;
+  }
+}
+@media (max-width: 599px) {
+  nav {
+    border: 2px rgb(4, 0, 255) solid;
+  }
+  section {
+    padding: 10px;
+  }
+  nav li {
+    display: inline;
+  }
+}

@@ -1,0 +1,68 @@
+<div style="display: flex; width: auto; height: auto; justify-content: center;">
+    <div class="circle-shodw"></div>
+    <div class="inner-rect"></div>
+    <div class="circle-shodw"></div>
+    <div class="circle-middle up-shodw"></div>
+    <div class="circle-middle down-shodw"></div>
+</div>
+<div style="width: 100%; height: 30px; background-color: red;">4444444444444444</div>
+
+<div style="height: 60px; height: 60px;">
+    <div class="half-cycle"></div>
+</div>
+
+<div class="triangle"></div>
+<style>
+    .triangle {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 200px 200px 0 0;
+        border-color: #007bff transparent transparent transparent;
+        -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
+        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
+    }
+
+    body {
+        background: #09042A;
+
+    }
+
+    .half-cycle {
+        border-left: 30px solid red;
+        border-top: 30px solid red;
+        border-bottom: 30px solid transparent;
+        border-right: 30px solid transparent;
+        box-shadow: 100px 0 blue;
+    }
+
+    .down-shodw {
+        transform: translateY(-53px);
+        box-shadow: 0 0 0 10px #09042A
+    }
+
+    .up-shodw {
+        transform: translateY(53px);
+        box-shadow: 0 0 0 10px #09042A
+    }
+
+    .circle-middle {
+        position: absolute;
+        background: #F5BB9C;
+        border-radius: 50%;
+    }
+
+    .circle-shodw {
+        border-radius: 50%;
+        box-shadow: 0 0 0 10px #E78481
+    }
+
+    .inner-rect {
+        background: #E78481;
+    }
+
+    div {
+        width: 60px;
+        height: 60px;
+    }
+</style>

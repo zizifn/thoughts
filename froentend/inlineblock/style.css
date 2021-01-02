@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  border: 1px red solid;
+}
+
+nav {
+  display: inline-block;
+  border: 1px blue solid;
+  width: 25%;
+  vertical-align: top;
+}
+
+.column {
+  display: inline-block;
+  border: 1px yellow solid;
+  width: 74%;
+  padding: 10px;
+  /* vertical-align: top; */
+}
+
+.box2 {
+  display: inline-block;
+  width: 200px;
+  height: 100px;
+  margin: 1em;
+}
