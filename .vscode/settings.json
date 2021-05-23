@@ -1,9 +1,10 @@
 {
-    "files.exclude": {
-        "**/.classpath": true,
-        "**/.project": true,
-        "**/.settings": true,
-        "**/.factorypath": true
-    },
-    "java.configuration.updateBuildConfiguration": "interactive"
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "liveServer.settings.port": 1083
 }
