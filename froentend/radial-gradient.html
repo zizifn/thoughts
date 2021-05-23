@@ -1,0 +1,101 @@
+<div class="radial1">
+    <div class="test"></div>
+</div>
+
+<div class="radial2">
+    <div class="test"></div>
+</div>
+<div class="radial3">
+    <div class="test"></div>
+</div>
+<div class="radial4">
+    <div class="test"></div>
+</div>
+
+Make this:
+<div class="top-semi-circle"></div>
+<div class="bottom-semi-circle"></div>
+Look like this:
+<div class="full-circle"></div>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #5C434C;
+        margin: 0px;
+    }
+
+    .test {
+        height: 50px;
+        width: 50px;
+        margin: 50px;
+    }
+
+    .radial1 {
+        background: radial-gradient(circle closest-side at 20px 20px, red 20%, blue 25%, green 0%)
+    }
+
+    .radial2 {
+        background: radial-gradient(circle closest-corner at 20px 20px, red 20%, blue 25%, green 0%)
+    }
+
+    .radial3 {
+        background: radial-gradient(circle farthest-side at 20px 20px, red 20%, blue 25%, green 0%)
+    }
+
+    .radial4 {
+        background: radial-gradient(circle farthest-corner at 20px 20px, red 20%, blue 25%, green 0%)
+    }
+
+
+    .top-semi-circle,
+    .bottom-semi-circle {
+        width: 10em;
+        height: 5em;
+        background: radial-gradient(circle at 100px 100px, red, #000);
+    }
+
+    .top-semi-circle {
+        border-radius: 10em 10em 0 0;
+    }
+
+    .bottom-semi-circle {
+        border-radius: 0 0 10em 10em;
+    }
+
+    .full-circle {
+        width: 10em;
+        height: 10em;
+        border-radius: 10em;
+        background: radial-gradient(circle at 100px 100px, red, #000);
+    }
+
+    div {
+        margin: 10px;
+        height: 200px;
+        width: 200px;
+        border: 1px solid red;
+
+    }
+
+    .yellow {
+        border-top-color: #F09462
+    }
+
+    .whitle {
+        border-top-color: #F5D6B4
+    }
+
+    .circle {
+        margin: 9px;
+        width: 0px;
+        border-width: 80px;
+        border-radius: 50%;
+        border-style: solid;
+        border-color: #F09462 transparent transparent transparent;
+        transform: rotate(-45deg)
+    }
+</style>
