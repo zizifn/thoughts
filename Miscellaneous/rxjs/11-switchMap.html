@@ -74,14 +74,18 @@
         }
         s1.pipe(
             concatMap(
-                (value) =>
-                    of(value).pipe(
+                (value) => {
+                    if (value === 5) {
+                        throw new Error('error in check')
+                    }
+                    return of(value).pipe(
                         filter(check),
                         catchError(error => {
                             console.log('inner observable error');
                             return rxjs.empty();
                         })
                     )
+                }
             ),
             filter(checkOuter),// 把可能出现的error的，炒作放入到 switchMap，这样就不会end source observable
             catchError(error => {

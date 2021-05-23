@@ -1,4 +1,9 @@
-import { Component, OnInit, ChangeDetectionStrategy, NgZone } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  NgZone,
+} from "@angular/core";
 import { Subject } from "rxjs";
 
 @Component({
@@ -13,7 +18,7 @@ export class ParentComponent implements OnInit {
   ind: boolean = true;
   str: string = "default";
   angularVersion = "8";
-  private _size = 10;
+  private _size = 10.216;
   public get size() {
     return this._size;
   }
@@ -22,9 +27,7 @@ export class ParentComponent implements OnInit {
   }
   subject = new Subject<string>();
 
-  constructor(
-    private ngZone: NgZone
-  ) {}
+  constructor(private ngZone: NgZone) {}
 
   ngOnInit() {
     (window as any).testSubject = this.subject;
@@ -70,7 +73,7 @@ export class ParentComponent implements OnInit {
 
   sentNext() {
     setInterval((value) => {
-      console.log("send 10 from sentNext-Interval")
+      console.log("send 10 from sentNext-Interval");
       this.subject.next("10");
     }, 1000);
   }

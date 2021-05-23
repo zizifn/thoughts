@@ -1,68 +1,93 @@
-<div style="display: flex; width: auto; height: auto; justify-content: center;">
-    <div class="circle-shodw"></div>
-    <div class="inner-rect"></div>
-    <div class="circle-shodw"></div>
-    <div class="circle-middle up-shodw"></div>
-    <div class="circle-middle down-shodw"></div>
-</div>
-<div style="width: 100%; height: 30px; background-color: red;">4444444444444444</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div style="height: 60px; height: 60px;">
-    <div class="half-cycle"></div>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
 
-<div class="triangle"></div>
-<style>
-    .triangle {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 200px 200px 0 0;
-        border-color: #007bff transparent transparent transparent;
-        -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
-        filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, .5));
-    }
+<body>
 
-    body {
-        background: #09042A;
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3">
+        <div class="box3-inner transform1"></div>
+        <div class="box3-inner transform2"></div>
+        <div class="box3-inner transform3"></div>
+        <div class="box3-inner2"></div>
+    </div>
+    <div class="box4"></div>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    }
+        body {
+            background: #191919;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-    .half-cycle {
-        border-left: 30px solid red;
-        border-top: 30px solid red;
-        border-bottom: 30px solid transparent;
-        border-right: 30px solid transparent;
-        box-shadow: 100px 0 blue;
-    }
+        .box4 {
+            width: 200px;
+            height: 20px;
+            background: #191919;
+            border: 1px solid red;
+        }
 
-    .down-shodw {
-        transform: translateY(-53px);
-        box-shadow: 0 0 0 10px #09042A
-    }
+        .transform3 {
+            transform: translate(5px, -10px) rotate(90deg);
+        }
 
-    .up-shodw {
-        transform: translateY(53px);
-        box-shadow: 0 0 0 10px #09042A
-    }
+        .transform2 {
+            transform: translate(41px, -30px) rotate(30deg)
+        }
 
-    .circle-middle {
-        position: absolute;
-        background: #F5BB9C;
-        border-radius: 50%;
-    }
+        .transform1 {
+            transform: translate(-33px, -20px) rotate(-30deg)
+        }
 
-    .circle-shodw {
-        border-radius: 50%;
-        box-shadow: 0 0 0 10px #E78481
-    }
+        .box3-inner2 {
+            width: 30px;
+            height: 10px;
+            background: #5DBCF9;
+        }
 
-    .inner-rect {
-        background: #E78481;
-    }
+        .box3-inner {
+            width: 90px;
+            height: 10px;
+            background: #5DBCF9;
+        }
 
-    div {
-        width: 60px;
-        height: 60px;
-    }
-</style>
+        .box3 {
+            width: 100px;
+            height: 50px;
+            border: 1px solid red;
+            margin-bottom: 14px;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 70px;
+            border: 10px solid #5DBCF9;
+            border-color: #5DBCF9 #5DBCF9 transparent #5DBCF9;
+        }
+
+        .box1 {
+            width: 50px;
+            height: 40px;
+            border: 10px solid #5DBCF9;
+            margin-bottom: -10px;
+        }
+    </style>
+
+</html>

@@ -26,8 +26,9 @@ so easy!! 等等，请问浏览器，下面 2 个问题请回答下。
 
 这里我们创建一个 IFC 来显示行。那么相应的我们给 IFC 定义一些 rule， 来规定哪些 元素/box 应该放入行中。
 
-- rule1
-- etc
+> “In a block formatting context, boxes are laid out one after the other, vertically, beginning at the top of a containing block. The vertical distance between two sibling boxes is determined by the 'margin' properties. Vertical margins between adjacent block-level boxes in a block formatting context collapse.
+
+> In a block formatting context, each box's left outer edge touches the left edge of the containing block (for right-to-left formatting, right edges touch).” - 9.4.1
 
 ### 万一一列中有多个元素，那怎么排列啊
 

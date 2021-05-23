@@ -1,46 +1,46 @@
 <div>
-<div class="container">
-    <div class="row align-items-center">
-        <div class="col-sm">
-            One of three columns
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm">
+                One of three columns
+            </div>
+            <div class="col-sm row">
+                <span>One&nbsp; </span>
+                <span>of&nbsp;</span>
+                <span>three&nbsp;</span>
+                <span>columns</span>
+            </div>
+            <div class="col-sm">
+                One of three columns
+            </div>
         </div>
-        <div class="col-sm row">
-            <span>One&nbsp; </span>
-            <span>of&nbsp;</span>
-            <span>three&nbsp;</span>
-            <span>columns</span>
-        </div>
-        <div class="col-sm">
-            One of three columns
-        </div>
-    </div>
-</div>
-
-
-<div class="flex-container div-container">
-    <h2>{{ title }}</h2>
-    <h3>Parent</h3>
-    <div>{{ parentModel.prop1 }}</div>
-
-    <div>
-        <label>ind {{ ind }} </label> <br />
-        <label>str {{ str }} </label> <br />
-        <label>size: {{ size }} </label> <br />
-    </div>
-    <div>
-
-        <ul>
-        </ul>
-
     </div>
 
 
-    <button (click)="updateModel()">update model</button>
-    <button (click)="clickTest()">click</button>
-    <button (click)="subscribeClick()">subscribe click</button>
-    <button (click)="sentNext()">sentNext</button>
-    <app-child prefix="12345-parent" [model]="parentModel" [ind]="ind" [str]="str" [(size)]="size"
-        class="child-layout div-container"></app-child>
-    <footer>Angular version: {{ angularVersion }}</footer>
-</div>
+    <div class="flex-container div-container">
+        <h2>{{ title }}</h2>
+        <h3>Parent</h3>
+        <div>{{ parentModel.prop1 }}</div>
+
+        <div>
+            <label>ind {{ ind }} </label> <br />
+            <label>str {{ str }} </label> <br />
+            <label>size: {{ size | currency:'CAD':'symbol':'2.1-2'}} </label> <br />
+        </div>
+        <div>
+
+            <ul>
+            </ul>
+
+        </div>
+
+
+        <button (click)="updateModel()">update model</button>
+        <button (click)="clickTest()">click</button>
+        <button (click)="subscribeClick()">subscribe click</button>
+        <button (click)="sentNext()">sentNext</button>
+        <app-child prefix="12345-parent" [model]="parentModel" [ind]="ind" [str]="str" [(size)]="size"
+            class="child-layout div-container"></app-child>
+        <footer>Angular version: {{ angularVersion }}</footer>
+    </div>
 </div>
