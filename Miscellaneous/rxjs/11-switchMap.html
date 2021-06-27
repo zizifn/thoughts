@@ -1,15 +1,14 @@
 <html>
 
 <head>
-    <title>RXJS sample
-    </title>
+    <title>RXJS sample</title>
     <!-- Everything is imported under the rxjs namespace -->
-    <script src="https://unpkg.com/@reactivex/rxjs@6.0.0/dist/global/rxjs.umd.js"></script>
+    <script src="./rxjs.umd.js"></script>
 </head>
 
 <body>
-    <button id="button1"> click me</button>
-    <button id="button2"> click me2</button>
+    <button id="button1">click me</button>
+    <button id="button2">click me2</button>
     <script>
         const fromEvent = rxjs.fromEvent;
         const interval = rxjs.interval;
@@ -29,7 +28,6 @@
 
         const pluck = rxjs.operators.pluck;
 
-
         const concatMap = rxjs.operators.concatMap;
         const mergeMap = rxjs.operators.mergeMap;
         const mergeAll = rxjs.operators.mergeAll;
@@ -40,72 +38,71 @@
 
         const filter = rxjs.operators.filter;
 
-        var button = document.querySelector('#button1');
-        var button2 = document.querySelector('#button2');
+        var button = document.querySelector("#button1");
+        var button2 = document.querySelector("#button2");
 
-        var obserable2 = interval(1000)
+        var obserable2 = interval(1000);
 
+        fromEvent(button, "click")
+            .pipe(switchMap((event) => obserable2))
+            .subscribe(
+                (value) => console.log(value),
+                (error) => console.log(error),
+                () => console.log("complete")
+            );
 
-        fromEvent(button, 'click').pipe(
-            switchMap(
-                event => obserable2
-            )
-        ).subscribe(
-            (value) => console.log(value),
-            (error) => console.log(error),
-            () => console.log("complete"))
-
-        const switched = of(1, 2, 3).pipe(switchMap((x) => of(x, x ** 2, x ** 3).pipe(delay(100))));
-        switched.subscribe(x => console.log(x));
-
+        const switched = of(1, 2, 3).pipe(
+            switchMap((x) => of(x, x ** 2, x ** 3).pipe(delay(100)))
+        );
+        switched.subscribe((x) => console.log(x));
 
         var s1 = new Subject();
         function check(value) {
             if (value === 3) {
-                throw new Error('error in check')
+                throw new Error("error in check");
             }
             return value;
         }
         function checkOuter(value) {
             if (value === 4) {
-                throw new Error('error in check')
+                throw new Error("error in check");
             }
             return value;
         }
         s1.pipe(
-            concatMap(
-                (value) => {
-                    if (value === 5) {
-                        throw new Error('error in check')
-                    }
-                    return of(value).pipe(
-                        filter(check),
-                        catchError(error => {
-                            console.log('inner observable error');
-                            return rxjs.empty();
-                        })
-                    )
+            concatMap((value) => {
+                if (value === 5) {
+                    throw new Error("error in check");
                 }
-            ),
-            filter(checkOuter),// 把可能出现的error的，炒作放入到 switchMap，这样就不会end source observable
-            catchError(error => {
-                console.log('outer observable error');
-                return of('outer error catch');
+                return of(value).pipe(
+                    filter(check),
+                    catchError((error) => {
+                        console.log("inner observable error");
+                        return rxjs.empty();
+                    })
+                );
+            }),
+            filter(checkOuter), // 把可能出现的error的，放入到 switchMap，这样就不会end source observable
+            catchError((error) => {
+                console.log("outer observable error");
+                return of("outer error catch");
             })
-        ).subscribe((e) => {
-            try {
-                console.log("sub" + e)
-            } catch {
+        ).subscribe(
+            (e) => {
+                try {
+                    console.log("sub" + e);
+                } catch { }
+            },
+            console.log,
+            () => console.log("completed")
+        );
 
-            }
-        }, console.log, () => console.log('completed'))
-
-        s1.next('11') // 11
-        s1.next(3) // inner observable error <br> inner error catch.
-        s1.next('11') // 11
+        s1.next("11"); // 11
+        s1.next(3); // inner observable error <br> inner error catch.
+        s1.next("11"); // 11
         // s1.next(4) //outer observable error <br> outer error catch
-        s1.next('11') // no output, 没有output 原因是，遇到error 会observable end
-        s1.observers // []
+        s1.next("11"); // no output, 没有output 原因是，遇到error 会observable end
+        s1.observers; // []
 
         // s1.subscribe(
         //     (value) => {
@@ -119,12 +116,125 @@
         //         }
         //     }
         // )
-// 1
-// 1
-// 1
-// 2
-// 4
-// 8
+        // 1
+        // 1
+        // 1
+        // 2
+        // 4
+        // 8
+
+        // 测试1
+        /*
+                  var s2 = new Subject();
+                  // 1. work fine.
+                  s2.subscribe(
+                      (rep) => {
+                          console.log("first subscribe " + rep)
+                      },
+                      console.log, () => console.log('completed')
+                  )
+
+                  // 2. subscribe has error
+                  s2.subscribe(
+                      (rep) => {
+                          console.log('second subscribe ' + rep)
+                          throw new Error('error in second subscribe')
+                      },
+                      console.log, () => console.log('completed')
+                  )
+
+                  s2.next('test') // 这里第二个 subscribe 会报错，然后observable不在工作。 但是不会影响第一个的正常工作
+                  s2.next('test2') // 这里可以证明第一个 subscribe 工作正常
+          */
+
+        // 测试2
+        /*
+        var s2 = new Subject();
+        // 1. work fine.
+        s2.subscribe(
+            (rep) => {
+                console.log("first subscribe " + rep)
+            },
+            console.log, () => console.log('completed')
+        )
+        const s22 = s2.pipe(
+
+            tap(
+                (resp) => {
+                    return resp
+                }
+            )
+        ).subscribe(
+            (rep) => {
+                console.log('second subscribe (in subscribe) ' + rep)
+            },
+            (error) => {
+                console.log(error)
+            }, () => console.log('completed')
+        )
+        s22.pipe(
+            filter(
+                (res) => true
+            )
+        ).subscribe(
+            (rep) => {
+                console.log('second subscribe (in subscribe) ' + rep)
+            },
+            (error) => {
+                console.log(error)
+            }, () => console.log('completed')
+        )
+       // s2.next('test') // 这里第二个 observable 在pipe中 报错，然后observable不在工作。 但是不会影响第一个的正常工作
+       // s2.next('test2') // 这里可以证明第一个 subscribe 工作正常*/
+
+        // 测试3， 怎么解决这种问题？ 就是用siwtch map
+        /**/
+        var s22 = new Subject();
+        var s2 = new Subject();
+        // 1. work fine.
+        s2.subscribe(
+            (rep) => {
+                console.log("first subscribe " + rep);
+            },
+            console.log,
+            () => console.log("completed")
+        );
+        const ss2 = s2.pipe(
+            concatMap((resp) => {
+                return s22.pipe(
+                    // tap((res) => {
+                    //     console.log("second observable (in switchMap->pipe) " + res);
+                    //     //throw new Error("error in second observable->switchMap->pipe");
+                    // }),
+                    map((res) => {
+                        console.log("second observable (in switchMap->pipe) " + res);
+                        throw new Error("error in second observable->switchMap->pipe");
+                        // return res;
+                    }),
+                    catchError(error => {
+                        console.log('outer observable error');
+                        return of('outer error catch');
+                    })
+                );
+            }),
+            tap(
+                () => console.log('tap')
+            ),
+            catchError(error => {
+                console.log('outer observable error');
+                return of('outer error catch');
+            })
+        )
+        ss2.subscribe(
+            (rep) => {
+                console.log("second subscribe (in subscribe) " + rep);
+            },
+            (error) => {
+                console.log(error)
+            },
+            () => console.log("completed")
+        );
+
     </script>
 </body>
 
