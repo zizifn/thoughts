@@ -5,6 +5,9 @@ export interface BookLibrary {
   "/book/{bookId}": {
     delete: () => void;
   };
+  "/book/{bookId}/bar/{barId}": {
+    delete: () => void;
+  };
 }
 
 type PathParamter<TPath extends string> =
@@ -24,4 +27,8 @@ export declare function BooksClient(baseUrl: string): {
 
 const client = BooksClient("http://localhost")
   .path("/book/{bookId}", "1")
+  .delete();
+
+const client2 = BooksClient("http://localhost")
+  .path("/book/{bookId}/bar/{barId}", "1", "2")
   .delete();
