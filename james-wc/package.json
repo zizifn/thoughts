@@ -1,6 +1,6 @@
 {
   "name": "james-wc",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Webcomponent james-wc following open-wc recommendations",
   "author": "james-wc",
   "license": "MIT",
@@ -17,6 +17,9 @@
     "storybook": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds -c .storybook/server.mjs\"",
     "storybook:build": "tsc && build-storybook"
   },
+  "files": [
+    "dist/*"
+  ],
   "dependencies": {
     "@vanillawc/wc-menu-wrapper": "0.0.5",
     "lit-element": "^2.5.1",
