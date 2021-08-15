@@ -1,6 +1,6 @@
 {
   "name": "james-wc",
-  "version": "0.0.1",
+  "version": "0.0.4-0",
   "description": "Webcomponent james-wc following open-wc recommendations",
   "author": "james-wc",
   "license": "MIT",
@@ -9,7 +9,8 @@
   "scripts": {
     "start": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"wds\"",
     "build": "tsc",
-    "prepublish": "tsc",
+    "prepare": "tsc",
+    "prepublishOnly": "tsc",
     "lint": "eslint --ext .ts,.html . --ignore-path .gitignore && prettier \"**/*.ts\" --check --ignore-path .gitignore",
     "format": "eslint --ext .ts,.html . --fix --ignore-path .gitignore && prettier \"**/*.ts\" --write --ignore-path .gitignore",
     "test": "tsc && wtr --coverage",
@@ -22,13 +23,13 @@
   ],
   "dependencies": {
     "@vanillawc/wc-menu-wrapper": "0.0.5",
-    "lit-element": "^2.5.1",
-    "lit-html": "^1.4.1"
+    "lit": "^2.0.0-rc.2"
   },
   "devDependencies": {
     "@custom-elements-manifest/analyzer": "^0.4.17",
     "@open-wc/eslint-config": "^4.3.0",
-    "@open-wc/testing": "^2.5.33",
+    "@open-wc/testing": "^3.0.0-next.2",
+    "@open-wc/testing-helpers": "^2.0.0-next.0",
     "@typescript-eslint/eslint-plugin": "^4.29.1",
     "@typescript-eslint/parser": "^4.29.1",
     "@web/dev-server": "^0.1.21",

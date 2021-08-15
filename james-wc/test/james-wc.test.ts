@@ -1,7 +1,7 @@
 import { html, fixture, expect } from '@open-wc/testing';
 
 import { JamesWc } from '../src/JamesWc.js';
-import '../james-wc.js';
+// import '../james-wc.js';
 
 describe('JamesWc', () => {
   it('has a default title "Hey there" and counter 5', async () => {

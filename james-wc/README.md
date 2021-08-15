@@ -98,3 +98,4 @@ To run a local development server that serves the basic demo located in `demo/in
 
 1. change `files` in package.json
 2. npm publish
+3. npm publish --tag beta
