@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/JamesWc.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "JamesWc",
+          "members": [
+            {
+              "kind": "field",
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "attribute": "title"
+            },
+            {
+              "kind": "field",
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "attribute": "counter"
+            },
+            {
+              "kind": "field",
+              "name": "counter2",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "attribute": "counter2"
+            },
+            {
+              "kind": "method",
+              "name": "__increment"
+            }
+          ],
+          "attributes": [
+            {
+              "name": "title",
+              "type": {
+                "text": "string"
+              },
+              "default": "'Hey there'",
+              "fieldName": "title"
+            },
+            {
+              "name": "counter",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "fieldName": "counter"
+            },
+            {
+              "name": "counter2",
+              "type": {
+                "text": "number"
+              },
+              "default": "5",
+              "fieldName": "counter2"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit-element"
+          },
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "JamesWc",
+          "declaration": {
+            "name": "JamesWc",
+            "module": "src/JamesWc.ts"
+          }
+        }
+      ]
+    }
+  ]
+}
