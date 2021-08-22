@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "@cloudflare/wrangler": "^1.12.2",
-    "husky": "^4.3.0"
+    "husky": "^4.3.0",
+    "typescript": "^4.3.5"
   }
 }
