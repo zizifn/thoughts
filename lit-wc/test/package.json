@@ -1,0 +1,20 @@
+{
+  "name": "test-lit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "@internetarchive/lit-jwplayer": "0.0.1-alpha.1",
+    "james-wc": "0.0.4-0",
+    "james-wc1": "0.0.0"
+  }
+}
