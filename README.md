@@ -42,4 +42,6 @@ Thoughts of daily work by zizifn.
 
 ### [SVG](./Miscellaneous/svg/svg.md)
 
+### [作为前端面试官的面试套路手册](./interview/interview.md)
+
 ### [webpack](./webpack/readme.md)
