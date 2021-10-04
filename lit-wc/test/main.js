@@ -1,3 +1,2 @@
-"use strict";
-exports.__esModule = true;
-require("james-wc1");
+import { JamesWc1 } from "james-wc1";
+console.log(JamesWc1);

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .spans {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .spans>span {
+            border: 1px solid red;
+            height: 40px;
+            width: 40px;
+        }
+
+        .spans>span.dotted {
+            border: 1px dotted blue;
+        }
+    </style>
+</head>
+
+<body>
+    <button>click me</button>
+    <div id="spans" class="spans">
+        <span>1</span>
+        <span class="dotted">2</span>
+        <span>3</span>
+        <span>4</span>
+        <span>5</span>
+    </div>
+
+
+    <script>
+        const btn = document.querySelector("button");
+        btn.addEventListener('click', () => {
+            const spans = document.querySelector('#spans')
+
+            const spansArray = Array.from(spans.querySelectorAll('span'));
+            spansArray.reverse().forEach(element => {
+                spans.appendChild(element);
+            });
+
+        })
+    </script>
+</body>
+
+</html>
