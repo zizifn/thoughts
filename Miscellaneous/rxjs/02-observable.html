@@ -11,6 +11,8 @@
     <button>click me</button>
     <script>
         const Observable = rxjs.Observable;
+        const share = rxjs.operators.share;
+        const tap = rxjs.operators.tap;
 
         let observer = {
             next: (event) => console.log(event),
@@ -24,6 +26,9 @@
             button.onclick = (event) => {
                 obser.next(event)// obser closure
             };
+            // button.addEventListener("click", (event) => {
+            //     obser.next(event);
+            // })
             obser.next("value");
             // async
             setTimeout(() => {
@@ -38,6 +43,11 @@
             //             obser.error("error");
             //             obser.next("next value");
         }
+        ).pipe(
+            // share(),
+            tap(() => {
+                console.log("tap........");
+            })
         );
 
         // 每一次 subscribe 都会执行一遍 create里面的函数
