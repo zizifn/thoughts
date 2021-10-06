@@ -51,14 +51,14 @@
 - 选择的权重
 
   - id > class/attribute/pseudo > type
-  - 怎么看 !important，怎么 override。
+  - !important，怎么 override？
 
 - 布局 flexbox
   这里重点不是靠属性怎么写？而是看面试者有没有在全局上了解 flex。
 - 布局 Grid
   我一般不问。
 - ~~这里插入 BFC/IFC~~
-  > 我没有想好怎么问这一类问题？ 我不想让面试者背定义，等我想好一个好的代码例子~~
+  > 我没有想好怎么问这一类问题？ 我不想让面试者背定义，等我想好一个好的代码例子
 
 ### refer
 
@@ -82,6 +82,12 @@
     - 尽量考察 `map()` 会改变原来数组吗？
   - 如何使用 Array 来模拟，数据结构--栈
   - 如何使用 Array 来模拟，数据结构-队列
+
+- 对象的复制
+  - 浅拷贝
+  - 深拷贝
+  - 区别？
+    - 如果对方 回答，JSON.stringify， 问他和lodash 的 cloneDeep 有什么区别？
 
 - ~~怎么构建对象~~
 
@@ -123,6 +129,15 @@ asyncThing1()
     console.log("All done!");
   });
 ```
+
+## HTTP
+- 介绍下HTTP？
+- HTTP method
+- 301/302?
+- Cookies/ session
+- 浏览器/CDN 缓存
+  - max age
+  - Etag/ if-None-match (304)
 
 ## Node.js
 
@@ -278,6 +293,9 @@ console.timeEnd("main");
 
 ## CI CD
 
+- 兼容性怎么处理的？
+  - CSS 兼容性
+  - JS 兼容性
 - 问面试者最近的一个 story 是怎么上线的?
   这里是想问，从本地开发，项目的 tool chain，PR， 怎么测试，怎么 deploy 的？
 - 追问 git branch 策略？
@@ -286,6 +304,14 @@ console.timeEnd("main");
 - 怎么做 prod support 的？
   - 追问 log 是怎么记录？
   - 追问 log 的客户相关信息是怎么 mask 的?
+
+## Angular
+- 组件怎么传值 
+
+## RXJS
+- mergeMap
+- switchMap
+- concatMap
 
 ## 问面试者还有什么问题吗？
 
