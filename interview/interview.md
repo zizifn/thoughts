@@ -88,6 +88,23 @@
   - 深拷贝
   - 区别？
     - 如果对方 回答，JSON.stringify， 问他和lodash 的 cloneDeep 有什么区别？
+- 代码题目作用域/闭包
+
+```html
+<body>
+    <button>click me</button>
+    <script>
+        for (var index = 0; index < 10; index++) {
+            document.querySelector('button').addEventListener('click', () => {
+                console.log(index);
+            })
+
+        }
+    </script>
+</body>
+```
+
+- this
 
 - ~~怎么构建对象~~
 
@@ -95,7 +112,6 @@
   - Class
   - 区别？
 
-- ~~代码题目作用域/闭包~~
 - 手写代码, fetch 的使用，可以查文档。
   如果有条件和时间的话？
 - 伪代码题目，promise，
