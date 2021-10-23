@@ -6,6 +6,5 @@
     "**/.factorypath": true
   },
   "java.configuration.updateBuildConfiguration": "interactive",
-  "liveServer.settings.port": 5000,
-  "liveServer.settings.host": "172.20.93.190"
+  "liveServer.settings.port": 5000
 }
