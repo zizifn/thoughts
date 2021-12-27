@@ -339,6 +339,7 @@ Callback_Promise_obser/azure.ps1
 #java
 target/
 .settings/
+**/.env
 
 # idea
 .idea/

