@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title>RXJS sample</title>
+    <!-- Everything is imported under the rxjs namespace -->
+    <script src="./rxjs.umd.js"></script>
+</head>
+
+<body>
+    <button id="button1">click me</button>
+    <button id="button2">click me2</button>
+    <script>
+        const fromEvent = rxjs.fromEvent;
+        const interval = rxjs.interval;
+        const Observable = rxjs.Observable;
+        const of = rxjs.of;
+        const Subject = rxjs.Subject;
+        const map = rxjs.operators.map;
+        const tap = rxjs.operators.tap;
+        const take = rxjs.operators.take;
+        const throttleTime = rxjs.operators.throttleTime;
+        // wait for some time, reduce http request
+        const debounceTime = rxjs.operators.debounceTime;
+        const distinctUntilChanged = rxjs.operators.distinctUntilChanged;
+
+        const scan = rxjs.operators.scan;
+        const reduce = rxjs.operators.reduce;
+
+        const pluck = rxjs.operators.pluck;
+
+        const concatMap = rxjs.operators.concatMap;
+        const mergeMap = rxjs.operators.mergeMap;
+        const mergeAll = rxjs.operators.mergeAll;
+        const switchMap = rxjs.operators.switchMap;
+        const delay = rxjs.operators.delay;
+        const catchError = rxjs.operators.catchError;
+        const throwError = rxjs.operators.throwError;
+
+        const filter = rxjs.operators.filter;
+
+        var button = document.querySelector("#button1");
+        var button2 = document.querySelector("#button2");
+
+        var s1 = new Subject();
+
+        function checkOuter(value) {
+            if (value === 4) {
+                throw new Error('error in check')
+            }
+            return value;
+        }
+        s1.pipe(
+            // filter(checkOuter),// 把可能出现的error的，炒作放入到 switchMap，这样就不会end source observable
+            switchMap(
+                (value) =>
+                    of(value).pipe(
+                        filter(checkOuter), // 放在这里。
+                        // catchError(error => {
+                        //     console.log('inner observable error');
+                        //     return of('inner error catch');
+                        // })
+                    )
+            ),
+
+            catchError(error => {
+                console.log('outer observable error');
+                // return of('outer error catch');
+                return ['outer error catch'];
+            })
+        ).subscribe((e) => {
+            try {
+                console.log("sub" + e)
+            } catch {
+
+            }
+        })
+
+        const letter = of('a', 'b', 'c');
+
+        letter.pipe(mergeMap(
+            (value) => {
+                return of(value).pipe()
+            }
+        )).subscribe(console.log);
+
+
+    </script>
+</body>
+
+</html>
