@@ -18,9 +18,11 @@ Thoughts of daily work by zizifn.
 
 ## CORS COEP COOP CORP
 
-### [为什么说 Access-Control-Allow-Origin : \* 是 almost 安全的？](./corss-origin/CORS2-img.md)
+### [为什么说 Access-Control-Allow-Origin : \* 是 almost 安全的？](./corss-origin/CORS1.md)
 
-### [为什么说 img 标签是 web 标准最大的失误？](./corss-origin/CORS1.md)
+### [为什么说 img 标签是 web 标准最大的失误？](./corss-origin/2-img.md)
+
+### [为什么说 Content-Security-Policy (SCP) 还不够安全？](./corss-origin/CORP.md)
 
 ## 工具 & Miscellaneous
 
