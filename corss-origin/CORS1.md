@@ -33,7 +33,7 @@ fetch("https://github.com/", {
 > 这里有一个简单的攻击，使用 img tag 可以轻松判断用户是否在某个企业内网。 至于原因和如何防护，我们以后再说。
 > `<img src="http://企业内外IP/favicon.ico" alt="" onload="alert(1);" />`
 
-## 对于需要认证的 API POST 请求
+## 对于需要认证的 POST 请求
 
 慢着，虽然其他 site javascript 拿不到 response，但是网络请求已经发出去了，这样如果是`post`请求，就会造成伤害吧？
 
