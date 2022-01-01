@@ -16,6 +16,8 @@ Thoughts of daily work by zizifn.
 
 ### [CSS layout](./froentend/css_layout.md)
 
+### [前端做个计时器有多难？](./froentend/timer/timer.md)
+
 ## CORS COEP COOP CORP
 
 ### [为什么说 Access-Control-Allow-Origin : \* 是 almost 安全的？](./corss-origin/CORS1.md)

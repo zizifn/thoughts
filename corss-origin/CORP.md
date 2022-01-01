@@ -4,7 +4,7 @@
 
 [MND: Content-Security-Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy)
 
-现在很多网站都已经启用了 SCP。 SCP 能够知道网站本身从哪些地方加载资源（`img`, `script`）。这将帮助防止跨站脚本攻击（Cross-Site Script）
+现在很多网站都已经启用了 SCP。 SCP 能够指定网站从哪些地方加载资源（`img`, `script`等）。SCP 可以有效帮助防止跨站脚本攻击（Cross-Site Script）。
 
 下面是 github 的 SCP 设置，
 
@@ -40,14 +40,13 @@ SCP 仅仅是指定自己网站加载资源的范围。。但是如果**恶意�
 
 > 位于“https://\*\*\*.herokuapp.com/corss-origin-header/favicon.ico?Cross-Origin-Resource-Policy=same-site”的资源因其 Cross-Origin-Resource-Policy 头内容（或缺少该头）而被拦截。详见 https://developer.mozilla.org/docs/Web/HTTP/Cross-Origin_Resource_Policy_(CORP)#
 
-同时 CORP 也同样防止了 Meltdown and Spectre 攻击，虽然发送了 http 请求，但是由于 corp 浏览器没有把 http response 加载到内存中，所有 Meltdown and Spectre 也就无法起作用。
+同时 CORP 也同样防止了 Meltdown and Spectre 攻击，虽然发送了 http 请求，但是由于 corp 浏览器没有把 http response 加载到内存中，所有 Meltdown and Spectre 也就无法起作用。也就是下面的例子。
 
-```html
-<img src="https://内网地址/员工信息.html"" onload="alert(1)" /> //corb
-```
-
-## CORB
+> `<img src="https://内网地址/员工信息.html"" onload="alert(1)" />`
+> 如果内网的 html 没有 cookie 检验，虽然 img 标签无法显示拿到 html 信息，但是浏览器会把 html 加载到进程和内存中，利用 Meltdown and Spectre CPU bug 攻击 就可以拿到 html 的数据。
 
 ## COOP
+
+如果恶意网站使用 window open
 
 ## COEP
