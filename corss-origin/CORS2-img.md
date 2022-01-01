@@ -140,6 +140,7 @@ SameSite 有很多选项，严谨的解释，请参考 MDN。[SameSite](https://
 
 > 实际上 Meltdown and Spectre 攻击的最终解决方案，是 CPU 架构的重新设计，但是这可不是几年能完成的，因为现在 CPU 的数量太多了。
 
-> 如果错误，请大家指正。
-
 ## Cross-Origin-Resource-Policy
+
+> reference
+> https://www.youtube.com/watch?v=vfAHa5GBLio
