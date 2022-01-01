@@ -21,7 +21,7 @@ function timer1() {
 timer1();
 ```
 
-Job done! 下班！等等！ 让我们看看我们的需求，
+Job done! 下班！等等！ 让我们看看计时器的需求，
 
 - [❌ ] 能精准的计时 (**不能满足这个需求，下面解释**)
 - [✅] 能够稳定的更新 UI (**绝大部分情况能更新 UI， 这个满足**)
@@ -172,3 +172,6 @@ function interval(ms, callback) {
 
 interval(1000, updateUI);
 ```
+
+> reference
+> https://www.youtube.com/watch?v=MCi6AZMkxcU
