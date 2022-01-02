@@ -8,7 +8,7 @@
 
 ### raf Task
 
-## How loop work?
+## How loop work
 
 > Reference
 > [Jake Archibald: 在循环](https://www.youtube.com/c/JSConfEU)

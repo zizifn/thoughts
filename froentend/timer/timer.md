@@ -6,7 +6,7 @@
 - [✅] 能够稳定的更新 UI
 - [✅] 不要浪费资源
 
-# setTimeout/ setInterval
+## setTimeout/ setInterval
 
 计时器，谁不会啊？最基础的 js 方法`setInterval`.
 
@@ -72,7 +72,7 @@ Job done! 下班！等等！ 让我们看看我们的需求，
 
 > 如果我们把 setInterval 设置成 900ms 不就完全没有问题了吗？也可以，但是如果你想要每 100ms 更新一次 UI 呢？
 
-# requestAnimationFrame (RAF)
+## requestAnimationFrame (RAF)
 
 [MDN requestAnimationFrame](https://developer.mozilla.org/zh-CN/docs/Web/API/window/requestAnimationFrame)
 
@@ -114,7 +114,7 @@ Job done! 下班！等等！ 让我们看看我们的需求，
 
 怎么解决呢？可不可以不让 `requestAnimationFrame` 不 60 秒调用一次呢？对你想的没错，`setTimeout`.
 
-# setTimeout / requestAnimationFrame (RAF)
+## setTimeout / requestAnimationFrame (RAF)
 
 我们可以在`requestAnimationFrame` callback 里面不直接调用`requestAnimationFrame`，而是用`setTimeout` 自己调度。
 
@@ -144,7 +144,7 @@ timer1();
 
 ![mutilple](./mutiple.png)
 
-# 完美版本
+## 完美版本
 
 ```js
 function interval(ms, callback) {
@@ -174,4 +174,4 @@ interval(1000, updateUI);
 ```
 
 > reference
-> https://www.youtube.com/watch?v=MCi6AZMkxcU
+> <https://www.youtube.com/watch?v=MCi6AZMkxcU>
