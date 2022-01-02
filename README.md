@@ -18,6 +18,8 @@ Thoughts of daily work by zizifn.
 
 ### [前端做个计时器有多难？](./froentend/timer/timer.md)
 
+### [Event loop？](./froentend/timer/timer.md)
+
 ## CORS COEP COOP CORP
 
 ### [为什么说 Access-Control-Allow-Origin : \* 是 almost 安全的？](./corss-origin/CORS1.md)
@@ -55,6 +57,8 @@ Thoughts of daily work by zizifn.
 ### [SVG](./Miscellaneous/svg/svg.md)
 
 ### [作为前端面试官的面试套路手册](./interview/interview.md)
+
+### [Web 漏洞挖掘实战 读者故事](极客时间/Web漏洞挖掘实战.md)
 
 ### [webpack](./webpack/readme.md)
 
