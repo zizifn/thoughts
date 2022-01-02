@@ -2,9 +2,15 @@
   "excludeFiles": [],
   "rules": {
     "no-empty-code": 1,
-    "no-long-code": [1, {
-      "length": 500,
-      "exclude": ["dot"]
-    }]
+    "no-long-code": [
+      1,
+      {
+        "length": 500,
+        "exclude": [
+          "dot"
+        ]
+      }
+    ],
+    "no-trailing-punctuation": 0
   }
 }

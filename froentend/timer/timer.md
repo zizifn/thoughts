@@ -76,7 +76,7 @@ Job done! 下班！等等！ 让我们看看我们的需求，
 
 [MDN requestAnimationFrame](https://developer.mozilla.org/zh-CN/docs/Web/API/window/requestAnimationFrame)
 
-```
+```text
 告诉浏览器——你希望执行一个动画，并且要求浏览器在下次重绘之前调用指定的回调函数更新动画。
 
 注意：若你想在浏览器下次重绘之前继续更新下一帧动画，那么回调函数自身必须再次调用window.requestAnimationFrame()
@@ -106,7 +106,7 @@ Job done! 下班！等等！ 让我们看看我们的需求，
 
 这个方式浪费资源，为什么呢，让我们再看下 MDN 的说明，
 
-```
+```text
 为了提高性能和电池寿命，因此在大多数浏览器里，当requestAnimationFrame() 运行在后台标签页或者隐藏的<iframe> 里时，requestAnimationFrame() 会被暂停调用以提升性能和电池寿命。
 ```
 
