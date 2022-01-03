@@ -22,9 +22,9 @@ Thoughts of daily work by zizifn.
 
 ### [Event loop？](./froentend/timer/timer.md)
 
-### [前端性能优化--Tools Not Rule](TODO)
+### [前端性能优化--Tools Not Rule](./froentend/browser/前端性能优化.md)
 
-## [为什么不要用 setTimeout /setInterval 做动画？](TODO)
+### [为什么不要用 setTimeout /setInterval 做动画？](TODO)
 
 ## CORS COEP COOP CORP
 
