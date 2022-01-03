@@ -18,7 +18,13 @@ Thoughts of daily work by zizifn.
 
 ### [前端做个计时器有多难？](./froentend/timer/timer.md)
 
+## 浏览器
+
 ### [Event loop？](./froentend/timer/timer.md)
+
+### [前端性能优化--Tools Not Rule](TODO)
+
+## [为什么不要用 setTimeout /setInterval 做动画？](TODO)
 
 ## CORS COEP COOP CORP
 

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html {
+            height: 200vh;
+        }
+
+        .box {
+            border: 1px solid blue;
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            /* transition: transform 10s;
+             */
+            animation: trans 10s ease 0s 1 normal backwards;
+        }
+
+        @keyframes trans {
+            /* 50% {
+                transform: translateX(400px);
+            } */
+
+            100% {
+                transform: translateX(1000px);
+            }
+
+        }
+
+        .box2 {
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        .box3 {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+            position: relative;
+        }
+
+        .box4 {
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <button id="btn1"> click me</button>
+    <button id="btn2"> click me2</button>
+    <script>
+        const box = document.getElementsByClassName('box');
+        const box4 = document.getElementsByClassName('box4');
+        let click = false
+        let number1 = 0;
+        // document.getElementById('btn1').addEventListener("click", () => {
+        //     console.log("22");
+        // })
+        document.getElementById('btn1').addEventListener("click", () => {
+            // document.getElementsByName('')
+            // const div = document.createElement('div')
+            // div.innerText = 'div';
+            // document.body.appendChild(div);
+            // box[0].style.background = click ? "red" : "blue";
+            // click = !click;
+            // box[0].style.transform = "translateX(100px)";
+            // for (let index = 0; index < 50000000; index++) {
+            //     number1 += index;
+            // }
+            let offsetLeft = 0
+            for (let index = 0; index < 1000; index++) {
+                box4[0].style.width = `${box[0].offsetLeft + index}px`;
+
+            }
+
+            console.log(" click", offsetLeft);
+        })
+        // window.addEventListener("click", () => {
+        //     console.log(" windows click");
+        // })
+        const now = Date.now()
+        setTimeout(
+            () => {
+                // box[0].style.transform = 'translateX(1000px)';
+                // while (true) {
+                //     if (Date.now() - now > 8000) {
+                //         break;
+                //     }
+                // }
+            }, 1000
+        )
+        {
+            const box3 = document.getElementsByClassName('box3');
+            let left = 0;
+            let counter = 0;
+            let number = 0
+            function frame() {
+                requestAnimationFrame(() => {
+                    box3[0].style.left = `${left}px`;
+                    left += 1.67;
+                    counter += 1;
+                    // for (let index = 0; index < 5000000; index++) {
+                    //     number += index;
+                    // }
+                    if (left > 100) {
+                        return
+                        console.log(counter);
+                    }
+                    frame();
+                })
+            }
+            frame();
+        }
+
+        const box2 = document.getElementsByClassName('box2');
+        let left = 0;
+        let counter = 0;
+        let number = 0;
+        const id = setInterval(() => {
+            left += 1.67;
+            box2[0].style.left = `${left}px`;
+            left += 1.67;
+            for (let index = 0; index < 1000000; index++) {
+                number += index;
+            }
+            counter += 1;
+            if (left > 100) {
+                clearInterval(id)
+                console.log(counter);
+            }
+        }, 16.7)
+
+        {
+            // let left = 0;
+            // const box4 = document.getElementsByClassName('box4');
+            // function frame() {
+            //     requestAnimationFrame(() => {
+            //         left += 1.67;
+            //         box4[0].offsetLeft = left;
+            //         // counter += 1;
+            //         // for (let index = 0; index < 5000000; index++) {
+            //         //     number += index;
+            //         // }
+            //         if (left > 1000) {
+            //             return
+            //             console.log();
+            //         }
+            //         frame();
+            //     })
+            // }
+            // frame();
+        }
+    </script>
+
+</body>
+
+</html>
