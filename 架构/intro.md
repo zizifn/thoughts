@@ -32,7 +32,11 @@
 
 ### Proxy
 
-### failover 策略
+## failover 策略
+
+### Top level failover
+
+### App level failover
 
 ## 监控
 
@@ -43,3 +47,7 @@
 #### 模板 CICD
 
 #### 怎么做蓝绿部署？
+
+#### 全链路 HTTPS
+
+##### APP https key store 和 trust store 的管理
