@@ -12,7 +12,7 @@ Thoughts of daily work by zizifn.
 
 ## 浏览器
 
-### [Event loop？](./froentend/timer/timer.md)
+### [Event loop？ TODO]()
 
 ### [前端性能优化--Tools Not Rule](./froentend/browser/前端性能优化.md)
 
