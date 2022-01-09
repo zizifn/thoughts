@@ -2,14 +2,6 @@
 
 Thoughts of daily work by zizifn.
 
-## 技术分享
-
-### [Callback and Promise](./Callback_Promise_obser/readme.md)
-
-### [Linux OS](./oslearn/readme.md)
-
-### [TomcatAndJetty](./TomcatAndJetty/readme.md)
-
 ## 前端
 
 ### [RXJS](./Miscellaneous/rxjs/readme.md)
@@ -30,7 +22,7 @@ Thoughts of daily work by zizifn.
 
 ### [为什么说 Access-Control-Allow-Origin : \* 是 almost 安全的？](./corss-origin/CORS1.md)
 
-### [为什么说 img 标签是 web 标准最大的失误？](./corss-origin/2-img.md)
+### [为什么说 img 标签是 web 标准最大的失误？](./corss-origin/CORS2-img.md)
 
 ### [为什么说 Content-Security-Policy (SCP) 还不够安全？](./corss-origin/CORP.md)
 
@@ -67,6 +59,14 @@ Thoughts of daily work by zizifn.
 ### [Web 漏洞挖掘实战 读者故事](极客时间/Web漏洞挖掘实战.md)
 
 ### [webpack](./webpack/readme.md)
+
+## 技术分享
+
+### [Callback and Promise](./Callback_Promise_obser/readme.md)
+
+### [Linux OS](./oslearn/readme.md)
+
+### [TomcatAndJetty](./TomcatAndJetty/readme.md)
 
 <details><summary><b>test111</b></summary>
 1. test 
