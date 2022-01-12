@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: "./src/main.js",
     output: {
@@ -7,6 +8,10 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+                loader: 'file-loader'
+            },
             {
                 test: /\.js$/,
                 use:
@@ -34,14 +39,18 @@ module.exports = {
 
                 ]
             },
-            {
-                test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
-                loader: 'url-loader'
-            }
+            // {
+            //     test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+            //     loader: 'url-loader'
+            // },
+            // {
+            //     test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2)$/,
+            //     loader: 'file-loader'
+            // }
         ]
     },
     plugins: [
-        // new HtmlWebpackPlugin({ template: './src/index.html' })
+        new HtmlWebpackPlugin({ template: './index.html' })
         // new VueLoaderPlugin(),
         // new CopyPlugin({
         //     patterns: [
