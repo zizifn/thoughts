@@ -20,6 +20,10 @@
 
 ## 网络隔离
 
+### 需要公司基础架构中支持
+
+https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
+
 ### VPC 划分
 
 ### DMZ VPC
@@ -41,6 +45,8 @@
 ## 监控
 
 ### 服务的监控
+
+### open tracing
 
 ### 如何确保业务部门 APP 可控
 
