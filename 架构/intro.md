@@ -44,9 +44,9 @@ https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 
 ## 监控
 
-### 服务的监控
+### 服务的监控 Open tracing
 
-### open tracing
+### 全链路业务 log
 
 ### 如何确保业务部门 APP 可控
 
