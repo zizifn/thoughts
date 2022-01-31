@@ -10,6 +10,8 @@ Thoughts of daily work by zizifn.
 
 ### [前端做个计时器有多难？](./froentend/timer/timer.md)
 
+### [怎么无侵入实现监控 node.js 模块 todo](./froentend/opentel/readme.md)
+
 ## 浏览器
 
 ### [Event loop？ TODO]()

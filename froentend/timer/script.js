@@ -73,4 +73,3 @@ interval(1000, updateUI)
 // }
 
 // timer1()
-
