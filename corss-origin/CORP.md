@@ -23,7 +23,7 @@ github-cloud.s3.amazonaws.com secured-user-images.githubusercontent.com/
 *.githubusercontent.com".
 ```
 
-SCP 仅仅是指定自己网站加载资源的范围。。但是如果**恶意网站**，使用 img 等加载其他网站资源怎么办呢？
+SCP 仅仅是指定自己网站加载资源的范围。。但是如果**恶意网站**，使用 img 等加载我们网站资源怎么办呢？
 
 ## Cross-Origin-Resource-Policy
 
