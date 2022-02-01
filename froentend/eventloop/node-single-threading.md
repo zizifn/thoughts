@@ -1,4 +1,4 @@
-# 为什么说 Node.js 不是完全的单线程的程序
+# 为什么说 Node.js 不是完全的单线程
 
 相信大家都知道 node.js 是一个单线程程序，使用了 Event Loop 可以做到多并发。可惜这是不完全正确的。
 
@@ -106,7 +106,7 @@ Node 使用了预定义的线程池，这个线程池的大小默认是4.
 
 > export UV_THREADPOOL_SIZE=6
 
-让我在看一个例子，
+让我们在看一个例子，
 
 ### HTTP request
 
@@ -161,9 +161,9 @@ time-10: 144.088ms
 
 如果 Node 背后的 C++ 的**异步**方法，首先会尝试是否有内核异步支持，比如这里网络请是使用 epoll （Linux），如果内核没有提供异步方式，Node才会使用自己的线程池。。
 
-所以 http 请求虽然是异步，不过是由内核实现的，等大内核完成后，会通知给 main thread 处理callback。
+所以 http 请求虽然是异步，不过是由内核实现的，等到内核完成后，会通知C++， C++会通知给 main thread 处理callback。
 
-那么 Node 哪些方法会使用线程池呢？哪些不会呢？
+那么 Node 哪些异步方法会使用线程池呢？哪些不会呢？
 
 1. 原生 Kernal Async
     - TCP/UDP server client
