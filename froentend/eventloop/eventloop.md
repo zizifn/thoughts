@@ -8,41 +8,41 @@
 
 ### 协作式多任务 Cooperative multi-tasking
 
-但是随着计算的发展，硬件也越来越强大，多任务的需求就出现了。
+但是随着计算机的发展，硬件也越来越强大，多任务的需求就出现了。
+协作式多任务就是解决多任务的一种方式，它的工作方式如下，
 
-协作式多任务工作方式如下，
-
-1. APP1 独占整个计算机在运气
+1. APP1 独占整个计算机在运行
 2. APP2 运行完，会调用 yield， 告诉操作系统自己完事了
 3. 操作系统会把计算机给 APP2
 4. 如此反复。
 
-看起来不错，但是这种方式有些问题。如果有有些应用程序没有调用yield，那么这个程序就会一直占用计算资源，其他程序就无法运行。其实Windows 95/98 就是这样工作的，经常一个程序就可以干掉一个系统。
+看起来不错，但是这种方式有些问题。如果有些应用程序没有调用yield，那么这个程序就会一直占用计算资源，其他程序就无法运行。其实Windows 95/98 就是这样工作的，经常一个程序就可以干掉一个系统。
 
-虽然有问题，但是我们可以多任务。
+虽然有问题，但是我们可以多任务啦。
 
 ### 抢占式多任务处理 Preemptive multitasking
 
-抢占式多任务处理工作方式如下，
+抢占式多任务的出现，大大增强了操作系统的稳定性，它处理工作方式如下，
 
 1. 操作系统会使用CPU 时间片的方式，调度所有程序。
 2. 如果一个 process 时间片到了，操作系统会把堆栈信息，保持到 memory 中，然后让另外一个process 运行。
+3. 如此反复。
 
 Window NT 引入了这个，我们熟悉的 XP 就是这样工作的。
 
-虽然可以多任务，但是在 process 始终运行在一个CPU上。 那么怎么才能高效利用CPU呢？
+虽然可以多任务，但是 process 始终运行在一个CPU上。 那么怎么才能高效利用 CPU 呢？
 
 ## Synmmetric multi Threading （SMT）
 
 这是 CPU 级别的功能，OS 利用这种新的指令，可以做到让一个 process 在多个CPU上运行。
 
-目前绝大部分系统的线程调度都是交个操作系统去调度的，这样操作系统才能利用SMT，做到一个process在多个cpu上运行。
+目前绝大部分系统的线程调度都是交个操作系统的，这样操作系统才能利用SMT，做到一个process在多个cpu上运行。
 
-虽然线程的调度是由操作系统来完成的，但是数据的共享是由程序员来完成的。多线程程序是很难写的。
+然而虽然线程的调度是由操作系统来完成的，但是数据的共享是由程序员来完成的。这里有点小小的问题就是，多线程程序是很难写的，写不好就会出现 bug 的。
 
 既然很难，那么Node.js 怎么搞定的呢？
 
-**如果解决不了问题，那么我们可以选择消灭问题**。Node.js 是一个单线程。。哎嘿，搞定！！
+**如果解决不了问题，那么我们可以选择消灭问题**。Node.js 选择了单线程。。哎嘿，搞定！！
 
 ## Node.js 是单线程
 
@@ -154,7 +154,7 @@ console.log("index end");
 
 ### index.js
 
-首先 Node 的主线程会执行index.js。注意此时还没有进入循环。下面步骤同步执行，
+首先 Node 的主线程会执行index.js。注意此时还没有进入循环。下面步骤是同步执行，
 
 1. 执行 console.log("index start");
 2. 执行 process.nextTick， 并且把 callback 加入到 nextTick 队列中
@@ -166,12 +166,12 @@ console.log("index end");
 8. 执行 Promise.resolve，并且把 callback 加入到 Promise 队列中
 9. 执行 console.log("index end");
 
-然后 index.js 执行基本完毕，但是需要清空，nextTick 队列和Promise 队列.
+然后 index.js 执行基本完毕，但是在结束前需要清空，nextTick 队列和Promise 队列.
 
 1. 检查 nextTick 队列，如果有 callback，则执行 callback
 2. 检查 Promise 队列，如果有 callback，则执行 callback
 
-> nextTick 队列 和 Promise 队列 不分先后。如果 Promise 队列 callback 生成 promise，会继续执行。并且block main thread
+> nextTick 队列 和 Promise 队列 顺序不分先后。如果 Promise 队列 callback 生成 promise，会继续执行。并且block main thread
 
 然后index.js 执行完毕，进入 event loop 循环。
 
