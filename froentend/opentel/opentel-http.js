@@ -33,11 +33,11 @@ const eventZone = rootZone.fork(
             } finally {
             }
         },
-        onInvoke(parentZoneDelegate, currentZone, targetZone, delegate, applyThis, applyArgs, source) {
-            console.log('onInvoke');
-            parentZoneDelegate.invoke(
-                targetZone, delegate, applyThis, applyArgs, source);
-        },
+        // onInvoke(parentZoneDelegate, currentZone, targetZone, delegate, applyThis, applyArgs, source) {
+        //     console.log('onInvoke');
+        //     parentZoneDelegate.invoke(
+        //         targetZone, delegate, applyThis, applyArgs, source);
+        // },
         onIntercept(parentZoneDelegate, currentZone, targetZone, delegate, source) {
             console.log('onIntercept');
             // return currentZone.wrap(delegate);
@@ -46,47 +46,58 @@ const eventZone = rootZone.fork(
     });
 
 let obj = {};
-
-btn1.addEventListener('click', () => {
-    eventZone.run(
-        async () => {
-            console.log("callback....");
-
-            // setTimeout(() => {
-            //     console.log('setTimeout inside');
-            // })
-            // console.log(value.target.value);
-            // const resp = fetch("http://localhost:5000/froentend/zonejs/zonejs.html").then(
-            //     resp1 => {
-            //         const text = resp1.text()
-            //         return 'ddddd';
-            //     }
-            // ).then(data => {
-            //     console.log(data);
-            // });
-
-            // const resp = await fetch("http://localhost:5000/froentend/zonejs/zonejs.html")
-            // const text = await resp.text();
-
-            function reqListener() {
-                console.log(this.responseText);
+function warp(fn) {
+    return function (event) {
+        console.log(performance.now());
+        eventZone.run(
+            () => {
+                Promise.resolve().then(() => {
+                    Reflect.apply(fn, this, arguments);
+                })
             }
+        )
+        console.log(performance.now());
+    }
 
-            var oReq = new XMLHttpRequest();
-            oReq.addEventListener("load", reqListener);
-            oReq.open("GET", "http://localhost:5000/froentend/zonejs/zonejs.html");
-            oReq.send();
-            console.log('ddddddd');
-        })
-});
+}
 
-// // function observer_callback(list, observer) {
-// //     console.log(list);
-// // }
-// // setTimeout(
-// //     () => {
-// //         let observer = new PerformanceObserver(observer_callback);
-// //         observer.observe({ entryTypes: ["paint", "measure", "resource"] });
-// //     }, 1000
-// // )
+// btn1.addEventListener('click', (
+//     (event) => {
+//         console.log("callback....");
+//         let result = 0;
+//         for (let i = 1; i < 10000000; i++) {
+//             result += i;
+//         }
+//         console.log(result)
+//         console.log(event);
+//     }
+// ))
 
+btn1.addEventListener('click', warp(
+    (event) => {
+        console.log("callback....");
+        let result = 0;
+        for (let i = 1; i < 10000000; i++) {
+            result += i;
+        }
+        console.log(result)
+        console.log(event);
+    }
+))
+
+// btn1.addEventListener('click', () => {
+//     eventZone.run(
+//         () => {
+//             Promise.resolve(1).then(
+//                 () => {
+//                     console.log("callback....");
+//                     let result = 0;
+//                     for (let i = 1; i < 10000000; i++) {
+//                         result += i;
+//                     }
+//                     console.log(result)
+//                 }
+//             )
+
+//         })
+// });
