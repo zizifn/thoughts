@@ -5,7 +5,7 @@ const port = 3000
 
 app.use('/static', express.static(path.join(__dirname, 'public')))
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
 
     // get all env
     // normal env
