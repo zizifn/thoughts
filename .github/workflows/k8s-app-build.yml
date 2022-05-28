@@ -1,4 +1,4 @@
-name: CI/CD
+name: k8s-app-build
 on:
   workflow_dispatch:
 jobs:
