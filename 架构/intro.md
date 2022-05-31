@@ -12,13 +12,13 @@
 
 ## 域名和 CDN 策略
 
-### CDN bypass when CDN is down
-
 ### 共有域名
 
 ### 私有域名
 
 ### CDN
+
+#### CDN bypass when CDN is down
 
 ## 网络隔离
 
