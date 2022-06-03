@@ -10,7 +10,7 @@ const port = 3000
 app.use('/gtw/hello/static', express.static(join(resolve(), 'public')))
 
 app.get('/gtw/hello/api/wiki', async (req, res) => {
-   const resp = await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Hazard_Powder_Company")
+   const resp = await fetch("https://en.wikipedia.org/api/rest_v1/page/random/summary")
    res.json(await resp.json())
 })
 
