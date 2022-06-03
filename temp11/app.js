@@ -7,9 +7,9 @@ import fetch from 'node-fetch'
 const app = express()
 const port = 3000
 
-app.use('/static', express.static(join(resolve(), 'public')))
+app.use('/gtw/hello/static', express.static(join(resolve(), 'public')))
 
-app.get('/api/wiki', async (req, res) => {
+app.get('/gtw/hello/api/wiki', async (req, res) => {
    const resp = await fetch("https://en.wikipedia.org/api/rest_v1/page/summary/Hazard_Powder_Company")
    res.json(await resp.json())
 })
