@@ -4,8 +4,11 @@ import 'express-async-errors'
 import express from 'express';
 import { join, resolve } from 'path';
 import fetch from 'node-fetch'
+import morgan from 'morgan'
 const app = express()
 const port = 3000
+
+app.use(morgan(':method :url :status :res[content-length] - :response-time ms'))
 
 app.use('/gtw/hello/static', express.static(join(resolve(), 'public')))
 
