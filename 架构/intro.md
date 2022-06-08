@@ -6,7 +6,7 @@
 
 未来的演化，可以升级到 K8S，然后优化路由部分和服务直接调用部分。或者使用 service mesh。
 
-一个基本完备的的 基于 kubernetes 实现的POC。 https://github.com/zizifn/k8s-poc
+一个基本完备的 基于 kubernetes 实现的POC。 https://github.com/zizifn/k8s-poc
 
 ## 架构图
 
