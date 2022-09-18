@@ -4,6 +4,7 @@ Thoughts of daily work by zizifn.
 
 ## 前端
 
+### [如何限制 Promise 最大并发量](./froentend/generator/async-concurrency.md)
 ### [RXJS](./Miscellaneous/rxjs/readme.md)
 
 ### [CSS layout](./froentend/css_layout.md)

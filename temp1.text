@@ -1,0 +1,98 @@
+[
+    {
+        "Id": "sha256:f58b025c6b6436457e864b4ca18952b74e880a6b386e478e19bd7cfaf803c4c6",
+        "RepoTags": [
+            "otel/opentelemetry-collector:latest"
+        ],
+        "RepoDigests": [
+            "otel/opentelemetry-collector@sha256:cec18c72535bebeaca3615e841b19066b468f87a2e29b724b118b5b7bf8808ce"
+        ],
+        "Parent": "",
+        "Comment": "buildkit.dockerfile.v0",
+        "Created": "2021-09-15T13:15:32.907943405Z",
+        "Container": "",
+        "ContainerConfig": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": null,
+            "Cmd": null,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": null
+        },
+        "DockerVersion": "",
+        "Author": "",
+        "Config": {
+            "Hostname": "",
+            "Domainname": "",
+            "User": "10001",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "4317/tcp": {},
+                "55678/tcp": {},
+                "55679/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+            ],
+            "Cmd": [
+                "--config",
+                "/etc/otel/config.yaml"
+            ],
+            "ArgsEscaped": true,
+            "Image": "",
+            "Volumes": null,
+            "WorkingDir": "/",
+            "Entrypoint": [
+                "/otelcol"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "org.opencontainers.image.created": "2021-09-15T12:53:13Z",
+                "org.opencontainers.image.name": "opentelemetry-collector-releases",
+                "org.opencontainers.image.revision": "4d29685d0ae13c45d6d0bd899852746a5eadae64",
+                "org.opencontainers.image.source": "https://github.com/open-telemetry/opentelemetry-collector-releases",
+                "org.opencontainers.image.version": "0.35.0"
+            }
+        },
+        "Architecture": "amd64",
+        "Os": "linux",
+        "Size": 73377660,
+        "VirtualSize": 73377660,
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/77ca9fd9e228eccbcde43124028838e08361156b4f72901f42dc3c12c693ab72/diff:/var/lib/docker/overlay2/b704a772203524e30cb5b81792d71c7654823c627fd7ad1062e189c7e329a5dc/diff",
+                "MergedDir": "/var/lib/docker/overlay2/fdcd460e841d95dccef2fd51aa3c1fd0b7cd9ffb472638d107365f202ff6b8bd/merged",
+                "UpperDir": "/var/lib/docker/overlay2/fdcd460e841d95dccef2fd51aa3c1fd0b7cd9ffb472638d107365f202ff6b8bd/diff",
+                "WorkDir": "/var/lib/docker/overlay2/fdcd460e841d95dccef2fd51aa3c1fd0b7cd9ffb472638d107365f202ff6b8bd/work"
+            },
+            "Name": "overlay2"
+        },
+        "RootFS": {
+            "Type": "layers",
+            "Layers": [
+                "sha256:5410bb171109d31317627220fc96c8aa3c62b01e22bb4f746f41fd76ea7ca9c6",
+                "sha256:8f1d1767559752b8ed82f882b35d75f2a15f6c314c837bdf37e7106d7c113f01",
+                "sha256:cdbaa48bb1f918707ea8e5837e978430551f0e360b7702fe4a7b67a433e2c750"
+            ]
+        },
+        "Metadata": {
+            "LastTagTime": "0001-01-01T00:00:00Z"
+        }
+    }
+]

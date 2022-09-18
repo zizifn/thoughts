@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "module": "esnext",
+      "noImplicitAny": true,
+      "removeComments": true,
+      "preserveConstEnums": true,
+      "sourceMap": true
+    },
+    "include": ["**/*.ts", "froentend/generator/promise-limit2.js"],
+    "exclude": ["node_modules", "**/*.spec.ts"]
+  }
