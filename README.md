@@ -2,6 +2,12 @@
 
 Thoughts of daily work by zizifn.
 
+## 技术选型
+
+### [如何让前后端高效的合作？--TRPC/GraphQL/OpenApi](./froentend/trpc-graphql-openapi/readme.md)
+
+### [选择前端 UI libary 的底层原理](./)
+
 ## 前端
 
 ### [如何限制 Promise 最大并发量](./froentend/generator/async-concurrency.md)

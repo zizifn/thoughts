@@ -23,5 +23,6 @@ const input = [
 ];
 
 // Only one promise is run at once
-const result = await Promise.all(input);
-console.log(result);
+// const result = await Promise.all(input);
+createTask(10, 10000)().then(v => console.log(v))
+// console.log(result);
