@@ -92,3 +92,7 @@ Graphql 通过先定义 schema，然后通过代码生成不同平台的类型�
 如果把没有任何标准的 REST API（这也是绝大多数 API 的现状）比喻成弱类型的话，那么 OpenAPI 仅仅是为 原生 REST API 加上了类型系统。而 Graphql/trpc 是完全的强类型。
 
 ![type](./type.excalidraw.png)
+
+
+> reference
+ [Stop Asking Me About gRPC](https://www.youtube.com/watch?v=jd5JwXoDXFo)
