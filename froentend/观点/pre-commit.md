@@ -20,7 +20,7 @@ developer 需要在任何是时刻都可以 check in。
 
 “你这野路子工程师，懂不懂工程化，标准的含金量啊？”
 
-## 通过 CI 来强制标准
+## 通过 CI 让 PR 变得麻烦，来强制标准
 
 Pre-commit 是可以在本地 `--no-verify` skip 的? 肯本无法让 阻止 skip git hooks。
 
