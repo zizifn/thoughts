@@ -4,7 +4,7 @@
   "description": "Thoughts of daily work",
   "main": "index.js",
   "type": "module",
-  "husky": {
+  "//husky": {
     "hooks": {
       "pre-commit": "npx lint-md */**/*.md"
     }
