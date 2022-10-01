@@ -2,6 +2,10 @@
 
 Thoughts of daily work by zizifn.
 
+## TODO
+
+### [强制 pre-commit 是否是错误的?](./froentend/%E8%A7%82%E7%82%B9/pre-commit.md)
+
 ## 技术选型
 
 ### [如何让前后端高效的合作？--TRPC/GraphQL/OpenApi](./froentend/trpc-graphql-openapi/readme.md)

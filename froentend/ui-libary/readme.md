@@ -63,7 +63,7 @@ function MyDialog() {
 
 ## Component library
 
-不对了，这不是讨论，UI library， 我们日常使用的， `Ant Design`, `element ui`, `MUI`, `Angular material` 呢？
+不对啊，我们日常使用的， Ant Design, element ui, MUI, Angular material 怎么不讨论下啊？
 
 他们不过同时满足，`样式系统` 和 `行为组件` 罢了。
 
@@ -71,7 +71,7 @@ function MyDialog() {
 
 这些组件 library **强烈**的设计风格，并且他们组件也有完善的功能可以拿到就用。
 
-## 我们的目标是什么
+## 我们的目标是什么?
 
 那么这是不是意味着，我们应该尽量使用 像 `Ant Design`, `element ui`, `MUI`, `Angular material` 这些组件 library 呢？
 
