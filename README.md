@@ -6,6 +6,8 @@ Thoughts of daily work by zizifn.
 
 ### [强制 pre-commit 是否是错误的?](./froentend/%E8%A7%82%E7%82%B9/pre-commit.md)
 
+### [如何工程的效率？](./froentend/%E8%A7%82%E7%82%B9/over-engineer.md)
+
 ## 技术选型
 
 ### [如何让前后端高效的合作？--TRPC/GraphQL/OpenApi](./froentend/trpc-graphql-openapi/readme.md)
@@ -15,6 +17,7 @@ Thoughts of daily work by zizifn.
 ## 前端
 
 ### [如何限制 Promise 最大并发量](./froentend/generator/async-concurrency.md)
+
 ### [RXJS](./Miscellaneous/rxjs/readme.md)
 
 ### [CSS layout](./froentend/css_layout.md)
