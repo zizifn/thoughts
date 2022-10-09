@@ -8,9 +8,9 @@ Thoughts of daily work by zizifn.
 
 ### [选择前端 UI libary 的底层原理](./froentend/ui-libary/readme.md)
 
-### [draft] [强制 pre-commit 是否是错误的?](./froentend/%E8%A7%82%E7%82%B9/pre-commit.md)
+### [draft] [强制 pre-commit 是否是错误的?](./froentend/opinions/pre-commit.md)
 
-### [draft] [如何工程的效率？--- 前端工程化中的各种 lint 是否是对的？](./froentend/%E8%A7%82%E7%82%B9/over-engineer.md)
+### [draft] [如何工程的效率？--- 前端工程化中的各种 lint 是否是对的？](./froentend/opinions/over-engineer.md)
 
 ## 前端
 
