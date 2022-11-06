@@ -1,11 +1,16 @@
 {
-    "compilerOptions": {
-      "module": "esnext",
-      "noImplicitAny": true,
-      "removeComments": true,
-      "preserveConstEnums": true,
-      "sourceMap": true
-    },
-    "include": ["**/*.ts", "froentend/generator/promise-limit2.js"],
-    "exclude": ["node_modules", "**/*.spec.ts"]
-  }
+  "compilerOptions": {
+    "module": "esnext",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "target": "es2020"
+  },
+  "include": [
+    "**/*.ts",
+    "froentend/generator/promise-limit2.js",
+    "proxy/http.mjs"
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
