@@ -39,7 +39,7 @@
     "lit": "^2.0.0-rc.3"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@esm-bundle/chai": "^4.1.5",
     "@open-wc/testing": "^2.5.32",
