@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Detailed custom validation</title>
+    <style>
+        body {
+            font: 1em sans-serif;
+            width: 200px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        p * {
+            display: block;
+        }
+
+        input[type=email] {
+            -webkit-appearance: none;
+            appearance: none;
+
+            width: 100%;
+            border: 1px solid #333;
+            margin: 0;
+
+            font-family: inherit;
+            font-size: 90%;
+
+            box-sizing: border-box;
+        }
+
+        /* This is our style for the invalid fields */
+        input:invalid {
+            border-color: #900;
+            background-color: #FDD;
+        }
+
+        input:focus:invalid {
+            outline: none;
+        }
+
+        /* This is the style of our error messages */
+        .error {
+            width: 100%;
+            padding: 0;
+
+            font-size: 80%;
+            color: white;
+            background-color: #900;
+            border-radius: 0 0 5px 5px;
+
+            box-sizing: border-box;
+        }
+
+        .error.active {
+            padding: 0.3em;
+        }
+    </style>
+</head>
+
+<body>
+    <form novalidate>
+        <p>
+            <label for="mail">
+                <span>Please enter an email address:</span>
+                <input type="text" id="mail" name="mail" minlength="8" autocomplete="off">
+                <!-- <span class="error" aria-live="assertive"></span> -->
+                <!-- <span class="error"></span> -->
+
+            </label>
+
+        </p>
+        <button>Submit</button>
+    </form>
+
+    <script src="./app.js">
+
+    </script>
+</body>
+
+</html>

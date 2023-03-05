@@ -9,7 +9,7 @@ server.on("connection", (clientToProxySocket) => {
   // We need only the data once, the starting packet
   clientToProxySocket.once("data", async (data) => {
     // If you want to see the packet uncomment below
-    console.log(data.toString());
+    // console.log(data.toString());
 
     let isTLSConnection = data.toString().indexOf("CONNECT") !== -1;
 
@@ -36,13 +36,13 @@ server.on("connection", (clientToProxySocket) => {
     if (isTLSConnection) {
       clientToProxySocket.write("HTTP/1.1 200 OK\r\n\n");
     } else {
-      // proxyToServerSocket.write(data);
+      proxyToServerSocket.write(data);
     }
 
     var options = {
-      host: "localhost",
-      path: "/api/proxy",
-      port: "3000",
+      host: "127.0.0.1",
+      path: "",
+      port: "8080",
       //This is the only line that is new. `headers` is an object with the headers to request
       headers: {
         "x-host": serverAddress,
@@ -51,6 +51,8 @@ server.on("connection", (clientToProxySocket) => {
       },
       method: "POST",
     };
+
+    console.log("------------");
     const proxyToServerSocket = request(options).socket;
     clientToProxySocket.pipe(proxyToServerSocket);
     proxyToServerSocket.pipe(clientToProxySocket);
