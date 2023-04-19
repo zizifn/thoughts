@@ -4,11 +4,11 @@ import express from "express";
 import { join, resolve } from "path";
 import fetch from "node-fetch";
 import morgan from "morgan";
-import {createServer} from 'http';
+import { createServer } from 'http';
 import { WebSocketServer, WebSocket } from "ws";
 const app = express();
 const port = 3000;
-const httpServer =createServer(app);
+const httpServer = createServer(app);
 
 app.use(
   morgan(":method :url :status :res[content-length] - :response-time ms")
