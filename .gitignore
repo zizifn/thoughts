@@ -376,3 +376,4 @@ Miscellaneous/rxjs/{_files/www-player-webp.css
 Miscellaneous/rxjs/{.html
 .npmrc
 **/.clinic/**
+sqlite/database.sqlite

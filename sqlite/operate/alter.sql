@@ -1,0 +1,1 @@
+Alter table users rename first_name to first_name2;
