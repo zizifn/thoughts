@@ -66,6 +66,7 @@ Router 让我们有更细粒度的流量控制，从而做到 failover 和更细
 - 如果从库同步过来，清除 marker。
 
 #### CDN bypass when CDN is down
+TODO
 
 ## 网络隔离
 
