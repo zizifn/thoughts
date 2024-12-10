@@ -10,6 +10,8 @@
 
 ## 架构图
 
+### 旧版本
+
 ![arch](./consolidated-network.excalidraw.png)
 
 ### 架构演进版本
@@ -18,7 +20,7 @@
 
 1. ECS 的服务现在基本都到了EKS。为了简化架构，把 router 迁移到 EKS
 2. NLB 比 ALB 性能更好。
-3. NLB 直接 attach 到 K8s service 上.
+
 ## 域名和 CDN 策略
 
 ### 共有域名
@@ -40,14 +42,18 @@ Last-Modified/If-Modified-Since
 1. TCP 优化
 2. Route 优化
 3. 回源长连接，降低源的压力
+4. 多种路由策略
+   - Stickiness cookies
+   - etc
 4. SSL offload(不推荐)
 
 #### Envoy Router
 
+CDN 已经根据 Stickiness cookies做了初略的路由。 
+
 Router 让我们有更细粒度的流量控制，从而做到 failover 和更细粒度的多活策略。
 
-1. 可以自定义路由测试策略
-2. 可以根据用户 cookies 锁定 region
+1. 可以自定义路由测试策略。 更具 header 或者cookies 
 
 #### 多活
 
@@ -59,11 +65,14 @@ Router 让我们有更细粒度的流量控制，从而做到 failover 和更细
 
 2. 读写分离。
 
+![database](./database.excalidraw.png)
+
 会出现cache不一致的问题。
 - 读的zone，如果需要写， 在 cache 设置一个marker。
 - Then 写入主 DB。
 - 如果 marker set, then 读取主库。else，读取从库。
 - 如果从库同步过来，清除 marker。
+
 
 #### CDN bypass when CDN is down
 TODO
@@ -91,10 +100,37 @@ https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 
 所有请求必须通过具有白名单规则的HTTP/Socket代理。
 
+### BU Cross Account connectivity
+
+1. VPC peering
+2. Transit Gateway
+
+### Across BU Cross Account connectivity
+
+1. Gateway
+2. privatelink
+
+
 ## APP 之间的通信
 
-所有 APP 直接通信都是通过 router 完成。我们这里采用的是服务端的 server discovery。
+### Server side discovery
 
+ALB with ingress controller for server side discovery.
+
+![app](./app.excalidraw.png)
+
+#### Why not client side discovery
+
+1. 架构的延续性
+
+这一套架构从之前之际的data center 都没有改变。 之前LB 用的是 F5 LTM。
+其次，还有 Enovy Router 的原因，之前是部署在 ECS，无法跨 EKS 和 ECS cluster。
+
+### Envoy Router
+
+所有 APP 直接通信都是通过 envoy router 完成。Envoy Router 做 cross cluster 的路由。
+
+虽然这样集中路由，会照成 router 很热。或许未来可以用 service mesh 来解决。
 
 ## Resiliency & Observability
 
@@ -116,24 +152,22 @@ https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 
 每个 ecs 和 EKS node 都会安装 Datadog agent，用于收集系统和应用的 metrics。
 
+#### Splunk and Datadog Dashboard
 
 ## Health check
 https://kubernetes.io/zh-cn/docs/concepts/configuration/liveness-readiness-startup-probes/
 
-首先在
+1. Liveness probe 
+2. Readiness probe
+3. APP 会响应 sigetm 信号，然后退出。
 
 ### Top level failover
 
+CDN 会进行 failover。
+
 ### App level failover
 
-
-
-## 监控
-
-### 服务的监控 Open tracing
-
-### 全链路业务 log
-
+完全由 Enovy Router + APP ALB 完成。
 
 
 ### 如何确保业务部门 APP 可控
