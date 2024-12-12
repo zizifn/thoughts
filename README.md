@@ -4,6 +4,8 @@ Thoughts of daily work by zizifn.
 
 ## 技术选型
 
+### [Stack](./stack/readme.md)
+
 ### [如何让前后端高效的合作？--TRPC/GraphQL/OpenApi](./froentend/trpc-graphql-openapi/readme.md)
 
 ### [选择前端 UI libary 的底层原理](./froentend/ui-libary/readme.md)

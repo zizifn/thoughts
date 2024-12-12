@@ -2,9 +2,7 @@
 
 以下是我们实际工作中微服务和 BFF 前端服务集群的架构图，其中省略了很多细节和敏感信息。相关 URL 都使用了我自己的域名。
 
-这套架构服务从一开始在自己数据中心，然后也同样应用到了基于 AWS ECS。
-
-未来的演化，可以升级到 K8S，然后优化路由部分和服务直接调用部分。或者使用 service mesh。
+这套架构服务从一开始在自己数据中心，然后也同样应用到了基于 AWS ECS。最后升级到 K8S。
 
 一个基本完备的 基于 kubernetes 实现的POC。 https://github.com/zizifn/k8s-poc
 
@@ -15,7 +13,9 @@
 ![arch](./consolidated-network.excalidraw.png)
 
 ### 架构演进版本
+
 ![arch](./consolidated-network-v2.excalidraw.png)
+
 #### Why
 
 1. ECS 的服务现在基本都到了EKS。为了简化架构，把 router 迁移到 EKS
@@ -73,6 +73,8 @@ Router 让我们有更细粒度的流量控制，从而做到 failover 和更细
 - 如果 marker set, then 读取主库。else，读取从库。
 - 如果从库同步过来，清除 marker。
 
+3. 
+
 
 #### CDN bypass when CDN is down
 TODO
@@ -93,7 +95,7 @@ https://github.com/sergiomarotco/Network-segmentation-cheat-sheet
 
 ### DataCenter connetcivity
 
-1. 所有应用均可通过AWS Direct Connect连接到数据中心。
+1. 所有应用均可通过 AWS Direct Connect 连接到数据中心。
 2. 默认情况下，防火墙会阻止所有流量，需提交工单以开启。
 
 ###  Internet connectivity
