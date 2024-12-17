@@ -73,7 +73,7 @@ Router 让我们有更细粒度的流量控制，从而做到 failover 和更细
 - 如果 marker set, then 读取主库。else，读取从库。
 - 如果从库同步过来，清除 marker。
 
-3. 
+3. Dynamodb golbal table
 
 
 #### CDN bypass when CDN is down
@@ -136,8 +136,15 @@ ALB with ingress controller for server side discovery.
 
 ## Resiliency & Observability
 
-### Resiliency Pattens 
-1. Circuit Breaker
+### Resiliency Pattens
+
+#### 服务自己方
+
+   Rate limit 
+
+#### 调用方
+   Circuit Breaker
+
 
 #### failover
 
@@ -154,6 +161,17 @@ ALB with ingress controller for server side discovery.
 
 每个 ecs 和 EKS node 都会安装 Datadog agent，用于收集系统和应用的 metrics。
 
+## Site Reliablity
+
+### health check
+
+### management API
+1. logger level
+2. routes
+3. threaddump
+
+## Cache
+
 #### Splunk and Datadog Dashboard
 
 ## Health check
@@ -161,7 +179,7 @@ https://kubernetes.io/zh-cn/docs/concepts/configuration/liveness-readiness-start
 
 1. Liveness probe 
 2. Readiness probe
-3. APP 会响应 sigetm 信号，然后退出。
+3. APP 会响应 sigterm 信号，然后退出。
 
 ### Top level failover
 
@@ -185,6 +203,12 @@ CDN 会进行 failover。
 ### 如何服务业务部门？
 
 #### 如何规范业务 app 的申请，上线，测试流程?
+
+##### 申请
+
+申请 APP 都
+
+##### 上线
 
 #### 如何支持不同框架？
 
