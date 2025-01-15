@@ -14,6 +14,8 @@ Thoughts of daily work by zizifn.
 
 ### [draft] [如何工程的效率？--- 前端工程化中的各种 lint 是否是对的？](./froentend/opinions/over-engineer.md)
 
+### [draf] [cloudflare](./serverless/cloudflare.md)
+
 ## 前端
 
 ### [如何限制 Promise 最大并发量](./froentend/generator/async-concurrency.md)
