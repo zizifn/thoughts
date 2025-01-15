@@ -48,6 +48,11 @@ Thoughts of daily work by zizifn.
 
 ### [简介](./架构/intro.md)
 
+## JS runtime
+
+### libuv
+[Libuv loop iteration --- 为什么 event loop 不退出？](./javascript-runtime/libuv/event_order.md)
+
 ## 工具 & Miscellaneous
 
 ### [Github Actions](.\Miscellaneous\github-actions\readme.md)
