@@ -49,16 +49,17 @@
 
 WinterTC (TC55) 是 Ecma International 的一个技术委员会，旨在实现服务器端 JavaScript 运行时之间的 API 互操作性，特别是对于与 Web 共同的 API。
 
-ECMA?? 相信熟悉 Javascript 都听过 [ECMAScript® Language Specification - TC39](https://tc39.es/ecma262/)。
+**ECMA?? 相信熟悉 Javascript 都听过 [ECMAScript® Language Specification - TC39](https://tc39.es/ecma262/)。**
 
 WinterTC (TC55) 制定了很多 API，不同的 Javascript 运行都会实现这些 API。大家可以在他们官网去查看。[WinterTC work](https://wintercg.org/work)
 
-这些 API 有很多是 web standrad 的 API，比如 `fetch`, `File`, `web stream` 等等。目前 nodejs 已经实现了很多 web API。
+这些 API 有很多是 web standrad 已有标准，比如 `fetch`, `File`, `web stream` 等等。
 
-比如 Nodejs 关于stream 的 API 就有两个包 `node:stream`（Node.js 自己的 API） 和 `node:stream/web` [whatwg/streams](https://streams.spec.whatwg.org/)。
+目前 nodejs 已经实现了很多 web API。比如关于 stream 的 API 就有两个包 `node:stream`（Node.js 自己的 API） 和 `node:stream/web` [whatwg/streams](https://streams.spec.whatwg.org/)。
 
-> 当然这也带来一些问题，让 nodejs API 变得更加复杂。
+> 当然这也带来一些问题，让 Nodejs API 变得更加复杂。
 
-WinterTC 还有关于网络的 proposal， 比如 `Sockets API`. CLI API 等等。
+WinterTC 还有关于网络的 proposal， 比如 `Sockets API`. `CLI API` 等等。
 
-> 你要是问为什么不直接使用 Node.js 的 API作为标准。那么请让我问一个问题，为什么 ES module(ES2015) 不直接使用 CommonJS 的模块规范？ES module 标准已经 10年了，但是我们如果看 JS 生态，大家还在日常开发中和这两种标准斗智斗勇。
+> 你要是问为什么不直接使用 Node.js 的 API作为标准。
+> 那么请让我先问一个问题，为什么 ES module(ES2015) 在制定的标准的时候，不直接使用早就出来的 CommonJS 作为规范呢？ES module 标准已经 10年了，但是我们如果看 JS 生态，大家还在日常开发中和这两种标准斗智斗勇。
