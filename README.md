@@ -55,7 +55,7 @@ Thoughts of daily work by zizifn.
 ### libuv
 [Libuv loop iteration --- 为什么 event loop 不退出？](./javascript-runtime/libuv/event_order.md)
 
-[01- 从 0 写个微小的 Javascript 运行时 - 什么是 Javascript 运行时？](./javascript-runtime/nodejs/01-什么是%20Javascript%20运行时.md)
+[从 0 写个微小的 Javascript 运行时 - 什么是 Javascript 运行时？](./javascript-runtime/nodejs/01-什么是%20Javascript%20运行时.md)
 
 [从 0 写个微小的 Javascript 运行时(02) - 技术的选择](./javascript-runtime/nodejs/02-技术的选择.md)
 
