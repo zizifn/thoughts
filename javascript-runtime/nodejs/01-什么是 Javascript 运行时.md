@@ -45,7 +45,7 @@
 
 这些 runtime 各自实现了自己的 std libary。虽然说生态蓬勃发展，但是也带来了一些问题。比如，不同的 runtime 之间的代码不可复用，不同的 runtime 之间的代码不可迁移。
 
-## Web 互操作服务器运行时 (WinterTC)
+## WinterTC (Technical Committee on Web-interoperable Server Runtimes)
 
 WinterTC (TC55) 是 Ecma International 的一个技术委员会，旨在实现服务器端 JavaScript 运行时之间的 API 互操作性，特别是对于与 Web 共同的 API。
 
