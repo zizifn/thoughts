@@ -58,6 +58,7 @@ Thoughts of daily work by zizifn.
 [从 0 写个微小的 Javascript 运行时 - 什么是 Javascript 运行时？](./javascript-runtime/nodejs/01-什么是%20Javascript%20运行时.md)
 
 [从 0 写个微小的 Javascript 运行时(02) - 技术的选择](./javascript-runtime/nodejs/02-技术的选择.md)
+[从 0 写个微小的 Javascript 运行时(03) - 把 JS 引擎 QuickJS 加入到项目里面](./javascript-runtime/nodejs/03-把%20JS%20引擎%20QuickJS%20加入到项目里面.md)
 
 ## 工具 & Miscellaneous
 
