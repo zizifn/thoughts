@@ -16,7 +16,7 @@ https://github.com/zizifn/toy-js-runtime/tree/part1-add-quick-js
 
 ### Jetbrains Clion
 
-个人感觉， Clion C/C++ 开发体验要比 vscode 好一些。
+个人感觉， Clion C/C++ 开发体验要比 vscode 好一些。Clion 也支持远程到 WSL2 进行开发。[Jetbrains Clion remote development](https://www.jetbrains.com/help/clion/remote-development.html)
 
 > 这里不想挑起编辑器之争，但是 Clion 速度和 debug 比 VS Code 好一些。
 
@@ -56,7 +56,11 @@ git submodule add https://github.com/quickjs-ng/quickjs.git deps/quickjs
 cd deps/quickjs
 git checkout tags/v0.8.0
 ```
-可以使用 `git submodule update --init --recursive` 来初始化所有的 submodule。
+可以使用 `git submodule update --init --recursive` 来初始化所有的 submodule。因为 submodule 也会有其他 submodule。
+
+```bash
+git submodule update --init --recursive
+```
 
 ## 编写 CMakeLists.txt
 
@@ -88,6 +92,8 @@ target_link_libraries(toyjsruntime PRIVATE m qjs)
 
 ## 编写 main.c
 
+完整 code 请查看 [main.c](https://github.com/zizifn/toy-js-runtime/blob/part1-add-quick-js/src/main.c)
+
 ```c
 
     rt = JS_NewRuntime();
@@ -111,12 +117,21 @@ make
 ``` 
 如果你是使用 Clion，可以直接点击 `main.c`提示的运行按钮。
 
+``` bash
+hello world!! 1 + 2 = 3
+```
+
 好了，这样一个简单的 js runtime 就完成了。
 
 **等等，这里有个问题啊！**
 
-`console.log` 是怎么来的？ [Console](https://console.spec.whatwg.org/) 是 web 标准，我们这里仅仅引入 JS 引擎 QuickJS 是满足 [ECMAScript® Language Specification - TC39](https://tc39.es/ecma262/)。 ECMA262 没有规定 Console。
+`console.log` 是怎么来的？ 
+![03-1](./03-jsruntime.excalidraw.png)
 
-细心的读者可能发现，code 中有一行 `js_std_add_helpers(ctx, argc, argv);`。这个函数是 quickjs lib(`#include "quickjs-libc.h"`) 额外提供的，它会把一些常用的函数添加到 JS 的 global 对象上。比如 `console.log`。
+[Console](https://console.spec.whatwg.org/) 是 web 标准，我们这里仅仅引入 JS 引擎 QuickJS 是满足 [ECMAScript® Language Specification - TC39](https://tc39.es/ecma262/)。 ECMA262 并没有规定 Console。
 
-下一篇文章，我会带大家一起，看看怎么添加一个自定义的模块？
+细心的读者可能发现，code 中有一行 `js_std_add_helpers(ctx, argc, argv);`。
+
+这个函数是 quickjs lib(`#include "quickjs-libc.h"`) 额外提供的，它会把一些常用的函数添加到 JS 的 global 对象上。比如 `console.log`。
+
+下一篇文章，我会带大家一起，看看怎么添加一个自定义的模块/库？（非 JS 引擎提供）
