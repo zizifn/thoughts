@@ -50,7 +50,7 @@ cmake --version
 git submodule add https://github.com/quickjs-ng/quickjs.git deps/quickjs
 ```
 
-如果像使用某个版本的 quickjs，可以切换到对应的 tag。
+如果想使用某个版本的 quickjs，可以切换到对应的 tag。
 
 ```bash
 cd deps/quickjs
