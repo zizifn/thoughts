@@ -18,21 +18,21 @@ Thoughts of daily work by zizifn.
 
 ## 从 0 写个微小的 Javascript 运行时
 
-[从 0 写个微小的 Javascript 运行时（01） - 什么是 Javascript 运行时？](./javascript-runtime/nodejs/01-什么是%20Javascript%20运行时.md)
+[从 0 写个微小的 Javascript 运行时（01）- 什么是 Javascript 运行时？](./javascript-runtime/nodejs/01-什么是Javascript运行时.md)
 
 [从 0 写个微小的 Javascript 运行时(02) - 技术的选择](./javascript-runtime/nodejs/02-技术的选择.md)
 
-[从 0 写个微小的 Javascript 运行时(03) - 把 JS 引擎 QuickJS 加入到项目里面](./javascript-runtime/nodejs/03-把%20JS%20引擎%20QuickJS%20加入到项目里面.md)
+[从 0 写个微小的 Javascript 运行时(03) - 把 JS 引擎 QuickJS 加入到项目里面](./javascript-runtime/nodejs/03-把JS引擎QuickJS加入到项目里面.md)
 
 [从 0 写个微小的 Javascript 运行时(04) - 添加一个自定义的模块/库](./javascript-runtime/nodejs/04-添加一个自定义的模块.md)
 
 [从 0 写个微小的 Javascript 运行时(05) - 添加 event loop （libuv）](./javascript-runtime/nodejs/05-添加event-loop.md)
 
-[从 0 写个微小的 Javascript 运行时(06) - 添加 setTimeout](./javascript-runtime/nodejs/06-添加%20setTimeout.md)
+[从 0 写个微小的 Javascript 运行时(06) - 添加 setTimeout](./javascript-runtime/nodejs/06-添加setTimeout.md)
 
-[从 0 写个微小的 Javascript 运行时(07) -添加 libffi](./javascript-runtime/nodejs/07-添加%20libffi.md)
+[从 0 写个微小的 Javascript 运行时(07) -添加 libffi](./javascript-runtime/nodejs/07-添加libffi.md)
 
-[从 0 写个微小的 Javascript 运行时(08) - 克隆一个 electron 跨平台框架](./javascript-runtime/nodejs/08-添加%20UI%20功能.md)
+[从 0 写个微小的 Javascript 运行时(08) - 克隆一个 electron 跨平台框架](./javascript-runtime/nodejs/08-添加UI功能.md)
 
 ### libuv
 [Libuv loop iteration --- 为什么 event loop 不退出？](./javascript-runtime/libuv/event_order.md)
