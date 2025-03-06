@@ -1,4 +1,4 @@
-# 从 0 写个微小的 Javascript 运行时(06) -添加 setTimeout
+# 从 0 写个微小的 Javascript 运行时(07) -添加 libffi
 
 ## 代码
 
@@ -195,7 +195,8 @@ void test1() {
 }
 ```
 
-创建一个 ffi-test.js。[详细代码]（https://github.com/zizifn/toy-js-runtime/blob/part5-add-ffi/src/example/test-ffi.js）
+创建一个 ffi-test.js。
+[详细代码](https://github.com/zizifn/toy-js-runtime/blob/part5-add-ffi/src/example/test-ffi.js)
 
 ``` javascript
 import { CCallback } from 'toyjsruntime:jsffi';
