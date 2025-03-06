@@ -18,9 +18,6 @@ Thoughts of daily work by zizifn.
 
 ## 从 0 写个微小的 Javascript 运行时
 
-### libuv
-[Libuv loop iteration --- 为什么 event loop 不退出？](./javascript-runtime/libuv/event_order.md)
-
 [从 0 写个微小的 Javascript 运行时 - 什么是 Javascript 运行时？](./javascript-runtime/nodejs/01-什么是%20Javascript%20运行时.md)
 
 [从 0 写个微小的 Javascript 运行时(02) - 技术的选择](./javascript-runtime/nodejs/02-技术的选择.md)
@@ -36,6 +33,9 @@ Thoughts of daily work by zizifn.
 [从 0 写个微小的 Javascript 运行时(07) -添加 libffi](./javascript-runtime/nodejs/07-添加%20libffi.md)
 
 [从 0 写个微小的 Javascript 运行时(08) - 克隆一个 electron 跨平台框架](./javascript-runtime/nodejs/08-添加%20UI%20功能.md)
+
+### libuv
+[Libuv loop iteration --- 为什么 event loop 不退出？](./javascript-runtime/libuv/event_order.md)
 
 ## 前端
 
