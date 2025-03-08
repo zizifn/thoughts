@@ -30,3 +30,29 @@ PostHog is the only product analyt  ics platform built to natively work with ses
 [posthog](https://posthog.com/)
 
 
+## How to find leateast web standard
+
+### Resources
+
+#### Baseline
+
+无论提案有多新，这里是可以决定是否被浏览器支持。https://web.dev/baseline
+
+#### Javascript 最新提案
+https://github.com/tc39/proposals
+
+#### CSS 最新提案
+https://www.w3.org/Style/CSS/current-work.en.html
+https://github.com/w3c/csswg-drafts
+
+### Web API
+https://www.w3.org/TR/?tags%255B0%255D=webapi
+https://github.com/w3c
+
+#### Open-ui
+
+这里是一些提案，可以让 html 变得更有拓展性。
+https://open-ui.org/
+
+
+
