@@ -14,6 +14,8 @@ Thoughts of daily work by zizifn.
 
 ### [draft] [如何工程的效率？--- 前端工程化中的各种 lint 是否是对的？](./froentend/opinions/over-engineer.md)
 
+### [draft] [如何工程的效率？--- 好的文化](./froentend/opinions/good-culture.md)
+
 ### [draf] [cloudflare](./serverless/cloudflare.md)
 
 ## 从 0 写个微小的 Javascript 运行时
@@ -35,6 +37,7 @@ Thoughts of daily work by zizifn.
 [从 0 写个微小的 Javascript 运行时(08) - 克隆一个 electron 跨平台框架](./javascript-runtime/nodejs/08-添加UI功能.md)
 
 ### libuv
+
 [Libuv loop iteration --- 为什么 event loop 不退出？](./javascript-runtime/libuv/event_order.md)
 
 ## 前端
@@ -68,8 +71,6 @@ Thoughts of daily work by zizifn.
 ## 基于微服务的技术架构
 
 ### [简介](./架构/intro.md)
-
-
 
 ## 工具 & Miscellaneous
 
