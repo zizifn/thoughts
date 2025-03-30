@@ -10,7 +10,8 @@
   "include": [
     "**/*.ts",
     "froentend/generator/promise-limit2.js",
-    "proxy/http.mjs"
+    "proxy/http.mjs",
+    "algorithm/gfe75/18-node.js"
   ],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
