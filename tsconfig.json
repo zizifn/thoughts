@@ -11,7 +11,8 @@
     "**/*.ts",
     "froentend/generator/promise-limit2.js",
     "proxy/http.mjs",
-    "algorithm/gfe75/18-node.js"
+    "algorithm/gfe75/18-node.js",
+    "algorithm/gfe75/closure.js"
   ],
   "exclude": ["node_modules", "**/*.spec.ts"]
 }
