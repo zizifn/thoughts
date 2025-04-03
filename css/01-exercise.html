@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 16px 32px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        margin-bottom: 24px;
+      }
+
+      /* We'll learn about this later on! */
+      aside p:last-of-type {
+        margin-bottom: 0;
+      }
+
+      aside {
+        background: peachpuff;
+        border: 2px solid;
+        padding: 16px;
+      }
+
+      article > p a {
+        color: deeppink;
+        text-decoration: none;
+      }
+
+      article > aside a {
+        color: black;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .testP {
+        /* Change me! */
+        font-size: 18px;
+
+        padding-bottom: 2em;
+        border: 1px solid;
+      }
+
+      .testp1 {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <span
+      >Lorem ipsum dolor, sit amet
+      <strong>string1111</strong>xxxxxxxxxxxxxxxxxxxxx</span
+    >
+    <input id="btn1" type="button" value="xxxx" />
+    <p class="testp1">
+      <span style="font-size: 1em"> This </span>
+      <span style="font-size: 0.8em"> sentence </span>
+      <span style="font-size: 0.64em"> gets </span>
+      <span style="font-size: 0.5em"> quieter </span>
+      <span style="font-size: 0.4em"> and </span>
+      <span style="font-size: 0.32em"> quieter </span>
+    </p>
+    <p class="testP">This paragraph has a relative amount of bottom padding!</p>
+    <article class="recipe">
+      <h2>Chicken Vindaloo</h2>
+      <p>
+        “Vindaloo” is a popular Indian <a href="">curry dish</a> that calls for
+        meat to be marinated in a highly flavorful spicy mixture with vinegar,
+        then quickly cooked up when you’re ready to eat.
+      </p>
+      <p>
+        While this dish has a long list of spices, most are quite common in the
+        average spice rack. If you find you're missing one, it's not a deal
+        breaker. You will still have a lovely, fragrant curry.
+      </p>
+      <aside>
+        <p>
+          Quick warning: <strong>this recipe is <em>spicy</em></strong
+          >. <a href="">Click here</a> for an alternative recipe with less heat.
+        </p>
+      </aside>
+    </article>
+    <script>
+      document
+        .getElementById("btn1")
+        .addEventListener("click", function (event) {
+          console.log("-----", event);
+          console.log("this---", this);
+        });
+    </script>
+  </body>
+</html>

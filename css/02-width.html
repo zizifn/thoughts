@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      h1 {
+        width: min-content;
+        background-color: fuchsia;
+      }
+      .max-content {
+        width: max-content;
+      }
+      .fit-content {
+        width: fit-content;
+        background-color: peachpuff;
+        margin-bottom: 16px;
+        padding: 8px;
+      }
+      .box {
+        width: 50%;
+        min-width: 170px;
+        max-width: 300px;
+        margin: 0 auto;
+        border: solid hotpink;
+      }
+      .box2 {
+        h2 {
+          width: fit-content;
+          border: solid hotpink;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This heading is shrunk down.</h1>
+
+    <h1 class="max-content">
+      This heading is constrained using max-content, which causes the line to
+      extend far longer than it otherwise would!
+    </h1>
+    <h1 class="max-content">A short heading</h1>
+    <h2 class="fit-content">Short</h2>
+    <h2 class="fit-content">A mid-length heading</h2>
+    <h2 class="fit-content">
+      The longest heading you've ever seen in your life, will it ever end,
+      ahhhhh ohmigod 😬😬😬😬😬😬😬
+    </h2>
+    <div class="box">Hello World</div>
+
+    <div class="box2">
+      <h2>Short</h2>
+      <h2>A mid-length heading</h2>
+      <h2>
+        The longest heading you've ever seen in your life, will it ever end,
+        ahhhhh ohmigod 😬😬😬😬😬😬😬
+      </h2>
+    </div>
+  </body>
+</html>
