@@ -5,25 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .sticky-ball {
-        position: sticky;
-        top: 0;
-        left: 20px;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: deeppink;
+      section {
+        display: flex;
+        gap: 8px;
+        align-items: start;
+        position: relative;
+        isolation: isolate;
+
+        h2 {
+          position: sticky;
+          top: 0;
+          align-items: start;
+          white-space: nowrap;
+        }
       }
 
-      .wrapper {
-        height: 50%;
-        margin-top: 25%;
-        margin-bottom: 100%;
-        border: 4px solid;
-      }
       html,
       body {
-        height: 165%;
+        height: 150%;
       }
     </style>
   </head>

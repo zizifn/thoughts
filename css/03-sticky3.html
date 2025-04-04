@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .sticky-ball {
+        position: sticky;
+        width: 50px;
+        height: 50px;
+      }
+
+      .sticky-ball.one {
+        top: 25px;
+      }
+      .sticky-ball.two {
+        top: 0px;
+      }
+      .sticky-ball.three {
+        top: -25px;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+      .wrapper {
+        height: 200%;
+        padding: 64px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      /*
+  I pushed the decorative styles down
+  here, so that all relevant styles
+  would be in-frame
+*/
+      .sticky-ball {
+        border-radius: 50%;
+        background: linear-gradient(0deg, deeppink, pink);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="sticky-ball one"></div>
+      <div class="sticky-ball two"></div>
+      <div class="sticky-ball three"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      main {
+        overflow: auto;
+        max-height: 200px;
+        border: 2px solid;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        text-align: center;
+        background: white;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>Sticky Header</header>
+      <p>
+        Because the main tag has a max-height, the content inside that element
+        won't fit. The 'overflow: auto' means that this container will have its
+        own scrollbar, and the header will stick *within this context*.
+      </p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+      <p>
+        It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was
+        popularised in the 1960s with the release of Letraset sheets containing
+        Lorem Ipsum passages, and more recently with desktop publishing software
+        like Aldus PageMaker including versions of Lorem Ipsum.
+      </p>
+    </main>
+  </body>
+</html>

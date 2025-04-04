@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .answer {
+        display: none;
+      }
+
+      /*
+  Show the answer when hovered
+  or focused
+*/
+      .answer-wrapper:hover .answer,
+      .answer-wrapper:focus .answer {
+        display: inline;
+      }
+
+      /* Visual styles */
+      .answer-wrapper {
+        border: none;
+        border-bottom: 3px solid;
+        background: transparent;
+      }
+      h2 {
+        font-size: 1rem;
+        margin-bottom: 32px;
+      }
+
+      section {
+        visibility: hidden;
+      }
+
+      .button.two {
+        visibility: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>
+      Question: What was the first feature-length animated film ever released?
+    </h2>
+    <p>
+      Answer:
+      <button class="answer-wrapper">
+        <span class="answer"> Snow White</span>
+      </button>
+    </p>
+
+    <section>
+      <button class="button one">First Button</button>
+      <button class="button two">Second Button</button>
+      <button class="button three">Third Button</button>
+    </section>
+  </body>
+</html>

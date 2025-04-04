@@ -53,3 +53,58 @@ function findCulprits(elem) {
 如果有任何一个 axis 的 overflow，都会一个 scroll container。然后要么 show or hide scrollbar。
 
 overflow 是相对与 scroll container 的。overflow 也适用在 position containing blocks 上。
+
+## sticky position
+
+Sticky position 是相对于 parent 的。如果 parent 的 top 不在 viewport 里面了，sticky 元素就没有了。另外 sticky position 还是在 flow 里面的。
+
+下面的情况，取决于 header 有多高。
+
+```
+    <header>
+      <div class="sticky"></div>
+    </header>
+```
+
+如果 parent 有 overflow， sticky position 也会不好用。下面脚本会找出 sticky 的元素的 parent 是否含有 overflow。
+
+```
+const selector = '.the-fixed-child';
+function findCulprits(elem) {
+  if (!elem) {
+    throw new Error(
+      'Could not find element with that selector'
+    );
+  }
+  let parent = elem.parentElement;
+  while (parent) {
+    const hasOverflow = getComputedStyle(parent).overflow;
+    if (hasOverflow !== 'visible') {
+      console.log(hasOverflow, parent);
+    }
+    parent = parent.parentElement;
+  }
+}
+findCulprits(document.querySelector(selector));
+```
+
+## hidden
+
+- display: none
+- visibility: hidden
+- opacity: 0
+
+accessibility
+https://www.joshwcomeau.com/snippets/react-components/visually-hidden/
+
+```
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0); /* Legacy property for Internet Explorer */
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+```
