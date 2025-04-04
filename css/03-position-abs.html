@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style></style>
+    <style>
+      html,
+      body {
+        width: 100%;
+      }
+      /* p {
+        position: absolute;
+      } */
+      .parent {
+        border: 4px solid;
+      }
+
+      .child {
+        /*
+      Enable this property
+      in the devtools!
+    */
+        /* position: absolute; */
+        width: 200px;
+        height: 200px;
+        background: pink;
+        opacity: 0.5;
+      }
+
+      .abs {
+        position: absolute;
+        top: 32px;
+        left: 32px;
+        border: 2px solid slateblue;
+      }
+      .container {
+        width: 200px;
+        border: 5px solid;
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <p>Paragraph One</p>
+    <p>Paragraph Two</p>
+    <p>Paragraph Three</p>
+    <div>hellohello</div> -->
+
+    <div class="parent">
+      <div class="child"></div>
+    </div>
+
+    <div class="abs">
+      <p>Lookatme!Iamaverylongsentence。</p>
+    </div>
+
+    <section class="container">
+      <p>Hello World!</p>
+    </section>
+  </body>
+</html>

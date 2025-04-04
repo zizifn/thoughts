@@ -35,7 +35,7 @@ block and inline.
 
   - content-box
 
-    width = content. eg `width: 100%` = parent content width
+    width = content. **eg `width: 100%` = parent content width**
 
   - border-box
 

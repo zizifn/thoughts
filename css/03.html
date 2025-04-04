@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .with-margin {
+        margin-left: 40px;
+      }
+      .with-position {
+        position: relative;
+        left: 40px;
+      }
+
+      .box {
+        height: 48px;
+        border: 4px solid;
+      }
+      .pink.box {
+        border-color: deeppink;
+      }
+
+      /*
+  ⚠️ The rest of this CSS is not
+  relevant, and is used to construct
+  the demo. Don't worry if you don't
+  understand it; we'll get to all
+  this stuff soon enough!
+*/
+
+      body {
+        display: flex;
+        align-items: flex-start;
+      }
+      body {
+        display: flex;
+        align-items: flex-start;
+      }
+      section {
+        flex: 1;
+        background: #eee;
+        border-radius: 4px;
+        font-size: 0.875rem;
+        text-align: center;
+        line-height: 3;
+      }
+      section:not(:last-of-type) {
+        margin-right: 20px;
+      }
+    </style>
+    <style>
+      /* .pink.box {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 75px;
+        height: 75px;
+        background: deeppink;
+      } */
+      /* .pink.box {
+        position: absolute;
+        top: 20px;
+        left: 25%;
+        width: 75px;
+        height: 75px;
+        background: deeppink;
+      } */
+      .pink.box {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 75px;
+        height: 75px;
+        background: deeppink;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <section>
+      “margin-left”
+      <div class="pink box with-margin"></div>
+    </section>
+    <section>
+      “left”
+      <div class="pink box with-position"></div>
+    </section> -->
+    <!-- 
+    <div class="pink box"></div>
+    <p>Hello World</p> -->
+    <div class="pink box"></div>
+
+    <p>Paragraph One</p>
+    <p>Paragraph Two</p>
+    <p>Paragraph Three</p>
+  </body>
+</html>

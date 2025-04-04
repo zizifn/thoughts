@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        margin: 50px;
+        border: solid hotpink;
+        /*
+    This property breaks
+    fixed positioning on
+    ALL descendants:
+  */
+        transform: translate(1px, 1px);
+      }
+
+      .fixed {
+        position: fixed;
+        top: 0;
+      }
+
+      /*
+  Artificially boost the size of the
+  "body", so that the frame can be
+  scrolled.
+*/
+      html,
+      body {
+        height: 125%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="fixed">☹️ I'm not really fixed</button>
+    </div>
+  </body>
+</html>
