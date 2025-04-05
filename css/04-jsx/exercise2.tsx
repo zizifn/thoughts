@@ -1,3 +1,5 @@
+import { Map, Save, ShoppingCart } from "react-feather";
+
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { createRoot } from "react-dom/client";
@@ -7,9 +9,9 @@ const GlobalStyles = createGlobalStyle`
 html, body{
   height: 100%;
 }
-  body {
+  /* body {
   background: pink;
-}
+} */
 
 
 `;
@@ -32,6 +34,8 @@ const WallArtWrapper = styled.div`
 const WallArtImg = styled.img`
   display: block;
   border-radius: 4px;
+  width: ${(props) => props.width};
+  height: ${(props) => props.height};
 `;
 
 const WallArtCaption = styled.p`
@@ -51,16 +55,49 @@ function WallArt({ src, alt, caption, width }) {
 
   return (
     <WallArtWrapper>
-      <WallArtImg
-        src={src}
-        alt={alt}
-        style={{
-          width,
-          height,
-        }}
-      />
+      <WallArtImg src={src} alt={alt} width={width} height={height} />
       <WallArtCaption>{caption}</WallArtCaption>
     </WallArtWrapper>
+  );
+}
+
+const BtnWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+`;
+
+const IconBtn = styled.button`
+  background: white;
+  border-radius: 8px;
+  border: 2px solid hsl(0deg 0% 80%);
+  width: 90px;
+  height: 90px;
+`;
+
+const IconBtnContent = styled.span`
+  display: block;
+  color: ${(props) => (props.isCurrent ? "deeppink" : false)};
+`;
+
+function IconButton({ icon, children, isCurrent, ...delegated }) {
+  return (
+    <IconBtn {...delegated}>
+      <IconBtnContent isCurrent={isCurrent}>{icon}</IconBtnContent>
+      {children}
+    </IconBtn>
+  );
+}
+
+function ButtonGroup() {
+  return (
+    <BtnWrapper>
+      <IconButton isCurrent icon={<Map />}>
+        Navigation
+      </IconButton>
+      <IconButton icon={<Save />}>Save Route</IconButton>
+      <IconButton icon={<ShoppingCart />}>View Cart</IconButton>
+    </BtnWrapper>
   );
 }
 
@@ -69,13 +106,13 @@ const App = () => {
 
   return (
     <>
-      <WallArt
+      {/* <WallArt
         src="/css/img/style.jpg"
         alt="A hallway with rainbow-coloured lights"
         caption="Photo by Efe Kurnaz"
         width={250}
-      />
-
+      /> */}
+      <ButtonGroup />
       <GlobalStyles></GlobalStyles>
     </>
   );
