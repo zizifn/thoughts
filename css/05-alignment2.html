@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      ol {
+        height: 100%;
+        display: flex;
+        list-style: none;
+        border: 1px solid gray;
+        padding-inline: 20px;
+        flex-direction: column;
+        max-width: 400px;
+        margin: auto;
+        gap: 5px;
+        justify-content: flex-end;
+
+        li {
+          padding: 10px;
+          width: 70%;
+          background-color: gray;
+        }
+        li:nth-child(even) {
+          background-color: blue;
+          color: white;
+          align-self: flex-end;
+        }
+      }
+      .row {
+        display: flex;
+      }
+      p {
+        /* Try changing this to 'width': */
+        flex-basis: 20px;
+        border: 2px solid hotpink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <p>The word “enormousness” is itself an enormous word.</p>
+    </div>
+    <ol>
+      <li class="message sent">Can you get me a big salad?</li>
+      <li class="message received">
+        What big salad? I'm going to the coffee shop.
+      </li>
+      <li class="message sent">They have big salads.</li>
+      <li class="message received">I've never seen a big salad.</li>
+      <li class="message sent">They have a big salad.</li>
+      <li class="message received">Is that what I ask for?</li>
+      <li class="message received">The <em>BIG</em> salad?</li>
+    </ol>
+  </body>
+</html>

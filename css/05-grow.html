@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      nav {
+        width: 220px;
+      }
+      nav,
+      main {
+        padding: 16px;
+        border: 2px solid;
+      }
+      section {
+        display: flex;
+        main {
+          flex-grow: 1;
+          flex-shrink: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <nav>
+        <h2>Navigation</h2>
+        <ul>
+          <li>Home</li>
+          <li>Shop</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
+      <main>
+        <h1>Welcome to ThingStore</h1>
+        <p>Please enjoy your time shopping!</p>
+      </main>
+    </section>
+  </body>
+</html>

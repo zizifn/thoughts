@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      div {
+        height: 100px;
+        background-color: red;
+      }
+      .wrapper {
+        display: flex;
+        gap: 5px;
+      }
+      .biggie {
+        flex: 2;
+        min-width: 75px;
+        background-color: blue;
+      }
+      .tiny {
+        flex: 1;
+        min-width: 75px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrapper">
+      <div class="biggie"></div>
+      <div class="tiny"></div>
+      <div class="tiny"></div>
+    </section>
+  </body>
+</html>
