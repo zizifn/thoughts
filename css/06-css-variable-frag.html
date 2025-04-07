@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        --standard-border-width: 4px;
+      }
+
+      strong {
+        --border-details: dashed goldenrod;
+        border: var(--standard-border-width) var(--border-details);
+      }
+    </style>
+    <style>
+      button {
+        font-size: var(--inflated-size);
+      }
+    </style>
+  </head>
+  <body>
+    <strong>Hello World</strong>
+  </body>
+</html>

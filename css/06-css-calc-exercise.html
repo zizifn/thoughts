@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html {
+        --box-size: 75px;
+      }
+
+      .box {
+        border-radius: calc(var(--index) * 5%);
+        width: var(--box-size);
+        height: var(--box-size);
+        /* transform: rotate(45deg); */
+
+        /*
+          Here's a quick example, to get you started!
+          We use “--index”, a number from 1 to 16,
+          to derive the “hue” for each square.
+
+          If you're not sure where to start,
+          try tweaking these numbers!
+
+          One last tip: using a gradient instead
+          of a solid color opens lots of exciting
+          possibilities!
+        */
+        background: linear-gradient(
+          calc(var(--index) * 20deg),
+          hsl(calc(var(--index) * -10deg) 100% 50%),
+          hsl(calc(var(--index) * 10deg) 100% 50%)
+        );
+      }
+
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(var(--box-size) * 4);
+        height: calc(var(--box-size) * 4);
+      }
+
+      /*
+        Attach a unique index to each box.
+        Normally, we would do this in JS.
+      */
+      .box:nth-of-type(1) {
+        --index: 1;
+      }
+      .box:nth-of-type(2) {
+        --index: 2;
+      }
+      .box:nth-of-type(3) {
+        --index: 3;
+      }
+      .box:nth-of-type(4) {
+        --index: 4;
+      }
+      .box:nth-of-type(5) {
+        --index: 5;
+      }
+      .box:nth-of-type(6) {
+        --index: 6;
+      }
+      .box:nth-of-type(7) {
+        --index: 7;
+      }
+      .box:nth-of-type(8) {
+        --index: 8;
+      }
+      .box:nth-of-type(9) {
+        --index: 9;
+      }
+      .box:nth-of-type(10) {
+        --index: 10;
+      }
+      .box:nth-of-type(11) {
+        --index: 11;
+      }
+      .box:nth-of-type(12) {
+        --index: 12;
+      }
+      .box:nth-of-type(13) {
+        --index: 13;
+      }
+      .box:nth-of-type(14) {
+        --index: 14;
+      }
+      .box:nth-of-type(15) {
+        --index: 15;
+      }
+      .box:nth-of-type(16) {
+        --index: 16;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --275deg: 270deg;
+        --245deg: 245deg;
+        --350deg: 350deg;
+
+        --color-gray-100: hsl(var(--275deg) 20% 95%);
+        --color-gray-300: hsl(var(--275deg) 10% 75%);
+        --color-gray-500: hsl(var(--275deg) 5% 50%);
+        --color-gray-700: hsl(var(--275deg) 10% 30%);
+        --color-gray-900: hsl(var(--275deg) 15% 15%);
+
+        --color-primary: hsl(var(--245deg) 90% 50%);
+        --color-primary-light: hsl(var(--245deg) 90% 70%);
+        --color-primary-dark: hsl(var(--245deg) 90% 30%);
+        --color-primary-alpha-300: hsl(var(--245deg) 90% 50% / 0.3);
+        --color-primary-alpha-500: hsl(var(--245deg) 90% 50% / 0.5);
+        --color-primary-alpha-700: hsl(var(--245deg) 90% 50% / 0.7);
+
+        --color-secondary: hsl(var(--350deg) 95% 50%);
+        --color-secondary-light: hsl(var(--350deg) 95% 70%);
+        --color-secondary-dark: hsl(var(--350deg) 95% 30%);
+        --color-secondary-alpha-300: hsl(var(--350deg) 95% 50% / 0.3);
+        --color-secondary-alpha-500: hsl(var(--350deg) 95% 50% / 0.5);
+        --color-secondary-alpha-700: hsl(var(--350deg) 95% 50% / 0.7);
+      }
+
+      main {
+        border: solid black;
+        padding: 8px;
+      }
+      .row {
+        display: flex;
+        padding: 8px 0px;
+        gap: 8px;
+      }
+      .row.with-bg {
+        padding: 8px;
+        background-image: url("/course-materials/nasa-earth-shot.jpg");
+        background-size: cover;
+        background-position: center center;
+      }
+
+      .demo-box {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+      }
+
+      /*
+  The code below is very repetitive, but you don't
+  have to worry about it. In a modern JS app, we'd
+  probably generate these classes automatically!
+*/
+      .bg-gray-100 {
+        background: var(--color-gray-100);
+      }
+      .bg-gray-300 {
+        background: var(--color-gray-300);
+      }
+      .bg-gray-500 {
+        background: var(--color-gray-500);
+      }
+      .bg-gray-700 {
+        background: var(--color-gray-700);
+      }
+      .bg-gray-900 {
+        background: var(--color-gray-900);
+      }
+      .bg-primary {
+        background: var(--color-primary);
+      }
+      .bg-primary-light {
+        background: var(--color-primary-light);
+      }
+      .bg-primary-dark {
+        background: var(--color-primary-dark);
+      }
+      .bg-primary-alpha-700 {
+        background: var(--color-primary-alpha-700);
+      }
+      .bg-primary-alpha-500 {
+        background: var(--color-primary-alpha-500);
+      }
+      .bg-primary-alpha-300 {
+        background: var(--color-primary-alpha-300);
+      }
+      .bg-secondary {
+        background: var(--color-secondary);
+      }
+      .bg-secondary-light {
+        background: var(--color-secondary-light);
+      }
+      .bg-secondary-dark {
+        background: var(--color-secondary-dark);
+      }
+      .bg-secondary-alpha-700 {
+        background: var(--color-secondary-alpha-700);
+      }
+      .bg-secondary-alpha-500 {
+        background: var(--color-secondary-alpha-500);
+      }
+      .bg-secondary-alpha-300 {
+        background: var(--color-secondary-alpha-300);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="row">
+        <div class="demo-box bg-gray-100"></div>
+        <div class="demo-box bg-gray-300"></div>
+        <div class="demo-box bg-gray-500"></div>
+        <div class="demo-box bg-gray-700"></div>
+        <div class="demo-box bg-gray-900"></div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="demo-box bg-primary-light"></div>
+          <div class="demo-box bg-primary"></div>
+          <div class="demo-box bg-primary-dark"></div>
+        </div>
+        <div class="row with-bg">
+          <div class="demo-box bg-primary"></div>
+          <div class="demo-box bg-primary-alpha-700"></div>
+          <div class="demo-box bg-primary-alpha-500"></div>
+          <div class="demo-box bg-primary-alpha-300"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="demo-box bg-secondary-light"></div>
+          <div class="demo-box bg-secondary"></div>
+          <div class="demo-box bg-secondary-dark"></div>
+        </div>
+        <div class="row with-bg">
+          <div class="demo-box bg-secondary"></div>
+          <div class="demo-box bg-secondary-alpha-700"></div>
+          <div class="demo-box bg-secondary-alpha-500"></div>
+          <div class="demo-box bg-secondary-alpha-300"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      @property --text-color {
+        syntax: "<color>";
+        inherits: false;
+        initial-value: black;
+      }
+
+      main {
+        --color: red;
+        color: var(--text-color);
+        --text-color: deeppink;
+      }
+
+      section {
+        color: var(--text-color1, yellow);
+      }
+    </style>
+    <style>
+      button {
+        font-size: var(--inflated-size);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      This text is just inside main.
+      <section>This text is inside section.</section>
+    </main>
+
+    <button>Click me</button>
+  </body>
+
+  <script>
+    let fontSize = 1;
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", () => {
+      fontSize += 0.25;
+      button.style.setProperty("--inflated-size", fontSize + "rem");
+    });
+  </script>
+</html>

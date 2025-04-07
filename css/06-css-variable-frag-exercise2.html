@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @media (prefers-color-scheme: dark) {
+        body {
+          --lightness-0: 0%;
+          --lightness-100: 100%;
+        }
+      }
+      body {
+        background: hsl(250deg 10% var(--lightness-0, 90%));
+        color: hsl(250deg 20% var(--lightness-100, 20%));
+      }
+
+      a {
+        color: hsl(250deg 100% 50%);
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Artificial Plants</h1>
+      <p>
+        Artificial plants and flowers bring the vibrance of plants without the
+        work. Shop many varieties and types:
+      </p>
+      <nav>
+        <ul>
+          <li>
+            <a href="/large">Large plants</a>
+          </li>
+          <li>
+            <a href="/bouq">Bouquets</a>
+          </li>
+          <li>
+            <a href="/vines">Vines</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+  </body>
+</html>

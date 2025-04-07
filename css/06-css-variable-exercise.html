@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      main {
+        --space: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space);
+        padding: var(--space);
+      }
+      article {
+        border-radius: var(--space);
+        padding: var(--space);
+      }
+
+      @media (min-width: 350px) {
+        main {
+          --space: 8px;
+        }
+      }
+
+      @media (min-width: 500px) {
+        main {
+          --space: 32px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>Card 1</article>
+      <article>Card 2</article>
+      <article>Card 3</article>
+    </main>
+  </body>
+</html>
