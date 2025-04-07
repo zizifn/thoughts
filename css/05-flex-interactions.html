@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .row {
+        display: flex;
+      }
+      .help-btn {
+        flex: 1;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background: gold;
+        padding: 16px;
+      }
+      main {
+        background: pink;
+      }
+      .row {
+        display: flex;
+      }
+      .help-btn {
+        flex: 1;
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        background: gold;
+        padding: 16px;
+      }
+      main {
+        background: pink;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+      }
+      p {
+        margin: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="row">
+      <main>Hello World</main>
+      <div class="help-btn">?</div>
+    </section>
+
+    <section class="column">
+      <p>This is a paragraph.</p>
+      <p>Because it's in a flex column, its margins won't collapse.</p>
+      <p>This is a good thing, but it can be confusing.</p>
+    </section>
+
+    <section class="wrapper">
+      <div class="first"></div>
+      <div class="second"></div>
+    </section>
+  </body>
+</html>

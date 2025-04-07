@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      .wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .box {
+          padding-block: 16px;
+          padding-inline: 16px;
+        }
+        header.box {
+          background-color: yellow;
+          flex: 0 0 50px;
+        }
+        footer.box {
+          flex: 0 0 50px;
+          background-color: pink;
+        }
+        .middle {
+          display: flex;
+          flex: 1;
+
+          .box {
+            flex: 1;
+          }
+          nav {
+            background-color: aquamarine;
+          }
+          main {
+            background-color: blueviolet;
+          }
+          aside {
+            background-color: chocolate;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="box">Header</header>
+      <section class="middle">
+        <nav class="box">Nav</nav>
+        <main class="box">Main Content</main>
+        <aside class="box">Ad unit</aside>
+      </section>
+      <footer class="box">Footer</footer>
+    </div>
+  </body>
+</html>

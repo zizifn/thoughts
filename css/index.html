@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      header {
+        display: block; /* Makes the header only as wide as its content */
+        min-width: 100%; /* Ensures header is at least full viewport width */
+        width: fit-content;
+      }
+
+      .div1 {
+        border: 1px solid red;
+        height: 100px;
+      }
+
+      .div2 {
+        border: 1px solid blue;
+        height: 50px;
+        min-width: 550px; /* Your existing constraint */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="div1">div1</div>
+      <div class="div2">div2</div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      .wrapper {
+        display: flex;
+      }
+
+      nav {
+        position: sticky;
+        top: 0;
+        align-self: flex-start;
+      }
+
+      main {
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="wrapper">
+      <nav class="box">
+        <h2>Navigation</h2>
+        <ul>
+          <li>Section One</li>
+          <li>Section Two</li>
+        </ul>
+      </nav>
+      <main class="box">
+        <p>This container contains random stuff to increase its height.</p>
+        <img src="./img/cat1.jpg" />
+        <p>Normally, a blog post would exist in this container.</p>
+        <img src="./img/cat2.jpg" />
+        <p>This container contains random stuff to increase its height.</p>
+        <img src="./img/cat3.jpg" />
+        <p>Normally, a blog post would exist in this container.</p>
+        <img src="./img/cat4.jpg" />
+      </main>
+    </section>
+  </body>
+</html>

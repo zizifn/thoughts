@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .photo-viewer {
+        display: flex;
+        gap: 10px;
+        .photo-roll {
+          flex: 0 0 200px;
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          .actions {
+            margin-block: auto 0;
+            display: flex;
+            justify-content: space-between;
+          }
+        }
+        img {
+          width: 100%;
+        }
+
+        .main-photo {
+          flex: 1 1 200px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="photo-viewer">
+      <div class="photo-roll">
+        <button class="clickable-photo selected">
+          <img src="./img/cat1.jpg" />
+        </button>
+        <button class="clickable-photo">
+          <img src="./img/cat2.jpg" />
+        </button>
+        <div class="actions">
+          <button>Previous</button>
+          <button>Next</button>
+        </div>
+      </div>
+      <div class="main-photo">
+        <img src="./img/cat3.jpg" />
+      </div>
+    </section>
+  </body>
+</html>
