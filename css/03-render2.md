@@ -58,7 +58,7 @@ overflow 是相对与 scroll container 的。overflow 也适用在 position cont
 
 Sticky position 是在 parent 里面的。如果 parent 已经消失，sticky 元素就没有了。另外 sticky position 还是在 flow 里面的。
 
-> top/left/right/bottom 是相对于 viewport 的。
+> 等到 sticky 生效时候，top/left/right/bottom 是相对于 viewport 的。
 
 下面的情况，取决于 header 有多高。然后 sticky 就可以固定在屏幕上多久。
 
