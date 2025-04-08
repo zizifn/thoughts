@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      form.form2 {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      form.form2 > input {
+        flex: 1 1 10ch;
+        margin: 0.5rem;
+      }
+      form.form2 > input[type="email"] {
+        flex: 3 1 30ch;
+      }
+
+      .form1 {
+        display: flex;
+        flex-wrap: wrap;
+
+        input {
+          flex: 1 1 150px;
+          margin: 0.5rem;
+        }
+        input[type="email"] {
+          flex: 3 1 450px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <form class="form2">
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email Address" />
+      <input type="submit" value="Subscribe" />
+    </form>
+
+    <form class="form1">
+      <input type="text" placeholder="Name" />
+      <input type="email" placeholder="Email Address" />
+      <input type="submit" value="Subscribe" />
+    </form>
+  </body>
+</html>
