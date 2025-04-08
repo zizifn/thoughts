@@ -1,5 +1,9 @@
 # TODO
 
+## 2025 年 4 月 7 日
+
+https://css-tricks.com/css-is-a-strongly-typed-language/
+
 ## 2025 年 4 月 2 日
 
 - [x] growth mindset https://www.khanacademy.org/college-careers-more/learnstorm-growth-mindset-activities-us
