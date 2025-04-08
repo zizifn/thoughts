@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      ul {
+        display: flex;
+        gap: clamp(1rem, calc(12vw - 2rem), 5rem);
+        /* gap: clamp(1rem, calc(12vw - 2rem), 5rem); */
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/">News</a>
+        </li>
+        <li>
+          <a href="/">Classifieds</a>
+        </li>
+        <li>
+          <a href="/">Opinion</a>
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      h1 {
+        /* font-size: 6vw; */
+        font-size: clamp(1.5rem, 6vw, 3rem);
+        margin-bottom: 0.5em;
+      }
+      .fluid {
+        font-size: clamp(2rem, calc(5vw + 1rem), 5rem);
+      }
+      .fluid-fast {
+        font-size: clamp(2rem, calc(14vw - 1.5rem), 5rem);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>This is a fluid headline!</h1>
+      <p>The heading will grow and shrink with the viewport.</p>
+    </main>
+
+    <h2 class="fluid">Fluid Text</h2>
+    <h2 class="fluid-fast">Fluid Text</h2>
+  </body>
+</html>
