@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .responsive {
+        font-size: 2rem;
+      }
+      @media (min-width: 400px) {
+        .responsive {
+          font-size: 2.5rem;
+        }
+      }
+      @media (min-width: 525px) {
+        .responsive {
+          font-size: 3rem;
+        }
+      }
+
+      .fluid {
+        font-size: clamp(2rem, 6vw + 1rem, 3rem);
+      }
+
+      figure {
+        padding: 16px;
+        border: 2px solid;
+        margin: 0;
+        margin-bottom: 8px;
+      }
+      figcaption {
+        font-size: 0.875rem;
+        color: #444;
+        margin-top: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="demo">
+      <figure>
+        <h2 class="responsive">Hello World</h2>
+        <figcaption>Responsive, using breakpoints</figcaption>
+      </figure>
+      <figure>
+        <h2 class="fluid">Hello World</h2>
+        <figcaption>Fluid, using viewport units</figcaption>
+      </figure>
+    </div>
+  </body>
+</html>

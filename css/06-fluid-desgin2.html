@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .wrapper {
+        display: flex;
+      }
+      .description {
+        flex: 1;
+      }
+      .bibliography {
+        flex: 1;
+      }
+
+      @media (max-width: 32rem) {
+        .wrapper {
+          flex-direction: column;
+        }
+        .bibliography {
+          border-radius: 0 0 4px 4px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="description">
+        <h2>Becky Chambers</h2>
+        <p>
+          Becky Chambers is an American science fiction writer, and the author
+          of the Hugo-award winning Wayfarers series. She is known for her
+          imaginative world-building and character-driven stories.
+        </p>
+      </div>
+      <nav class="bibliography">
+        <ul>
+          <li>
+            <a href="/"> A Psalm For The Wild-Built </a>
+          </li>
+          <li>
+            <a href="/"> The Galaxy, And The Ground Within </a>
+          </li>
+          <li>
+            <a href="/"> To Be Taught, If Fortunate </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrapper">
+      <div class="description">
+        <h2>John Scalzi</h2>
+        <p>
+          John Michael Scalzi II is an American science fiction author and
+          former president of the Science Fiction and Fantasy Writers of
+          America. He is best known for his Old Man's War series, three novels
+          of which have been nominated for the Hugo Award.
+        </p>
+      </div>
+      <nav class="bibliography">
+        <ul>
+          <li>
+            <a href="/"> Old Man's War </a>
+          </li>
+          <li>
+            <a href="/"> Questions For A Soldier </a>
+          </li>
+          <li>
+            <a href="/"> The Ghost Brigades </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </body>
+</html>
