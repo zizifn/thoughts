@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      main {
+        display: flex;
+        gap: 10px;
+      }
+      .article-summary {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        border: solid;
+
+        .image-wrapper {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+        .description {
+          .title {
+            overflow-wrap: break-word;
+            hyphens: auto;
+          }
+          p {
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            display: -webkit-box;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article class="article-summary">
+        <div class="image-wrapper">
+          <img
+            alt="A smart-looking dog. Greyscale photo"
+            src="./img/cat2.jpg"
+          />
+        </div>
+        <div class="description">
+          <h3 class="title">Good boy invents iPup, smartphone for canines</h3>
+          <p>
+            While Spot was learning to play fetch and Rover was rescuing people
+            stuck in wells, Daniel “Bark” Zhang was building the world's first
+            smartphone for dogs. The iPup is a paw-friendly mobile tablet
+            running Android “Beefcake”. Daniel says (through a dog translator)
+            that the idea struck him while peeing on a tree.
+          </p>
+        </div>
+      </article>
+
+      <article class="article-summary">
+        <div class="image-wrapper">
+          <img
+            alt="Girl stands in front of a wall of balloons"
+            src="./img/cat1.jpg"
+          />
+        </div>
+        <div class="description">
+          <h3 class="title">A secret balloon store in downtown Toronto</h3>
+          <p>
+            It's a quiet, unassuming building, with venetian blinds and spanish
+            masonry. Only the sharpest observer would notice the occasional
+            flash of colour from beyond the curtain, a glint of red and yellow
+            inflatables. Alabaster's Balloonery is possibly the country's most
+            understated party store, but outside appearances can be deceiving.
+            Though its red-brick facade has been left unchanged since it was
+            erected over 50 years ago, the interior has been renovated, bringing
+            a postmodern flourish that complements the colourful party supplies
+            quite nicely.
+          </p>
+        </div>
+      </article>
+
+      <article class="article-summary">
+        <div class="image-wrapper">
+          <img
+            alt="A cardboard folded box contraption sits on top of a desk, raising a laptop so that it can be used while standing"
+            src="./img/cat3.jpg"
+          />
+        </div>
+        <div class="description">
+          <h3 class="title">
+            The $20 standing desk physiotherapists are obsessed with
+          </h3>
+          <p>
+            If sitting is the new smoking, then standing desks are the new
+            nicotine patches. But most standing desks cost an arm and a leg.
+            This Vancouver startup is revolutionizing the office wellness
+            category.
+          </p>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>

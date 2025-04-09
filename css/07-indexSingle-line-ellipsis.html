@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      /* Cells containing student names */
+      tbody th {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 250px;
+      }
+
+      /* Cosmetic styles */
+      table {
+        border: 2px solid;
+        border-spacing: 3px;
+      }
+      th {
+        text-align: left;
+      }
+      td {
+        text-align: center;
+      }
+      td,
+      th {
+        padding: 8px;
+      }
+      tbody tr:first-of-type > td,
+      tbody tr:first-of-type > th {
+        border-top: 3px dashed;
+      }
+      thead th:first-of-type {
+        background: hsl(0deg 0% 90%);
+      }
+      tbody th {
+        border-right: 3px dashed;
+      }
+      tbody td,
+      tbody th {
+        border-bottom: 1px dashed hsl(0deg 0% 70%);
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Trigonometric Functions</th>
+          <th>The Unit Circle</th>
+          <th>Non-Right Triangles</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="col">Eli Aquina</th>
+          <td>89</td>
+          <td>61</td>
+          <td>74</td>
+        </tr>
+        <tr>
+          <th scope="col">Zhivko Germano</th>
+          <td>78</td>
+          <td>96</td>
+          <td>77</td>
+        </tr>
+        <tr>
+          <th scope="col">George Julius Edward Bradley-Coulson</th>
+          <td>84</td>
+          <td>89</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <th scope="col">Nessa Wilfrith</th>
+          <td>97</td>
+          <td>83</td>
+          <td>91</td>
+        </tr>
+        <tr>
+          <th scope="col">Shafaqat Kohinoor Sadi Vsevolod</th>
+          <td>93</td>
+          <td>88</td>
+          <td>79</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      document.getElementById("btn1").addEventListener("click", () => {
+        console.log("btn1");
+        document.getElementById("p1").classList.remove("kerning-normal");
+        document.getElementById("p1").classList.add("kerning");
+      });
+
+      document.getElementById("btn2").addEventListener("click", () => {
+        document.getElementById("p1").classList.remove("kerning");
+        document.getElementById("p1").classList.add("kerning-mormal");
+      });
+    </script>
+  </body>
+</html>

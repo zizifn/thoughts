@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .max-width-warpper {
+        max-width: 500px;
+        margin: 0 auto;
+
+        p::first-letter {
+          margin-left: 2rem;
+          font-size: medium;
+        }
+      }
+
+      .justified {
+        text-align: justify;
+        /* padding: 16px; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="max-width-warpper">
+      <p>
+        This is a paragraph that has been indented, using the
+        <em>first-letter</em> pseudo-element. Normally, we can't apply CSS
+        directly to text, but this pseudo-element acts as an invisible "span"
+        that wraps around the first character.
+      </p>
+      <p>
+        Indentation isn't super common on the web, but it's everywhere in print
+        media! Most published books will use indentation like this, and will
+        only add space between paragraphs at the end of a "section" or
+        sub-chapter.
+      </p>
+    </div>
+
+    <div class="justified">
+      <p>
+        This paragraph has been justify-aligned. The goal with justify-aligned
+        text is to create a sharp block of text that aligns both on the left and
+        right edges. It accomplishes this goal by tweaking the spacing between
+        each word. Historically, this process was painstakingly done by
+        typographers, using their intuition and a hearty amount of hyphens to
+        create well-formatted text.
+      </p>
+    </div>
+  </body>
+</html>

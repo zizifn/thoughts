@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        overflow: hidden;
+        margin-bottom: 1em;
+      }
+      main {
+        border: solid;
+        margin: 0 auto;
+        padding: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>
+        No matter how long this paragraph is, only 3 lines will be shown, the
+        rest concealed, and an ellipsis character will be added to demonstrate
+        that there is more text that is not shown here.
+      </p>
+      <p>Short paragraphs don't get an ellipsis.</p>
+    </main>
+  </body>
+</html>

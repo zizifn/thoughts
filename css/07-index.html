@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .kerning {
+        font-kerning: none;
+      }
+      .kerning-normal {
+        font-kerning: normal;
+      }
+    </style>
+  </head>
+  <body>
+    text-overflow: ellipsis;
+    <p style="overflow: hidden; text-overflow: ellipsis">
+      This is a narrow antidisestablishmentarianism column of text, with a very
+      long word: antidisestablishmentarianism.
+    </p>
+    <br />
+    <div class="wrapper" style="overflow-wrap: break-word; hyphens: auto">
+      overflow-wrap: break-word
+      <p style="overflow-wrap: break-word; hyphens: auto">
+        This is a narrow column of text, with a very long word:
+        antidisestablishmentarianism.
+      </p>
+      <p style="overflow-wrap: break-word; hyphens: auto">
+        The same problem happens with URLs:
+        https://www.somewebsite.com/articles/a1b2c3
+      </p>
+    </div>
+    <br />
+    <div class="wrapper">
+      <p>
+        This is a narrow column of text, with a very long word:
+        antidisestablishmentarianism.
+      </p>
+      <p>
+        The same problem happens with URLs:
+        https://www.somewebsite.com/articles/a1b2c3
+      </p>
+    </div>
+    <br />
+    <p>That sandwich costs $10&nbsp;USD, or you can barter for it.</p>
+    <p>That sandwich costs $10 USD, or you can barter for it.</p>
+    <p id="p1">Say Hello To Our Special Guest, GEORGE WASHINGTON!!</p>
+    <button id="btn1">change non kerning</button>
+    <button id="btn2">change to kerning</button>
+
+    <script>
+      document.getElementById("btn1").addEventListener("click", () => {
+        console.log("btn1");
+        document.getElementById("p1").classList.remove("kerning-normal");
+        document.getElementById("p1").classList.add("kerning");
+      });
+
+      document.getElementById("btn2").addEventListener("click", () => {
+        document.getElementById("p1").classList.remove("kerning");
+        document.getElementById("p1").classList.add("kerning-mormal");
+      });
+    </script>
+  </body>
+</html>
