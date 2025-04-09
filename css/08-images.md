@@ -96,13 +96,6 @@ Font 加载的顺序是
 
 ### Variable Fonts
 
-```html
-<link
-  href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300..900;1,300..900&display=swap"
-  rel="stylesheet"
-/>
-```
-
-利用 Variable Fonts 可以在一个字体文件中包含多个样式和 weight，减少 font 请求数量。
+利用 Variable Fonts 可以在一个字体文件中包含多个样式和宽度，减少 font 请求数量。
 
 > 一般情况下，font 的 weight 和 italic 是分开的。

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>React with JSX from CDN</title>
+    <!-- Babel for JSX support in browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react": "https://esm.sh/react",
+          "react-dom/client": "https://esm.sh/react-dom/client",
+          "styled-components": "https://esm.sh/styled-components",
+          "react-feather": "https://esm.sh/react-feather"
+        }
+      }
+    </script>
+    <style></style>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Your JSX Script -->
+    <!-- <script
+      type="text/babel"
+      data-type="module"
+      src="./04-jsx/exercise.tsx"
+    ></script> -->
+    <script type="text/babel" data-type="module">
+      import { Map, Save, ShoppingCart } from "react-feather";
+
+      import React from "react";
+      import { createRoot } from "react-dom/client";
+      import styled from "styled-components";
+      import { Home } from "react-feather";
+
+      function Header() {
+        return (
+          <>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+              asperiores consectetur, dolores similique repellat aperiam
+              inventore amet fugit ea dicta.
+            </p>
+            <Button>
+              <Home />
+            </Button>
+          </>
+        );
+      }
+
+      const Button = styled.button`
+        padding: 0;
+
+        & > svg {
+          display: block;
+        }
+      `;
+
+      const root = createRoot(document.getElementById("root"));
+      root.render(<Header />);
+    </script>
+  </body>
+</html>
