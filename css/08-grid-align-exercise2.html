@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        background-color: black;
+        --rect-width: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+        min-height: 100%;
+        gap: 5px;
+      }
+
+      .box {
+        width: var(--rect-width);
+        height: 80px;
+      }
+
+      .box.one {
+        justify-self: end;
+        width: calc(var(--rect-width) * 0.25);
+        background-color: pink;
+      }
+      .box.two {
+        width: calc(var(--rect-width) * 0.75);
+        background-color: pink;
+      }
+      .box.three {
+        justify-self: end;
+        width: calc(var(--rect-width) * 0.5);
+        background-color: lavender;
+      }
+      .box.four {
+        width: calc(var(--rect-width) * 0.5);
+        background-color: lavender;
+      }
+      .box.five {
+        justify-self: end;
+        width: calc(var(--rect-width) * 0.75);
+
+        background-color: honeydew;
+      }
+      .box.six {
+        width: calc(var(--rect-width) * 0.25);
+        background-color: honeydew;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="box one"></div>
+      <div class="box two"></div>
+      <div class="box three"></div>
+      <div class="box four"></div>
+      <div class="box five"></div>
+      <div class="box six"></div>
+    </div>
+  </body>
+</html>
