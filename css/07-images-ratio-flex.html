@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      section {
+        display: flex;
+        gap: 8px;
+      }
+      .image-wrapper {
+        flex: 1;
+      }
+      img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+      }
+      .padding-hack {
+        height: 0px;
+        padding-bottom: 100%;
+        position: relative;
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="image-wrapper">
+        <img
+          alt="A wide-open outdoor concrete area. Architecture"
+          src="./img/build1.jpg"
+        />
+      </div>
+      <div class="image-wrapper">
+        <img
+          alt="A wide-open outdoor concrete area. Architecture"
+          src="./img/build2.jpg"
+        />
+      </div>
+      <div class="image-wrapper">
+        <img
+          alt="A wide-open outdoor concrete area. Architecture"
+          src="./img/build3.jpg"
+        />
+      </div>
+    </section>
+
+    <section>
+      <div class="image-wrapper">
+        <div class="padding-hack"></div>
+      </div>
+      <div class="image-wrapper">
+        <div class="padding-hack">
+          <img
+            alt="A modular building against a blue sky. Architecture"
+            src="./img/build2.jpg"
+          />
+        </div>
+      </div>
+      <div class="image-wrapper">
+        <div class="padding-hack">
+          <img
+            alt="A unique building with inset curves. Architecture"
+            src="./img/build3.jpg"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        background: hsl(0deg 0% 2%);
+        padding: 0;
+        margin: 0;
+      }
+
+      .wrapper {
+        --blue: hsl(250deg 100% 55%);
+        --yellow: hsl(50deg 100% 50%);
+        --red: hsl(350deg 100% 45%);
+        --white: hsl(0deg 0% 100%);
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        grid-template-rows: 1fr 2fr;
+        gap: 10px 5px;
+        /* min-height: 100%; */
+
+        .blue-box {
+          background-color: var(--blue);
+        }
+        header {
+          background-color: var(--yellow);
+          /* color:  */
+          h1 {
+            text-align: end;
+          }
+        }
+        .red-box {
+          background-color: var(--red);
+        }
+        main {
+          background-color: var(--white);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="blue-box"></div>
+      <header>
+        <h1>Mondrifans</h1>
+      </header>
+      <div class="red-box"></div>
+      <main></main>
+    </div>
+  </body>
+</html>

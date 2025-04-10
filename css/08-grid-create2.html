@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .item:nth-of-type(1) {
+        background: pink;
+        height: 50px;
+      }
+      .item:nth-of-type(2) {
+        background: peachpuff;
+        height: 30px;
+      }
+      .item:nth-of-type(3) {
+        background: lavender;
+        height: 40px;
+      }
+      .item:nth-of-type(4) {
+        background: honeydew;
+        height: 80px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+    </div>
+  </body>
+</html>
