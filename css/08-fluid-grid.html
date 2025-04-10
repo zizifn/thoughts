@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        .item {
+          height: 200px;
+        }
+      }
+
+      .grid2 {
+        border: solid;
+        display: grid;
+        gap: 16px;
+        grid-template-columns:
+          minmax(50px, 1fr)
+          minmax(250px, 1fr);
+
+        .card {
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="grid">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </main>
+
+    <main class="grid2">
+      <div class="card"></div>
+      <div class="card"></div>
+    </main>
+  </body>
+</html>

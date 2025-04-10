@@ -42,7 +42,7 @@ const Heading = styled.div`
 const App = () => {
   const test: string = "test";
 
-  return <Alert>Thanks for participating in our survey!</Alert>;
+  return "TESTITT - LIHHB BY LIGHT";
 };
 
 const root = createRoot(document.getElementById("root"));

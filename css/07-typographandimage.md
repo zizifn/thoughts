@@ -114,3 +114,40 @@ image alt-->https://webaim.org/techniques/alttext/
 > 一般 右上角的 logo， alt 应该写 “back to home” 而不是描述 logo 图片。
 
 Image 有自带的宽度和高度，所有我们一般需要给一个 width
+
+需要使用让浏览器自动决定加载哪些图片。
+
+```css
+<img
+  alt=""
+  src="/course-materials/responsive-diamond.png"
+  srcset="
+    /course-materials/responsive-diamond.png 1x,
+    /course-materials/responsive-diamond@2x.png 2x,
+    /course-materials/responsive-diamond@3x.png 3x
+  "
+/>
+
+<picture>
+  <source
+    type="image/avif"
+    srcset="
+      /course-materials/responsive-diamond.avif 1x,
+      /course-materials/responsive-diamond@2x.avif 2x,
+      /course-materials/responsive-diamond@3x.avif 3x
+    "
+  />
+  <source
+    type="image/webp"
+    srcset="
+      /course-materials/responsive-diamond.webp 1x,
+      /course-materials/responsive-diamond@2x.webp 2x,
+      /course-materials/responsive-diamond@3x.webp 3x
+    "
+  />
+  <img
+    alt=""
+    src="/course-materials/responsive-diamond.png"
+  />
+</picture>
+```

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--
+• 320px minimum column width
+• 16px gap
+• No overflow on smaller screens
+-->
+    <style>
+      .grid {
+        display: grid;
+        padding: 16px;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+        /* grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); */
+
+        @media (max-width: 450px) {
+          grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        }
+        .item {
+          border: solid;
+          height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="grid">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </main>
+  </body>
+</html>
