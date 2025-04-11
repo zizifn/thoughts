@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 200px;
+        width: 200px;
+        background-color: bisque;
+        transition: transform 1s ease-out;
+      }
+      .trigger:hover ~ .menu {
+        display: revert;
+      }
+      .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        list-style: none;
+        .sub-menu-contianer {
+          position: relative;
+
+          .btn2 {
+            &:hover ~ .sub-menu {
+              list-style: none;
+              position: absolute;
+              display: revert;
+              left: 100%;
+            }
+          }
+          .sub-menu {
+            margin: 0;
+            padding: 0;
+            display: none;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button class="trigger">show menu</button>
+    <menu class="menu">
+      <li><button>btn1</button></li>
+      <li class="sub-menu-contianer">
+        <button class="btn2">btn2</button>
+        <menu class="sub-menu">
+          <li><button>sub-btn1</button></li>
+          <li><button>sub-btn2</button></li></menu
+        >
+      </li>
+      <li><button>btn3</button></li>
+      <li><button>btn4</button></li>
+    </menu>
+    <script></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
+        padding: 16px;
+        .thumbnail-wrapper {
+          overflow: hidden;
+        }
+        .thumbnail {
+          transition: transform 500ms;
+        }
+        .thumbnail-wrapper:hover .thumbnail {
+          transform: scale(1.2);
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="/" class="thumbnail-wrapper">
+        <img alt="A balloon store" class="thumbnail" src="./img/cat1.jpg" />
+      </a>
+      <a href="/" class="thumbnail-wrapper">
+        <img
+          alt="A good-boy dog. Black and white."
+          class="thumbnail"
+          src="./img/cat2.jpg"
+        />
+      </a>
+      <a href="/" class="thumbnail-wrapper">
+        <img
+          alt="A cardboard standing-desk tool."
+          class="thumbnail"
+          src="./img/cat3.jpg"
+        />
+      </a>
+      <a href="/" class="thumbnail-wrapper">
+        <img
+          alt="A “tokyo drift” style sports car"
+          class="thumbnail"
+          src="./img/cat4.jpg"
+        />
+      </a>
+    </div>
+  </body>
+</html>
