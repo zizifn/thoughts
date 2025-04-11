@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .relative.box {
+        position: relative;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        background-color: antiquewhite;
+      }
+      .transform.box {
+        transform: skewX(60deg);
+        width: 200px;
+        height: 200px;
+        background-color: beige;
+      }
+      .rotate.box {
+        transform: translateX(30px) rotate(45deg);
+        width: 200px;
+        height: 200px;
+        background-color: beige;
+      }
+
+      .inline-fella {
+        transform: rotate(-10deg);
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <span>inline rrrrrrrrrrrrg rrrrrrrrrrrrrrrrrrr t</span>
+      <span class="inline-fella">hello word</span>
+      <span class="inline-fella">hello word</span>
+      <p>loremmmm20</p>
+      <div class="relative box"></div>
+      <div class="transform box">hello world</div>
+      <div class="rotate box">rotate</div>
+    </div>
+  </body>
+</html>

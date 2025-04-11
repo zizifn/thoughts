@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        display: grid;
+      }
+
+      .box.grid {
+        /*
+      Change me to '1' to see
+      the difference!
+    */
+        z-index: 3;
+        background-color: antiquewhite;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+      }
+
+      .box.absolute {
+        position: absolute;
+        z-index: 2;
+        top: 200px;
+        left: 20px;
+        background-color: red;
+      }
+
+      .box2 {
+        width: 200px;
+        height: 200px;
+        background-color: aqua;
+      }
+
+      p {
+        margin: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <p>Hello World!</p>
+        <p>Hello World!</p>
+        <p>Hello World!</p>
+      </div>
+      <p>The margins on these paragraphs won't collapse.</p>
+      <p>Check it out in the devtools.</p>
+    </div>
+
+    <div class="wrapper">
+      <div class="box grid"></div>
+      <div class="box absolute"></div>
+    </div>
+
+    <div class="box2">lllllllll</div>
+  </body>
+</html>

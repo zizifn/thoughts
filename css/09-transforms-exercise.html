@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dialog-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: hsl(0deg 0% 0% / 0.75);
+      }
+
+      .dialog-content {
+        margin: auto;
+        width: 600px;
+        max-width: 100%;
+        height: 400px;
+        background: white;
+        border-radius: 6px;
+      }
+
+      .close-btn {
+        padding: 16px;
+        background: transparent;
+        border: none;
+        font-weight: bold;
+        margin-left: 100%;
+        transform: translateX(-100%) translateY(-100%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="dialog-wrapper">
+      <div class="dialog-content">
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+  </body>
+</html>

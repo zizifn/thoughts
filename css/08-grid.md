@@ -10,3 +10,7 @@ flexible 的单位是 fr unit (as well as auto). Pixels, rems, and percentages a
 `justify-content` applies to the grid structure, changing the columns.
 
 `justify-items` applies to the child elements, without affecting the shape of the grid.
+
+## minmax(0, 1fr)
+
+https://css-tricks.com/preventing-a-grid-blowout/

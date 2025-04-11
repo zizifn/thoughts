@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .grid {
+        display: grid;
+        grid-template-columns: 175px 1fr;
+        gap: 16px;
+      }
+
+      .image-list {
+        display: flex;
+        gap: 16px;
+        max-width: 100%;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid">
+      <div class="intro">
+        <h2>My Photos</h2>
+        <p>Here are some animals I saw on holiday:</p>
+      </div>
+
+      <div class="image-container">
+        <ul class="image-list">
+          <li>
+            <img src="./img/cat1.jpg" />
+          </li>
+          <li>
+            <img src="./img/cat2.jpg" />
+          </li>
+          <li>
+            <img src="./img/cat3.jpg" />
+          </li>
+          <li>
+            <img src="./img/cat4.jpg" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

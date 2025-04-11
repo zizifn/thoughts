@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        --hot-pink: hsl(340deg 100% 50%);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid var(--hot-pink);
+        padding: 24px;
+      }
+
+      .featured.story {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 2px solid var(--hot-pink);
+      }
+
+      .story:nth-of-type(2n) {
+        padding-right: 24px;
+        border-right: 2px solid var(--hot-pink);
+      }
+      .story:nth-of-type(2n + 3) {
+        padding-left: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <article class="featured story">
+        <img src="./img/meetcat.jpg" alt="A curious meerkat pops up" />
+        <h2>Study: Meerkats unseat dolphins as nature's smartest animal</h2>
+        <p>
+          Meanwhile, humans come in 4th, right after the surprisingly-wiley
+          platypus.
+        </p>
+      </article>
+      <article class="story">
+        <img src="./img/sky.jpg" alt="A vibrant shot of the night sky" />
+        <h2>The Search for Extra-Terrestrial Life</h2>
+        <p>
+          In Ukraine, a team of dedicated interdisciplinary professionals work
+          to answer one of history's longest unanswered questions: what's going
+          on, up there?
+        </p>
+      </article>
+      <article class="story">
+        <img src="./img/style.jpg" alt="A colorfully-lit hallway" />
+        <h2>The TIFF's Must-Watch List</h2>
+        <p>
+          As the Toronto International Film Festival picks up, 5 intrepid
+          reporters will dedicate the week to watching every available film. At
+          the top of the list so far: “Ephemeral Hallway”.
+        </p>
+      </article>
+    </div>
+  </body>
+</html>
