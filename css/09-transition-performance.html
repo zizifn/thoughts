@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        height: 100px;
+        width: 100px;
+      }
+      .accelerated.box {
+        transition: transform 750ms;
+        will-change: transform;
+        background: slateblue;
+      }
+      .accelerated.box:hover,
+      .accelerated.box:focus {
+        transform: translateY(10px);
+      }
+
+      .janky.box {
+        margin-left: 100px;
+        transition: margin-top 750ms;
+        will-change: margin-top;
+        background: deeppink;
+      }
+      .janky.box:hover,
+      .janky.box:focus {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <button class="accelerated box"></button>
+      <button class="janky box"></button>
+    </div>
+  </body>
+</html>

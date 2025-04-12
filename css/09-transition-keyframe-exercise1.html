@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      @keyframes waving-hand {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(20deg);
+        }
+      }
+      .wave {
+        /* margin-left: 100px; */
+        font-size: 3rem;
+        display: inline-block;
+        transform-origin: 80% 75%;
+        animation: waving-hand 1000ms linear 0s infinite alternate backwards;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      <span class="wave" role="img" aria-label="Waving hand"> 👋 </span>
+    </p>
+  </body>
+</html>

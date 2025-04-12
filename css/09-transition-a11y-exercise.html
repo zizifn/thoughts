@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes slide-in {
+        from {
+          transform: translateY(calc(100% + var(--spacing)));
+        }
+        to {
+          transform: translateY(0%);
+        }
+      }
+
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        .help-circle {
+          animation-name: slide-in;
+        }
+      }
+
+      .help-circle {
+        --spacing: 32px;
+        position: fixed;
+        bottom: var(--spacing);
+        right: var(--spacing);
+        animation: fade-in 500ms backwards;
+        animation-delay: 1000ms;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="help-circle">
+      <img alt="" src="./img/chrome.svg" />
+      <span class="visually-hidden"> Access help center </span>
+    </button>
+  </body>
+</html>

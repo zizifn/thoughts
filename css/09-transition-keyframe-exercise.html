@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      @keyframes popup {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+      .help-circle {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        animation: popup 500ms ease-in 1000ms 1 normal both;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="help-circle">
+      <img alt="" src="./img/chrome.svg" />
+      <span class="visually-hidden"> Access help center </span>
+    </button>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes slide-in {
+        from {
+          transform: rotate(-30deg) translateY(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: rotate(0deg) translateY(0%);
+          opacity: 1;
+        }
+      }
+
+      .box {
+        animation: slide-in 1000ms ease-in;
+        animation-iteration-count: infinite;
+      }
+
+      .box {
+        height: 100px;
+        width: 100px;
+        background-color: blanchedalmond;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0turn) scale(1);
+        }
+        25% {
+          transform: rotate(1turn) scale(1);
+        }
+        50% {
+          transform: rotate(1turn) scale(1.5);
+        }
+        75% {
+          transform: rotate(0turn) scale(1.5);
+        }
+        100% {
+          transform: rotate(0turn) scale(1);
+        }
+      }
+      .spinner {
+        /* animation: spin 1000ms linear 0 infinite; */
+        animation: spin 1000ms;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      @keyframes fade-out {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+
+      .box-fill {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        animation: fade-out 1000ms;
+        animation-delay: 500ms;
+        animation-fill-mode: both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Hello World</div>
+    <img class="spinner" alt="Loading…" src="./img/loading.svg" />
+
+    <div class="box-fill">Hello World</div>
+  </body>
+</html>
