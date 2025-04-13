@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .card-wrapper {
+        perspective: 500px;
+      }
+      .card {
+        display: block;
+        height: 200px;
+        width: 200px;
+        display: grid;
+        place-content: center;
+        background-color: antiquewhite;
+        text-decoration: none;
+      }
+      .front {
+        transition: transform 400ms;
+        will-change: transform;
+      }
+      .card:hover .front,
+      .card:focus .front {
+        transform: rotateY(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card-wrapper">
+      <a href="/" class="card">
+        <div class="front">
+          <p>Hello World</p>
+        </div>
+      </a>
+    </div>
+  </body>
+</html>

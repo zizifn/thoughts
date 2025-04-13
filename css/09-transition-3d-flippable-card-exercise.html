@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        max-width: 650px;
+        gap: 16px;
+        padding: 16px 0;
+        margin: 0 auto;
+        perspective: 1000px;
+      }
+      .item {
+        text-decoration: none;
+        list-style: none;
+        a {
+          display: block;
+          /* height: 100%; */
+          &:hover .front {
+            transform: rotateY(180deg);
+          }
+          &:hover .back {
+            transform: rotateY(0deg);
+          }
+          figure {
+            position: relative;
+            margin: 0;
+            padding: 0;
+            .front,
+            .back {
+              backface-visibility: hidden;
+              will-change: transform;
+            }
+            .front {
+              border: solid;
+            }
+            .back {
+              position: absolute;
+              top: 0;
+              left: 0;
+              bottom: 0;
+              right: 0;
+              margin: auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              transform: rotateY(180deg);
+            }
+            img {
+              width: 100%;
+              aspect-ratio: 1 / 1;
+              object-fit: cover;
+            }
+
+            @media (prefers-reduced-motion: no-preference) {
+              &:hover .front {
+                transition: transform 500ms;
+              }
+              &:hover .back {
+                transition: transform 500ms;
+              }
+              .front,
+              .back {
+                transition: transform 300ms 200ms;
+              }
+            }
+          }
+        }
+      }
+      .img1 {
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="wrapper">
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A white building, disappearing into fog. Architecture"
+                src="./img/build4.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Nick Wessaert </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A complex mix of support pillars. Architecture"
+                src="./img/build5.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Alvaro Pinot </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A white building with staggered balconies. Architecture"
+                src="./img/build6.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Grant Lemons </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A unique building with inset curves. Architecture"
+                src="./img/build7.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Julien Moreau </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A white building with wavy balconies. Architecture"
+                src="./img/build8.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Christian Perner </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A modular building against a blue sky. Architecture"
+                src="./img/build9.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Joel Filipe </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A wide-open outdoor concrete area. Architecture"
+                src="./img/build10.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Hugo Sousa </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="A concrete building with white protrusions. Architecture"
+                src="./img/build11.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Joel Filipe </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+      <li class="item">
+        <a href="/">
+          <figure>
+            <div class="front">
+              <img
+                alt="An igloo-style building. Architecture"
+                src="./img/build12.jpg"
+              />
+            </div>
+            <figcaption class="back">
+              Photo by
+              <span class="photographer"> Mitchell Luo </span>
+            </figcaption>
+          </figure>
+        </a>
+      </li>
+    </ul>
+  </body>
+</html>

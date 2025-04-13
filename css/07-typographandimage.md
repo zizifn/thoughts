@@ -113,7 +113,9 @@ image alt-->https://webaim.org/techniques/alttext/
 
 > 一般 右上角的 logo， alt 应该写 “back to home” 而不是描述 logo 图片。
 
-Image 有自带的宽度和高度，所有我们一般需要给一个 width
+Image 有自带的宽度和高度，所有我们一般需要给一个 width. 然后 height 就会根据图片的自带比例进行计算。
+
+如果你像指定图片的宽高比，可以用 `aspect-ratio`。这样如果你定义 width：100px，height 就会按照`aspect-ratio`计算。
 
 需要使用让浏览器自动决定加载哪些图片。
 

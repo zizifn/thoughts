@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .wrapper {
+        transform-style: preserve-3d;
+      }
+      .card-link {
+        transform-style: inherit;
+      }
+
+      /*
+  Everything else is the same.
+*/
+      .wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 8px;
+        perspective: 500px;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 200px;
+        background: white;
+        border-radius: 8px;
+        border: 2px solid hsl(240deg 100% 75%);
+        will-change: transform;
+        transform: rotateX(0deg);
+        transition: transform 750ms;
+        transform-origin: top center;
+      }
+      .card img {
+        width: 64px;
+        height: 64px;
+      }
+      .card-link:hover .card,
+      .card-link:focus .card {
+        transform: rotateX(-35deg);
+        transition: transform 250ms;
+      }
+      .card-link:focus {
+        outline: none;
+      }
+      .card-link:focus .card {
+        outline: 3px solid hsl(240deg 100% 50%);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="/" class="card-link">
+        <article class="card">
+          <img alt="Download Chrome" src="./img/chrome.svg" />
+        </article>
+      </a>
+      <a href="/" class="card-link">
+        <article class="card">
+          <img alt="Download Firefox" src="./img/firefox.svg" />
+        </article>
+      </a>
+      <a href="/" class="card-link">
+        <article class="card">
+          <img alt="Download Safari" src="./img/safari.png" />
+        </article>
+      </a>
+      <a href="/" class="card-link">
+        <article class="card">
+          <img alt="Download Edge" src="./img/edge.svg" />
+        </article>
+      </a>
+      <a href="/" class="card-link">
+        <article class="card">
+          <img alt="Download Opera" src="./img/oppo.svg" />
+        </article>
+      </a>
+    </div>
+  </body>
+</html>
