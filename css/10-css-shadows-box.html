@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .box {
+        height: 200px;
+        width: 200px;
+        --blur: 8px;
+        background-color: antiquewhite;
+        --spread: calc(var(--blur) * -1);
+
+        box-shadow: 12px 0px var(--blur) var(--spread) hsl(0deg 0% 0% / 0.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

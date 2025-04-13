@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      h2 {
+        width: 100px;
+        height: 200px;
+      }
+      .one {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+      .two {
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+      }
+      .card {
+        filter: drop-shadow(2px 4px 8px hsl(0deg 0% 0% / 0.4));
+      }
+      .decoration {
+        border-radius: 50%;
+        border: 5px solid white;
+      }
+      .grid {
+        display: grid;
+        filter: drop-shadow(2px 4px 32px hsl(0deg 0% 0% / 0.4));
+        grid-auto-flow: column;
+        gap: 10px;
+        .item {
+          width: 100px;
+          height: 100px;
+          background-color: azure;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="grid">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </main>
+    <article class="card">
+      <h2>Hi!</h2>
+      <div class="decoration one"></div>
+      <div class="decoration two"></div>
+    </article>
+  </body>
+</html>

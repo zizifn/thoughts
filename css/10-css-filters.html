@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      img {
+        width: 300px;
+        border-radius: 8px;
+      }
+      .brightness {
+        filter: brightness(150%);
+      }
+      .contrast {
+        filter: contrast(60%);
+      }
+      .sepia {
+        filter: sepia(100%);
+      }
+      .mixed {
+        filter: contrast(200%) grayscale(90%);
+      }
+      section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+      .btn {
+        background: linear-gradient(
+          to top,
+          hsl(260deg 80% 40%),
+          hsl(260deg 80% 50%)
+        );
+        transition: filter 600ms;
+      }
+      .btn:hover,
+      .btn:focus {
+        transition: filter 250ms;
+        filter: brightness(110%) hue-rotate(60deg);
+      }
+      span[role="img"] {
+        font-size: 2em;
+        color: yellow;
+      }
+      .rotated {
+        filter: hue-rotate(160deg);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="200"
+      height="200"
+      style="outline: 3px solid"
+    >
+      <rect x="0" y="0" width="150" height="200" fill="deeppink" />
+      <circle r="50" cx="150" cy="100" fill="gold" />
+    </svg> -->
+    <p>
+      <span role="img" aria-label="star"> ⭐ </span>
+      <span class="rotated" role="img" aria-label="star">⭐ test</span>
+    </p>
+    <section>
+      <div>
+        <h2>Default (no filter)</h2>
+        <img
+          alt="A colourful busy street in Tokyo, Japan"
+          src="./img/akihabara.png"
+        />
+      </div>
+
+      <div>
+        <h2>Boosted Brightness</h2>
+        <img
+          class="brightness"
+          alt="A colourful busy street in Tokyo, Japan"
+          src="./img/akihabara.png"
+        />
+      </div>
+
+      <div>
+        <h2>Lowered Contrast</h2>
+        <img
+          class="contrast"
+          alt="A colourful busy street in Tokyo, Japan"
+          src="./img/akihabara.png"
+        />
+      </div>
+
+      <div>
+        <h2>Sepia</h2>
+        <img
+          class="sepia"
+          alt="A colourful busy street in Tokyo, Japan"
+          src="./img/akihabara.png"
+        />
+      </div>
+
+      <div>
+        <h2>Contrast + grayscale</h2>
+        <img
+          class="mixed"
+          alt="A colourful busy street in Tokyo, Japan"
+          src="./img/akihabara.png"
+        />
+      </div>
+    </section>
+
+    <button class="btn">Push me</button>
+  </body>
+</html>

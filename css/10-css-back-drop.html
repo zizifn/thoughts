@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    .blur-circle {
+      backdrop-filter: blur(10px);
+      /* Vendor prefix for Safari: */
+      -webkit-backdrop-filter: blur(10px);
+      width: 100px;
+      height: 100px;
+      transform: translateY(-100%);
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: hsl(0deg 0% 100% / 0.5);
+      backdrop-filter:
+        brightness(150%) hue-rotate(30deg) blur(5px);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Course Platform</h1>
+  </header>
+
+  <main>
+    <h2>Module 1: Rendering Logic I</h2>
+    <p class="intro">Flow layout is the “OG” layout algorithm of the web, and it's still used heavily today. In this
+      module, we explore how to best use Flow layout in modern times. We'll also deepen our understanding of common
+      fundamentals like the Box Model.</p>
+
+    <ol>
+      <li>
+        Built-in Declarations and Inheritance
+      </li>
+      <li>
+        The Cascade
+      </li>
+      <li>
+        Directions
+      </li>
+      <li>
+        The Box Model
+        <ol>
+          <li>
+            Padding
+          </li>
+          <li>
+            Border
+          </li>
+          <li>
+            Margin
+          </li>
+        </ol>
+      </li>
+      <li>
+        Flow Layout
+        <ol>
+          <li>
+            Width Algorithms
+          </li>
+          <li>
+            Height Algorithms
+          </li>
+        </ol>
+      </li>
+      <li>
+        Margin Collapse
+        <ol>
+          <li>
+            Rules of Margin Collapse
+          </li>
+          <li>
+            Will It Collapse?
+          </li>
+          <li>
+            Using Margin Effectively
+          </li>
+        </ol>
+      </li>
+      <li>
+        Workshop: Agency page
+      </li>
+  </main>
+  <img alt="A colourful busy street in Tokyo, Japan" src="./img/akihabara.png" />
+  <div class="blur-circle"></div>
+</body>
+
+</html>

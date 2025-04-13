@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .wrapper {
+        background-color: white;
+        height: 200px;
+        width: 200px;
+        box-shadow: inset 2px 2px 8px hsl(0deg 0% 0% / 0.33);
+        /*
+     The '.box' has a non-inset shadow.
+     We don't want it to bleed beyond
+     its wrapper.
+    */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .box {
+        height: 190px;
+        width: 190px;
+        box-shadow: 2px 2px 8px hsl(0deg 0% 0% / 0.33);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="box">Moat!</div>
+    </div>
+  </body>
+</html>

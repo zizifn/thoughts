@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .card {
+        width: 200px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box-shadow {
+        box-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
+      }
+      .drop-shadow {
+        filter: drop-shadow(2px 4px 8px hsl(0deg 0% 0% / 0.25));
+      }
+      p {
+        text-shadow: 2px 4px 8px hsl(0deg 0% 0% / 0.25);
+      }
+    </style>
+  </head>
+
+  <body>
+    <p>This text has a subtle shadow!</p>
+    <article class="card box-shadow">
+      <h2>Hello World</h2>
+    </article>
+    <article class="card drop-shadow">
+      <h2>Hello World</h2>
+    </article>
+  </body>
+</html>
