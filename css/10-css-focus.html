@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .btn1 {
+        /* &:focus {
+          outline: 5px auto blue;
+        } */
+        &:focus-visible {
+          outline: 5px auto red;
+        }
+      }
+
+      #text1 {
+        &:focus-visible {
+          outline: none;
+        }
+      }
+      form {
+        &:focus-within {
+          background-color: aqua;
+        }
+      }
+      .with-outline {
+        outline: 2px solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="with-outline">This div shas a outline.</div>
+    <form action="">
+      <input type="text" />
+      <button>sumbit</button>
+    </form>
+    <button>test</button>
+    <button class="btn1">click me</button>
+    <input type="text" name="" id="text1" />
+  </body>
+</html>

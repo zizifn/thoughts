@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .test {
+        border-top: 10px solid antiquewhite;
+        border-bottom: 10px solid antiquewhite;
+        border-left: 10px solid antiquewhite;
+        border-right: 10px solid antiquewhite;
+      }
+      .toast {
+        border: solid;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 32px;
+        margin: auto;
+        /* Firefox requires a vendor prefix */
+        width: -moz-fit-content;
+        width: fit-content;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="test"></div>
+    <button class="random">Random button</button>
+
+    <div class="toast">No parent required!</div>
+  </body>
+</html>

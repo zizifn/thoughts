@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .tooltip {
+        position: relative;
+        margin-top: 100px;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        height: 50px;
+        width: 150px;
+        box-shadow: 0px 0px 16px hsl(0deg 0% 0% / 0.5);
+        filter: drop-shadow(0px 0px 16px hsl(0deg 0% 0% / 0.5));
+        &:after {
+          transform: translateY(-100%);
+          margin: auto;
+          left: 0;
+          right: 0;
+          position: absolute;
+          background-color: aqua;
+          /* display: block; */
+          content: "";
+          height: 24px;
+          width: 24px;
+          clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="tooltip">Lorem ipsum dolor hello</div>
+  </body>
+</html>

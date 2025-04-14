@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html {
+        --color-bg: hsl(0deg 0% 25%);
+        --color-text: hsl(0deg 0% 60%);
+        --color-line-1: hsl(355deg 100% 60%);
+        --color-line-2: hsl(110deg 50% 40%);
+      }
+
+      header button {
+        background: hsl(0deg 0% 100% / 0.2);
+        color: hsl(40deg 100% 60%);
+      }
+
+      .legend .box.froogle {
+        background-color: var(--color-line-1);
+      }
+      .legend .box.glamazon {
+        background-color: var(--color-line-2);
+      }
+
+      .froogle-line {
+        stroke: var(--color-line-1);
+      }
+      .glamazon-line {
+        stroke: var(--color-line-2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Financial Trends</h1>
+      <div>
+        <button>Log Out</button>
+      </div>
+    </header>
+
+    <main>
+      <p class="graph-prefix">
+        Comparing <strong>Froogle</strong> and <strong>Glamazon</strong>:
+      </p>
+
+      <div class="graph-wrapper">
+        <ol class="legend">
+          <li class="legend-item"><span class="box froogle"></span> Froogle</li>
+          <li class="legend-item">
+            <span class="box glamazon"></span> Glamazon
+          </li>
+        </ol>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="800"
+          height="300"
+          viewBox="0 0 800 300"
+          fill="none"
+        >
+          <path
+            class="froogle-line"
+            d="
+              M 0, 299
+              L 20, 297
+              L 40, 295
+              L 60, 296
+              L 80, 290
+              L 100, 280
+              L 120, 292
+              L 140, 271
+              L 160, 252
+              L 180, 258
+              L 200, 232
+              L 220, 240
+              L 240, 255
+              L 260, 261
+              L 280, 255
+              L 300, 252
+              L 320, 259
+              L 340, 246
+              L 360, 240
+              L 380, 231
+              L 400, 212
+              L 420, 218
+              L 440, 208
+              L 460, 200
+              L 480, 199
+              L 500, 190
+              L 520, 213
+              L 540, 188
+              L 560, 184
+              L 580, 190
+              L 600, 198
+              L 620, 193
+              L 640, 197
+              L 660, 191
+              L 680, 195
+              L 700, 188
+              L 720, 182
+              L 740, 200
+              L 760, 171
+              L 780, 192
+              L 800, 180
+            "
+          />
+          <path
+            class="glamazon-line"
+            d="
+              M 0, 298
+              L 20, 291
+              L 40, 289
+              L 60, 292
+              L 80, 270
+              L 100, 271
+              L 120, 232
+              L 140, 245
+              L 160, 212
+              L 180, 199
+              L 200, 197
+              L 220, 168
+              L 240, 172
+              L 260, 141
+              L 280, 172
+              L 300, 190
+              L 320, 201
+              L 340, 235
+              L 360, 220
+              L 380, 211
+              L 400, 204
+              L 420, 209
+              L 440, 232
+              L 460, 200
+              L 480, 188
+              L 500, 172
+              L 520, 155
+              L 540, 165
+              L 560, 123
+              L 580, 131
+              L 600, 140
+              L 620, 136
+              L 640, 117
+              L 660, 90
+              L 680, 92
+              L 700, 80
+              L 720, 81
+              L 740, 120
+              L 760, 150
+              L 780, 168
+              L 800, 170
+            "
+          />
+        </svg>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .artists {
+        overflow: auto;
+        /* display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-auto-flow: column; */
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        scroll-snap-type: x mandatory;
+
+        .artist-card {
+          min-width: 400px;
+          scroll-snap-align: start;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <section class="artists">
+      <article class="artist-card">
+        <img class="cover-art" alt="" src="./img/cover-art-water.jpg" />
+        <div class="about">
+          <p>Silk Stream</p>
+        </div>
+      </article>
+      <article class="artist-card">
+        <img class="cover-art" alt="" src="./img/cover-art-lemons.jpg" />
+        <div class="about">
+          <p>Sour Patch Grift</p>
+        </div>
+      </article>
+      <article class="artist-card">
+        <img class="cover-art" alt="" src="./img/cover-art-neon.jpg" />
+        <div class="about">
+          <p>はらじゅく CELEBRATION</p>
+        </div>
+      </article>
+      <article class="artist-card">
+        <img class="cover-art" alt="" src="./img/cover-art-abstract.jpg" />
+        <div class="about">
+          <p>Ethereal Engine</p>
+        </div>
+      </article>
+      <article class="artist-card">
+        <img class="cover-art" alt="" src="./img/cover-art-dogflowers.jpg" />
+        <div class="about">
+          <p>Sunday Whispers</p>
+        </div>
+      </article>
+      <article class="artist-card">
+        <img class="cover-art" alt="" src="./img/cover-art-body-art.jpg" />
+        <div class="about">
+          <p>Temple</p>
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

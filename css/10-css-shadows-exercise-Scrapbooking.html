@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!--
+Acceptance criteria:
+
+• The <article> should be 90% or 500px wide,
+  whichever is smaller. It should be centered.
+• The inset shadow should have:
+  • 1px horizontal offset
+  • 2px vertical offset
+  • 4px blur radius
+  • Black color @ 30% opacity
+• The “heart” sticker should have a shadow.
+  (use your judgment for the params)
+-->
+
+    <style>
+      .wrapper {
+        background-color: antiquewhite;
+        max-width: min(90%, 500px);
+        aspect-ratio: 1 / 1;
+        margin: auto;
+        box-shadow: inset 1px 2px 4px black;
+        display: grid;
+        place-items: center;
+        .card {
+          position: relative;
+          display: grid;
+          place-items: center;
+          background-color: white;
+          width: 80%;
+          height: 80%;
+          img {
+            width: 90%;
+          }
+          .sticker {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: scale(2.5, 3);
+            filter: hue-rotate(15deg);
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <article class="wrapper">
+      <div class="card">
+        <img
+          class="photo"
+          alt="A girl sits on a boulder overlooking a mountain"
+          src="./img/scrapbooking.jpg"
+        />
+        <div class="sticker" role="img" aria-label="heart sticker">💖</div>
+      </div>
+    </article>
+  </body>
+</html>

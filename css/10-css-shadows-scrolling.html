@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+        /* scrollbar-gutter: stable; */
+        height: 100%;
+      }
+      body {
+        overflow-y: scroll;
+        height: 100%;
+        margin: 0;
+      }
+      .p1 {
+        max-height: 200px;
+        white-space: pre-warp;
+        border: solid;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        height: 50px;
+        background-color: antiquewhite;
+      }
+      #chapter-2 {
+        scroll-margin-top: 250px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>header</header>
+    <h2 id="chapter-2">Chapter Two</h2>
+    <a href="#chapter-3">Skip to Next Chapter</a>
+    <p class="p1">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed ipsam
+      tempore, in ullam voluptatem debitis cupiditate eos tempora itaque
+      accusamus, voluptatibus quia minus assumenda? Aut dolorem cupiditate quae
+      unde eaque architecto similique velit rerum adipisci?
+    </p>
+    <h2 id="chapter-3">Chapter III</h2>
+    <a href="#chapter-2">Back to Previous Chapter</a>
+  </body>
+</html>

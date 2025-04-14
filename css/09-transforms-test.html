@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes rotatex {
+        0% {
+          transform: rotateX(0deg);
+        }
+        100% {
+          transform: rotateX(180deg);
+        }
+      }
+
+      @keyframes rotatex2 {
+        0% {
+          transform: rotateX(-180deg);
+        }
+        100% {
+          transform: rotateX(0deg);
+        }
+      }
+      .box {
+        border: solid;
+        /* margin-left: 100px; */
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        /* transform-origin: top center; */
+        perspective: 1000px;
+
+        animation: rotatex 3000ms linear 0s infinite both;
+      }
+
+      .box2 {
+        border: solid;
+
+        /* margin-left: 100px; */
+        margin: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        transform-origin: bottom center;
+        perspective: 1000px;
+
+        animation: rotatex2 3000ms linear 0s infinite both;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="box"></div>
+      <div class="box2"></div>
+    </div>
+  </body>
+</html>

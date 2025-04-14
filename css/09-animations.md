@@ -24,3 +24,7 @@
 - The backdrop starts fading in right away, and lasts a long time (1000ms).
 - The modal waits for 250ms, and then slides in over 400ms
 - The close button is now hidden by default, and is given its own unique transition. It starts - - animating after 600ms, and lasts 250ms.
+
+## 特效 demo
+
+https://tympanus.net/

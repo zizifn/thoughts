@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      @keyframes unfurl {
+        from {
+          transform: translateY(-10px);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);
+        }
+        to {
+          transform: translateY(0px);
+          clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+        }
+      }
+      .highlighted {
+        background: hsl(50deg 100% 70%);
+        padding: 12px 24px;
+        font-size: 1.25rem;
+        font-weight: bold;
+        width: -moz-fit-content;
+        width: fit-content;
+        border-radius: 4px;
+        animation: unfurl 1000ms;
+      }
+    </style>
+  </head>
+
+  <body>
+    <p class="highlighted">The World's Best Keyboard</p>
+    <p class="highlighted">The World's Best Keyboard</p>
+    <button>clcimeke</button>
+  </body>
+</html>
