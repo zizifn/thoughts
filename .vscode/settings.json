@@ -8,9 +8,9 @@
   "java.configuration.updateBuildConfiguration": "interactive",
   "liveServer.settings.port": 5000,
   "excalidraw.image": {
-
     "exportScale": 1,
     "exportWithBackground": true,
     "exportWithDarkMode": false
-  }
+  },
+  "java.compile.nullAnalysis.mode": "disabled"
 }
